@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF9191"
+    android:background="#FFFEFE"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,6 +13,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="52dp"
+        android:textColor="@color/black"
         android:text="HELLO WORLD"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
