@@ -3379,6 +3379,7 @@ int id open_search_view_search_prefix 0x7f08014a
 int id open_search_view_status_bar_spacer 0x7f08014b
 int id open_search_view_toolbar 0x7f08014c
 int id open_search_view_toolbar_container 0x7f08014d
+int id openinfo_btn 0x7f0801ef
 int id outline 0x7f08014e
 int id outward 0x7f08014f
 int id overshoot 0x7f080150
@@ -3654,6 +3655,7 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0b0018
 int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
+int layout activity_info_page 0x7f0b006a
 int layout activity_main 0x7f0b001c
 int layout custom_dialog 0x7f0b001d
 int layout design_bottom_navigation_item 0x7f0b001e

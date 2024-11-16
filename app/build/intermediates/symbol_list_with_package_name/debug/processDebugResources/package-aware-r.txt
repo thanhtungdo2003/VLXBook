@@ -3380,6 +3380,7 @@ id open_search_view_search_prefix
 id open_search_view_status_bar_spacer
 id open_search_view_toolbar
 id open_search_view_toolbar_container
+id openinfo_btn
 id outline
 id outward
 id overshoot
@@ -3655,6 +3656,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_info_page
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item

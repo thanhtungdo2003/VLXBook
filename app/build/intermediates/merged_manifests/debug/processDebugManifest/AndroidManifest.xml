@@ -28,6 +28,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.VLXBookApplication" >
         <activity
+            android:name="com.vlteam.vlxbookapplication.InfoPage"
+            android:exported="false" />
+        <activity
             android:name="com.vlteam.vlxbookapplication.MainActivity"
             android:exported="true" >
             <intent-filter>
