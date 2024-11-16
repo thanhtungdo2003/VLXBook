@@ -2952,6 +2952,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable custom_btnlogin
+drawable custom_input_login
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2971,6 +2973,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
+drawable logox
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3144,6 +3147,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnlogin
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3264,6 +3268,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id immediateStop
 id included
 id indeterminate
@@ -3276,6 +3281,8 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id lbpass
+id lbusername
 id left
 id leftToRight
 id legacy
@@ -3284,6 +3291,7 @@ id line3
 id linear
 id listMode
 id list_item
+id logintitle
 id m3_side_sheet
 id main
 id marquee
@@ -3390,6 +3398,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id passInput
 id password_toggle
 id path
 id pathRelative
@@ -3494,6 +3503,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView4
+id textView5
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3524,6 +3535,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id usernameInput
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3674,6 +3686,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout login
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
