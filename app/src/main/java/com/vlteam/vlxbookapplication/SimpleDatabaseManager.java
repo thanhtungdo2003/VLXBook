@@ -1,262 +1,190 @@
 package com.vlteam.vlxbookapplication;
 
-import java.sql.*;
-import java.util.HashMap;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteStatement;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class SimpleDatabaseManager {
-    private Connection connection;
-    private String fileName;
+public class SimpleDatabaseManager extends SQLiteOpenHelper {
 
-    public SimpleDatabaseManager(String serverName) {
-        try {
-            Class.forName("org.sqlite.JDBC");
-            connection = DriverManager.getConnection("jdbc:sqlite:" + serverName + ".db");
-            fileName = serverName;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    private static final int DATABASE_VERSION = 1; // Phiên bản cơ sở dữ liệu
+    private static final String DATABASE_NAME = "example.db"; // Tên cơ sở dữ liệu
+
+    public SimpleDatabaseManager(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    public void connect() {
-        try {
-            Class.forName("org.sqlite.JDBC");
-            connection = DriverManager.getConnection("jdbc:sqlite:" + fileName + ".db");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        // Tạo bảng cơ sở dữ liệu khi lần đầu tiên khởi chạy
     }
 
-    public void disconnect() {
-        try {
-            if (connection != null && !connection.isClosed()) {
-                connection.close();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public Connection getConnection() {
-        return connection;
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        // Nâng cấp cơ sở dữ liệu khi phiên bản thay đổi
+        db.execSQL("DROP TABLE IF EXISTS my_table"); // Ví dụ xóa bảng
+        onCreate(db); // Tạo lại bảng
     }
 
     public void createSimpleTable(String tableName, List<String> dataStruct) {
-        connect();
-        if (dataStruct.isEmpty()) {
-            return;
-        }
+        SQLiteDatabase db = this.getWritableDatabase();
         StringBuilder queryBuilder = new StringBuilder("CREATE TABLE IF NOT EXISTS " + tableName + " (");
-        for (String data : dataStruct) {
-            queryBuilder.append(data).append(",");
+        for (String column : dataStruct) {
+            queryBuilder.append(column).append(",");
         }
         queryBuilder.deleteCharAt(queryBuilder.length() - 1);
-        queryBuilder.append(")");
-        String query = queryBuilder.toString();
-        try (Connection connection = getConnection();
-             Statement statement = connection.createStatement()) {
-            statement.execute(query);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        disconnect();
+        queryBuilder.append(");");
+
+        db.execSQL(queryBuilder.toString());
+        db.close();
     }
 
-    public void dropData(String tableName) {
-        connect();
-        String query = "DROP TABLE " + tableName;
-        try (Connection connection = getConnection();
-             Statement statement = connection.createStatement()) {
-            statement.execute(query);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        disconnect();
+    public void dropTable(String tableName) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DROP TABLE IF EXISTS " + tableName);
+        db.close();
     }
 
-    /**
-     * Hàm lưu dữ liệu
-     */
     public void save(String tableName, Map<String, Object> data) {
-        connect(); //
-        // Xây dựng câu truy vấn INSERT dựa trên tên bảng và dữ liệu được truyền vào
-        StringBuilder queryBuilder = new StringBuilder("INSERT INTO ").append(tableName).append(" (");
-        StringBuilder valuesBuilder = new StringBuilder(") VALUES (");
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
 
         for (Map.Entry<String, Object> entry : data.entrySet()) {
-            queryBuilder.append(entry.getKey()).append(",");
-            valuesBuilder.append("?,");
-        }
-
-        queryBuilder.deleteCharAt(queryBuilder.length() - 1); // Xoá dấu phẩy cuối cùng
-        valuesBuilder.deleteCharAt(valuesBuilder.length() - 1); // Xoá dấu phẩy cuối cùng
-
-        String query = queryBuilder.append(valuesBuilder).append(")").toString();
-
-        try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
-            int parameterIndex = 1;
-            for (Object value : data.values()) {
-                preparedStatement.setObject(parameterIndex++, value);
+            if (entry.getValue() instanceof String) {
+                values.put(entry.getKey(), (String) entry.getValue());
+            } else if (entry.getValue() instanceof Integer) {
+                values.put(entry.getKey(), (Integer) entry.getValue());
+            } else if (entry.getValue() instanceof Double) {
+                values.put(entry.getKey(), (Double) entry.getValue());
             }
-
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
-        disconnect(); //
+
+        db.insert(tableName, null, values);
+        db.close();
     }
 
-    public void insert(String tableName, List<String> columnNames, List<Object> dataSets) {
-        try (Connection connection = getConnection()) {
+    public Object getDataByKey(String tableName, String columnName, String keyColumn, String keyValue) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(tableName, new String[]{columnName}, keyColumn + "=?",
+                new String[]{keyValue}, null, null, null);
+
+        if (cursor != null) {
+            cursor.moveToFirst();
+            Object result = cursor.getString(0);
+            cursor.close();
+            return result;
+        }
+
+        return null;
+    }
+
+    public void updateDataByColumn(String tableName, String columnName, Object newValue, String keyColumn, Object key) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        if (newValue instanceof String) {
+            values.put(columnName, (String) newValue);
+        } else if (newValue instanceof Integer) {
+            values.put(columnName, (Integer) newValue);
+        } else if (newValue instanceof Double) {
+            values.put(columnName, (Double) newValue);
+        }
+
+        db.update(tableName, values, keyColumn + " = ?", new String[]{key.toString()});
+        db.close();
+    }
+    public void insert(String tableName, Map<String, Object> data) {
+        try (SQLiteDatabase database = getWritableDatabase()) {
+
+            // Tạo danh sách cột và placeholders
             StringBuilder columns = new StringBuilder();
             StringBuilder placeholders = new StringBuilder();
 
-            for (String column : columnNames) {
+            for (String column : data.keySet()) {
                 columns.append(column).append(",");
                 placeholders.append("?,");
             }
 
-            String columnStr = columns.substring(0, columns.length() - 1);
-            String placeholderStr = placeholders.substring(0, placeholders.length() - 1);
+            // Loại bỏ dấu phẩy cuối cùng
+            columns.deleteCharAt(columns.length() - 1);
+            placeholders.deleteCharAt(placeholders.length() - 1);
 
-            // Tạo chuỗi placeholders với số lượng dấu ? tương ứng với kích thước của dataSets
-            String fullPlaceholderStr = new String(new char[dataSets.size()]).replace("\0", "?,");
-            fullPlaceholderStr = fullPlaceholderStr.substring(0, fullPlaceholderStr.length() - 1);
+            // Câu lệnh SQL INSERT
+            String query = "INSERT INTO " + tableName + " (" + columns + ") VALUES (" + placeholders + ")";
 
-            String query = "INSERT INTO " + tableName + " (" + columnStr + ") VALUES (" + fullPlaceholderStr + ")";
-
-            try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-                int count = 1;
-                for (Object data : dataSets) {
-                    preparedStatement.setObject(count, data);
-                    count++;
+            // Chuẩn bị và gán giá trị
+            SQLiteStatement statement = database.compileStatement(query);
+            int index = 1;
+            for (Object value : data.values()) {
+                if (value instanceof String) {
+                    statement.bindString(index, (String) value);
+                } else if (value instanceof Integer) {
+                    statement.bindLong(index, (Integer) value);
+                } else if (value instanceof Double) {
+                    statement.bindDouble(index, (Double) value);
+                } else if (value == null) {
+                    statement.bindNull(index);
                 }
-                preparedStatement.executeUpdate();
+                index++;
             }
-        } catch (SQLException e) {
-            e.printStackTrace(); // Xử lý lỗi theo nhu cầu của bạn
-        }
-    }
 
-
-    public void removeByKey(String tableName, String key) {
-        connect();
-        String query = "DELETE FROM " + tableName + " WHERE " + key + " = ?";
-        try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setString(1, key);
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
+            // Thực thi câu lệnh
+            statement.executeInsert();
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        disconnect();
     }
+    public List<Object> getColumnValues(String tableName, String columnName) {
+        SQLiteDatabase database = null;
+        List<Object> result = new ArrayList<>();
 
-    public Object getDataByKey(String tableName, String columnName, String columKey, String key) {
-        connect();
+        try {
+            database = getReadableDatabase();
 
-        // Xây dựng câu truy vấn SELECT dựa trên tên bảng và điều kiện được truyền vào
-        String query = "SELECT " + columnName + " FROM " + tableName + " WHERE " + columKey + " = ?";
+            // Truy vấn lấy tất cả giá trị của cột
+            String query = "SELECT " + columnName + " FROM " + tableName;
+            Cursor cursor = database.rawQuery(query, null);
 
-        try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            // Lấy dữ liệu từ Cursor và thêm vào danh sách
+            if (cursor.moveToFirst()) {
+                do {
+                    int columnIndex = cursor.getColumnIndex(columnName);
+                    int columnType = cursor.getType(columnIndex);
 
-            preparedStatement.setString(1, key);
-
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                if (resultSet.next()) {
-                    // Thay đổi "columnName" thành tên cột cụ thể bạn muốn lấy dữ liệu
-                    return resultSet.getObject(columnName);
-                }
+                    switch (columnType) {
+                        case Cursor.FIELD_TYPE_STRING:
+                            result.add(cursor.getString(columnIndex));
+                            break;
+                        case Cursor.FIELD_TYPE_INTEGER:
+                            result.add(cursor.getInt(columnIndex));
+                            break;
+                        case Cursor.FIELD_TYPE_FLOAT:
+                            result.add(cursor.getDouble(columnIndex));
+                            break;
+                        case Cursor.FIELD_TYPE_NULL:
+                            result.add(null);
+                            break;
+                    }
+                } while (cursor.moveToNext());
             }
-        } catch (SQLException e) {
+
+            // Đóng Cursor
+            cursor.close();
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            disconnect();
-        }
-
-        return null;
-    }
-
-
-    public Object getKeybyData(String tableName, String keyReturn, Map<String, Object> conditions) {
-        connect();
-        // Xây dựng câu truy vấn SELECT dựa trên tên bảng và điều kiện được truyền vào
-        StringBuilder queryBuilder = new StringBuilder("SELECT " + keyReturn + " FROM ").append(tableName).append(" WHERE ");
-
-        for (Map.Entry<String, Object> entry : conditions.entrySet()) {
-            queryBuilder.append(entry.getKey()).append(" = ? AND ");
-        }
-        queryBuilder.delete(queryBuilder.length() - 5, queryBuilder.length()); // Xoá "AND " cuối cùng
-        String query = queryBuilder.toString();
-        try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            int parameterIndex = 1;
-            for (Object value : conditions.values()) {
-                preparedStatement.setObject(parameterIndex++, value);
+            if (database != null) {
+                database.close();
             }
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                if (resultSet.next()) {
-                    return resultSet.getString(keyReturn);
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            disconnect();
         }
-        return null;
+
+        return result;
     }
 
-    public Object getDataByColumn(String tableName, String columnName, String keyColumn, Object keyValue) {
-        connect();
-        String query = "SELECT " + columnName + " FROM " + tableName + " WHERE " + keyColumn + " = ?";
-        try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setObject(1, keyValue);
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                if (resultSet.next()) {
-                    return resultSet.getObject(columnName);
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            disconnect();
-        }
-        return null;
-    }
-
-
-    public void addDataByColum(String tableName, String columName, String keyValue, Object key, Object data) {
-        connect();
-        String query = "INSERT INTO " + tableName + " (" + keyValue + ", " + columName + ") VALUES (?, ?)";
-        try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setObject(1, key);
-            preparedStatement.setObject(2, data);
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        disconnect();
-    }
-
-    public void updateDataByColum(String tableName, String columnName, Object newValue, String keyColumn, Object key) {
-        connect();
-        String query = "UPDATE " + tableName + " SET " + columnName + " = ? WHERE " + keyColumn + " = ?";
-        try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setObject(1, newValue);
-            preparedStatement.setObject(2, key);
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            disconnect();
-        }
-    }
 }
