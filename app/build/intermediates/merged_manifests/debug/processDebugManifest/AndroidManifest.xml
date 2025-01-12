@@ -30,13 +30,19 @@
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
         <activity
+            android:name="com.vlteam.vlxbookapplication.InfoPage"
+            android:exported="false" />
+        <activity
+            android:name="com.vlteam.vlxbookapplication.ChattingInterface"
+            android:exported="false" />
+        <activity
             android:name="com.vlteam.vlxbookapplication.MainActivity"
             android:exported="false" />
         <activity
             android:name="com.vlteam.vlxbookapplication.login"
             android:exported="false" />
         <activity
-            android:name="com.vlteam.vlxbookapplication.InfoPage"
+            android:name="com.vlteam.vlxbookapplication.MessengerInterface"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

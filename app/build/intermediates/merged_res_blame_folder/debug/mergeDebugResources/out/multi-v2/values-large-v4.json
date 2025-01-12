@@ -4,7 +4,7 @@
             "outputFile": "com.vlteam.vlxbookapplication.app-mergeDebugResources-29:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Thanh Tung\\.gradle\\caches\\8.9\\transforms\\2dc28e75dd635e84b83682028e31a9e8\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\tcao2\\.gradle\\caches\\8.9\\transforms\\2dc28e75dd635e84b83682028e31a9e8\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Thanh Tung\\.gradle\\caches\\8.9\\transforms\\2f7a9aa49e96354262c2e8317ac9f5c8\\transformed\\material-1.10.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\tcao2\\.gradle\\caches\\8.9\\transforms\\2f7a9aa49e96354262c2e8317ac9f5c8\\transformed\\material-1.10.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
