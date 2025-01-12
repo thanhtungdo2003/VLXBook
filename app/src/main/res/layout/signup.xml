@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_backgroundcolor"
+    android:orientation="vertical"
+    tools:context=".SignupActivity">
+
+    <ImageView
+        android:id="@+id/imageViewSignup"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Họ">
+
+            <EditText
+                android:id="@+id/editTextText"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_input_login"
+                android:ems="10"
+                android:fontFamily="@font/alata"
+                android:inputType="text"
+                android:paddingLeft="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Tên"
+            android:paddingRight="0dp">
+
+            <EditText
+                android:id="@+id/editTextText2"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/custom_input_login"
+                android:ems="10"
+                android:fontFamily="@font/alata"
+                android:inputType="text"
+                android:paddingLeft="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tên tài khoản">
+
+            <EditText
+                android:id="@+id/usernameInputSignup"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_input_login"
+                android:ems="10"
+                android:fontFamily="@font/alata"
+                android:paddingLeft="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập mật khẩu">
+
+            <EditText
+                android:id="@+id/passInputSignup"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_input_login"
+                android:ems="10"
+                android:fontFamily="@font/alata"
+                android:inputType="text"
+                android:paddingLeft="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập lại mật khẩu">
+
+            <EditText
+                android:id="@+id/passInputSignup2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_input_login"
+                android:ems="10"
+                android:fontFamily="@font/alata"
+                android:inputType="text"
+                android:paddingLeft="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnsignup"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_btnlogin"
+        android:fontFamily="@font/alata"
+        android:text="Đăng ký"
+        android:textColor="@color/white"
+        app:backgroundTint="@null" />
+
+    <TextView
+        android:id="@+id/tvNextToLogin"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:clickable="true"
+        android:fontFamily="@font/alata"
+        android:gravity="center"
+        android:text="Bạn đã có tài khoản?" />
+
+</LinearLayout>
