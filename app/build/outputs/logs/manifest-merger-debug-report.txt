@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:2:1-36:12
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\2f7a9aa49e96354262c2e8317ac9f5c8\transformed\material-1.10.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\f10fca55b83b093145272f1e2fba964c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\7a3aaf29d461c1d100658a8de629bf9c\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -56,8 +56,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Thanh T
 	xmlns:android
 		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:5:5-32:19
-INJECTED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:5:5-32:19
+ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:5:5-33:19
+INJECTED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:5:5-33:19
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\2f7a9aa49e96354262c2e8317ac9f5c8\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\2f7a9aa49e96354262c2e8317ac9f5c8\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\f10fca55b83b093145272f1e2fba964c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -85,11 +85,11 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Th
 	android:fullBackupContent
 		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:8:9-54
 	android:roundIcon
-		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:11:9-51
 	tools:targetApi
 		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:14:9-29
 	android:icon
-		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:9:9-46
 	android:allowBackup
 		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
@@ -102,18 +102,18 @@ ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\
 		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:17:13-37
 	android:name
 		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:16:13-41
-activity#com.vlteam.vlxbookapplication.InfoPage
+activity#com.vlteam.vlxbookapplication.login
 ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:20:9-22:40
 	android:exported
 		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:22:13-37
 	android:name
-		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:21:13-37
-activity#com.vlteam.vlxbookapplication.login
+		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:21:13-34
+activity#com.vlteam.vlxbookapplication.InfoPage
 ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:23:9-31:20
 	android:exported
 		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:25:13-36
 	android:name
-		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:24:13-34
+		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:24:13-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:26:13-30:29
 action#android.intent.action.MAIN
@@ -124,6 +124,10 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:29:17-77
 	android:name
 		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:29:27-74
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:34:5-67
+	android:name
+		ADDED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml:34:22-64
 uses-sdk
 INJECTED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Thanh Tung\AndroidStudioProjects\VLXBookApplication\app\src\main\AndroidManifest.xml

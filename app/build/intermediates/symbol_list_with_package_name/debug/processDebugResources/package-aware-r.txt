@@ -2942,6 +2942,8 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable anlan
+drawable arrow_left
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_checkbox_checked_mtrl
@@ -2952,6 +2954,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable coverphoto
 drawable custom_btnlogin
 drawable custom_input_login
 drawable design_fab_background
@@ -2973,6 +2976,8 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
+drawable knightblock
+drawable logo_vlxbook
 drawable logox
 drawable m3_appbar_background
 drawable m3_avd_hide_password
@@ -3046,6 +3051,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable openrightside
+drawable search_icon
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3268,11 +3275,16 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageButton
+id imageButton2
 id imageView
+id imageView2
+id imageView3
 id immediateStop
 id included
 id indeterminate
 id info
+id info_main
 id invisible
 id inward
 id italic
@@ -3374,6 +3386,7 @@ id notification_main_column_container
 id off
 id on
 id onInterceptTouchReturnSwipe
+id open_messager_infopage_btn
 id open_search_bar_text_view
 id open_search_view_background
 id open_search_view_clear_button
@@ -3503,6 +3516,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView2
+id textView3
 id textView4
 id textView5
 id text_input_end_icon
@@ -3535,6 +3550,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id user_displayname_textview_title
 id usernameInput
 id vertical_only
 id view_offset_helper
