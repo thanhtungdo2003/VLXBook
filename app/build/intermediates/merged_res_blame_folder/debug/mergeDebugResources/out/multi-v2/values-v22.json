@@ -4,7 +4,7 @@
             "outputFile": "com.vlteam.vlxbookapplication.app-mergeDebugResources-29:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\duong\\.gradle\\caches\\8.9\\transforms\\e9179cb1cce1261e72ec007d1f599301\\transformed\\appcompat-1.7.0\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\tcao2\\.gradle\\caches\\8.9\\transforms\\e9179cb1cce1261e72ec007d1f599301\\transformed\\appcompat-1.7.0\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

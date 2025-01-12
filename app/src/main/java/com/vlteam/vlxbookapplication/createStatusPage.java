@@ -163,6 +163,7 @@ public class createStatusPage extends AppCompatActivity {
             else {
                 ImageView imageView = new ImageView(this);
                 imageView.setLayoutParams(new LinearLayout.LayoutParams(500, 500));
+                imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
                 imageView.setImageURI(uri);
                 frameLayout.addView(imageView);
                 frameLayout.addView(btnDelete);
