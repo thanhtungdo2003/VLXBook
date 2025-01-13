@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
+    android:layout_height="wrap_content"
     android:gravity="start"
     android:orientation="horizontal"
-    android:padding="8dp">
+    android:paddingStart="8dp"
+    android:paddingTop="1dp"
+    android:layout_marginBottom="2dp">
 
     <TextView
         android:id="@+id/text_message_received"
@@ -14,6 +16,7 @@
         android:padding="10dp"
         android:text="Tin nhắn nhận"
         android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:maxWidth="300dp" />
 
 </LinearLayout>
