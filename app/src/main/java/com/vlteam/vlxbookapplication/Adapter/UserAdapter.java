@@ -66,7 +66,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvUserName = itemView.findViewById(R.id.tv_user_name);
+            tvUserName = itemView.findViewById(R.id.tv_fullname);
             tvMessage = itemView.findViewById(R.id.tv_message);
             tvTime = itemView.findViewById(R.id.tv_time);
             imgAvtUser = itemView.findViewById(R.id.img_avt_user_list);

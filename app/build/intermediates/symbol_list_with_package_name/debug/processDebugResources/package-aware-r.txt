@@ -43,6 +43,10 @@ anim m3_side_sheet_exit_to_right
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
+anim slide_in_left
+anim slide_in_right
+anim slide_out_left
+anim slide_out_right
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -3048,6 +3052,7 @@ drawable commenticon
 drawable coverphoto
 drawable custom_addnewstatus
 drawable custom_backgroundcolor
+drawable custom_btn_border_radius_10
 drawable custom_btnlogin
 drawable custom_btnsignup
 drawable custom_input_login
@@ -3060,6 +3065,7 @@ drawable dropdownic
 drawable emojiicon
 drawable friendic
 drawable friendicon
+drawable friendicon_select
 drawable homeicon
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
@@ -3120,6 +3126,7 @@ drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable menuicon
+drawable messagericon
 drawable messicon
 drawable mic_icon
 drawable mtrl_bottomsheet_drag_handle
@@ -3313,6 +3320,7 @@ id button15
 id button2
 id button3
 id button5
+id button6
 id button7
 id button8
 id button9
@@ -3455,7 +3463,6 @@ id imageButton12
 id imageButton2
 id imageButton3
 id imageButton4
-id imageButton5
 id imageButton7
 id imageButton8
 id imageButton9
@@ -3578,6 +3585,8 @@ id notification_main_column_container
 id off
 id on
 id onInterceptTouchReturnSwipe
+id open_friend_find_btn
+id open_home_btn
 id open_messager_btn
 id open_messager_infopage_btn
 id open_search_bar_text_view
@@ -3624,7 +3633,7 @@ id rcv_horizontal_users
 id rcv_message_box
 id rcv_user_list
 id rectangles
-id recyclerViewPosts
+id recyclerViewFriendPropose
 id report_drawn
 id reverseSawtooth
 id right
@@ -3722,6 +3731,7 @@ id textView10
 id textView11
 id textView12
 id textView13
+id textView15
 id textView2
 id textView3
 id textView4
@@ -3766,10 +3776,10 @@ id tvDateOfPost
 id tvHr
 id tvNameUser
 id tvNextToLogin
+id tv_fullname
 id tv_message
 id tv_name_user_chatting
 id tv_time
-id tv_user_name
 id tv_user_name_under_search
 id unchecked
 id uniform
@@ -3913,6 +3923,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_chatting_interface
+layout activity_friend_list_find_main
 layout activity_info_page
 layout activity_main
 layout activity_messenger_interface
@@ -3935,6 +3946,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_friend_propose
 layout item_message_received
 layout item_message_send
 layout item_photo

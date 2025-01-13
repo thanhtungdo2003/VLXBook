@@ -1,5 +1,9 @@
 R_DEF: Internal format may change without notice
 local
+anim slide_in_left
+anim slide_in_right
+anim slide_out_left
+anim slide_out_right
 array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
@@ -43,6 +47,7 @@ drawable commenticon
 drawable coverphoto
 drawable custom_addnewstatus
 drawable custom_backgroundcolor
+drawable custom_btn_border_radius_10
 drawable custom_btnlogin
 drawable custom_btnsignup
 drawable custom_input_login
@@ -50,6 +55,7 @@ drawable dropdownic
 drawable emojiicon
 drawable friendic
 drawable friendicon
+drawable friendicon_select
 drawable homeicon
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -70,6 +76,7 @@ drawable logonamefb
 drawable logox
 drawable marketicon
 drawable menuicon
+drawable messagericon
 drawable messicon
 drawable mic_icon
 drawable next
@@ -108,6 +115,7 @@ id button15
 id button2
 id button3
 id button5
+id button6
 id button7
 id button8
 id button9
@@ -126,7 +134,6 @@ id imageButton12
 id imageButton2
 id imageButton3
 id imageButton4
-id imageButton5
 id imageButton7
 id imageButton8
 id imageButton9
@@ -148,6 +155,8 @@ id info_main
 id main
 id message_area
 id name_input
+id open_friend_find_btn
+id open_home_btn
 id open_messager_btn
 id open_messager_infopage_btn
 id openinfo_btn
@@ -157,7 +166,7 @@ id passInputSignup2
 id rcv_horizontal_users
 id rcv_message_box
 id rcv_user_list
-id recyclerViewPosts
+id recyclerViewFriendPropose
 id scrollImageHorizontal
 id surname_input
 id textView
@@ -165,6 +174,7 @@ id textView10
 id textView11
 id textView12
 id textView13
+id textView15
 id textView2
 id textView3
 id textView4
@@ -181,19 +191,21 @@ id tvDateOfPost
 id tvHr
 id tvNameUser
 id tvNextToLogin
+id tv_fullname
 id tv_message
 id tv_name_user_chatting
 id tv_time
-id tv_user_name
 id tv_user_name_under_search
 id user_displayname_textview_title
 id usernameInput
 id usernameInputSignup
 layout activity_chatting_interface
+layout activity_friend_list_find_main
 layout activity_info_page
 layout activity_main
 layout activity_messenger_interface
 layout create_status_page
+layout item_friend_propose
 layout item_message_received
 layout item_message_send
 layout item_photo

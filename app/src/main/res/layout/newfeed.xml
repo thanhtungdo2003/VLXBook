@@ -64,7 +64,7 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/open_home_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -73,7 +73,7 @@
             app:srcCompat="@drawable/homeicon" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/open_friend_find_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -176,7 +176,7 @@
                 android:layout_height="2dp"
                 android:background="#E4D4D4" />
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewPosts"
+                android:id="@+id/recyclerViewFriendPropose"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp" />

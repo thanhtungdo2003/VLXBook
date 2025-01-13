@@ -42,6 +42,10 @@ int anim m3_side_sheet_exit_to_right 0x7f010028
 int anim mtrl_bottom_sheet_slide_in 0x7f010029
 int anim mtrl_bottom_sheet_slide_out 0x7f01002a
 int anim mtrl_card_lowers_interpolator 0x7f01002b
+int anim slide_in_left 0x7f01002e
+int anim slide_in_right 0x7f01002c
+int anim slide_out_left 0x7f01002d
+int anim slide_out_right 0x7f01002f
 int animator design_appbar_state_list_animator 0x7f020000
 int animator design_fab_hide_motion_spec 0x7f020001
 int animator design_fab_show_motion_spec 0x7f020002
@@ -3047,6 +3051,7 @@ int drawable commenticon 0x7f08009c
 int drawable coverphoto 0x7f08009d
 int drawable custom_addnewstatus 0x7f08009e
 int drawable custom_backgroundcolor 0x7f08009f
+int drawable custom_btn_border_radius_10 0x7f08012c
 int drawable custom_btnlogin 0x7f0800a0
 int drawable custom_btnsignup 0x7f0800a1
 int drawable custom_input_login 0x7f0800a2
@@ -3059,6 +3064,7 @@ int drawable dropdownic 0x7f0800a8
 int drawable emojiicon 0x7f0800a9
 int drawable friendic 0x7f0800aa
 int drawable friendicon 0x7f0800ab
+int drawable friendicon_select 0x7f08012b
 int drawable homeicon 0x7f0800ac
 int drawable ic_arrow_back_black_24 0x7f0800ad
 int drawable ic_call_answer 0x7f0800ae
@@ -3119,6 +3125,7 @@ int drawable material_ic_keyboard_arrow_right_black_24dp 0x7f0800e4
 int drawable material_ic_menu_arrow_down_black_24dp 0x7f0800e5
 int drawable material_ic_menu_arrow_up_black_24dp 0x7f0800e6
 int drawable menuicon 0x7f0800e7
+int drawable messagericon 0x7f08012d
 int drawable messicon 0x7f0800e8
 int drawable mic_icon 0x7f0800e9
 int drawable mtrl_bottomsheet_drag_handle 0x7f0800ea
@@ -3312,6 +3319,7 @@ int id button15 0x7f0a0078
 int id button2 0x7f0a0079
 int id button3 0x7f0a007a
 int id button5 0x7f0a007b
+int id button6 0x7f0a0267
 int id button7 0x7f0a007c
 int id button8 0x7f0a007d
 int id button9 0x7f0a007e
@@ -3454,7 +3462,6 @@ int id imageButton12 0x7f0a0108
 int id imageButton2 0x7f0a0109
 int id imageButton3 0x7f0a010a
 int id imageButton4 0x7f0a010b
-int id imageButton5 0x7f0a010c
 int id imageButton7 0x7f0a010d
 int id imageButton8 0x7f0a010e
 int id imageButton9 0x7f0a010f
@@ -3577,6 +3584,8 @@ int id notification_main_column_container 0x7f0a0182
 int id off 0x7f0a0183
 int id on 0x7f0a0184
 int id onInterceptTouchReturnSwipe 0x7f0a0185
+int id open_friend_find_btn 0x7f0a0265
+int id open_home_btn 0x7f0a0266
 int id open_messager_btn 0x7f0a0186
 int id open_messager_infopage_btn 0x7f0a0187
 int id open_search_bar_text_view 0x7f0a0188
@@ -3623,7 +3632,7 @@ int id rcv_horizontal_users 0x7f0a01b0
 int id rcv_message_box 0x7f0a01b1
 int id rcv_user_list 0x7f0a01b2
 int id rectangles 0x7f0a01b3
-int id recyclerViewPosts 0x7f0a01b4
+int id recyclerViewFriendPropose 0x7f0a0268
 int id report_drawn 0x7f0a01b5
 int id reverseSawtooth 0x7f0a01b6
 int id right 0x7f0a01b7
@@ -3721,6 +3730,7 @@ int id textView10 0x7f0a0211
 int id textView11 0x7f0a0212
 int id textView12 0x7f0a0213
 int id textView13 0x7f0a0214
+int id textView15 0x7f0a0269
 int id textView2 0x7f0a0215
 int id textView3 0x7f0a0216
 int id textView4 0x7f0a0217
@@ -3765,10 +3775,10 @@ int id tvDateOfPost 0x7f0a023e
 int id tvHr 0x7f0a023f
 int id tvNameUser 0x7f0a0240
 int id tvNextToLogin 0x7f0a0241
+int id tv_fullname 0x7f0a026a
 int id tv_message 0x7f0a0242
 int id tv_name_user_chatting 0x7f0a0243
 int id tv_time 0x7f0a0244
-int id tv_user_name 0x7f0a0245
 int id tv_user_name_under_search 0x7f0a0246
 int id unchecked 0x7f0a0247
 int id uniform 0x7f0a0248
@@ -3912,6 +3922,7 @@ int layout abc_search_view 0x7f0d0019
 int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
 int layout activity_chatting_interface 0x7f0d001c
+int layout activity_friend_list_find_main 0x7f0d0079
 int layout activity_info_page 0x7f0d001d
 int layout activity_main 0x7f0d001e
 int layout activity_messenger_interface 0x7f0d001f
@@ -3934,6 +3945,7 @@ int layout design_text_input_end_icon 0x7f0d002f
 int layout design_text_input_start_icon 0x7f0d0030
 int layout ime_base_split_test_activity 0x7f0d0031
 int layout ime_secondary_split_test_activity 0x7f0d0032
+int layout item_friend_propose 0x7f0d007a
 int layout item_message_received 0x7f0d0033
 int layout item_message_send 0x7f0d0034
 int layout item_photo 0x7f0d0035

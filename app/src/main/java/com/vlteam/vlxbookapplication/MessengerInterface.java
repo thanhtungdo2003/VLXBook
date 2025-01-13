@@ -58,6 +58,8 @@ public class MessengerInterface extends AppCompatActivity {
         });
 
         userAvtImageUnderSearchAdapter = new UserAvtImageUnderSearch(userModelList, (userModel, view) -> {
+
+
             Intent intent = new Intent(view.getContext(), ChattingInterface.class);
             intent.putExtra("userImage", userModel.getImageResId());
             intent.putExtra("userName", userModel.getOtherUserNames());

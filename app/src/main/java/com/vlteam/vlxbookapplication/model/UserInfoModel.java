@@ -20,7 +20,11 @@ public class UserInfoModel {
     public String Job;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public LocalDate getBirthOfDay(){
+    public LocalDate getBirthOfDay() {
         return LocalDate.parse(BirthOfDay);
+    }
+
+    public String getFullName() {
+        return Surname + " " + Name;
     }
 }

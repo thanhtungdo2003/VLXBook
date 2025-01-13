@@ -60,10 +60,17 @@ public class NewfeedActivity extends AppCompatActivity {
                 startActivity(new Intent(NewfeedActivity.this, MessengerInterface.class));
 
             }
+        }); findViewById(R.id.open_friend_find_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NewfeedActivity.this, FriendListFindMainActivity.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+            }
         });
 
 
-        recyclerView = findViewById(R.id.recyclerViewPosts);
+        recyclerView = findViewById(R.id.recyclerViewFriendPropose);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         // Khởi tạo danh sách bài viết
         postList = new ArrayList<>();

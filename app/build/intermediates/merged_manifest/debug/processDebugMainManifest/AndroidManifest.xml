@@ -37,6 +37,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
         <activity
+            android:name="com.vlteam.vlxbookapplication.FriendListFindMainActivity"
+            android:exported="false" />
+        <activity
             android:name="com.vlteam.vlxbookapplication.InfoPage"
             android:exported="false" />
         <activity
