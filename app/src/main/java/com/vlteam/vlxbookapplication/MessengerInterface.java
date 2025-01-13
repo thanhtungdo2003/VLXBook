@@ -1,9 +1,13 @@
 package com.vlteam.vlxbookapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -13,10 +17,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.vlteam.vlxbookapplication.Adapter.UserAdapter;
 import com.vlteam.vlxbookapplication.Adapter.UserAvtImageUnderSearch;
+import com.vlteam.vlxbookapplication.httpservice.ApiService;
+import com.vlteam.vlxbookapplication.httpservice.RetrofitClient;
+import com.vlteam.vlxbookapplication.model.AuthModel;
 import com.vlteam.vlxbookapplication.model.UserModel;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MessengerInterface extends AppCompatActivity {
     private RecyclerView rcvUser, rcvHorintalUser;
@@ -24,6 +38,7 @@ public class MessengerInterface extends AppCompatActivity {
     private UserAdapter userAdapter;
     private UserAvtImageUnderSearch userAvtImageUnderSearchAdapter;
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,14 +51,19 @@ public class MessengerInterface extends AppCompatActivity {
         userAdapter = new UserAdapter(userModelList, (userModel, view) -> {
             Intent intent = new Intent(view.getContext(), ChattingInterface.class);
             intent.putExtra("userImage", userModel.getImageResId());
-            intent.putExtra("userName", userModel.getName());
+            intent.putExtra("userName", userModel.getOtherUserNames());
+            intent.putExtra("messBoxID", userModel.getMessagerID());
+            intent.putExtra("otherFullName", userModel.getFullNameOther());
             view.getContext().startActivity(intent);
         });
 
         userAvtImageUnderSearchAdapter = new UserAvtImageUnderSearch(userModelList, (userModel, view) -> {
             Intent intent = new Intent(view.getContext(), ChattingInterface.class);
             intent.putExtra("userImage", userModel.getImageResId());
-            intent.putExtra("userName", userModel.getName());
+            intent.putExtra("userName", userModel.getOtherUserNames());
+            intent.putExtra("messBoxID", userModel.getMessagerID());
+            intent.putExtra("otherFullName", userModel.getFullNameOther());
+
             view.getContext().startActivity(intent);
         });
 
@@ -53,23 +73,36 @@ public class MessengerInterface extends AppCompatActivity {
         rcvUser.setAdapter(userAdapter);
         rcvHorintalUser.setAdapter(userAvtImageUnderSearchAdapter);
 
-        // Thêm dữ liệu vào danh sách
-        userModelList.clear();
-        userModelList.add(new UserModel("1", "Lương", "Đỗ Thanh Tùng óc chó", R.drawable.avt_1, "10:05"));
-        userModelList.add(new UserModel("2", "Hòa", "Đỗ Thanh Tùng óc chó", R.drawable.avt_2, "11:20"));
-        userModelList.add(new UserModel("3", "Phúc", "Đỗ Thanh Tùng óc chó", R.drawable.avt_3, "14:30"));
-        userModelList.add(new UserModel("4", "Nam", "Đỗ Thanh Tùng óc chó", R.drawable.avt_5, "15:45"));
-        userModelList.add(new UserModel("5", "Lương", "Đỗ Thanh Tùng óc chó", R.drawable.avt_4, "16:10"));
-        userModelList.add(new UserModel("6", "Hòa", "Đỗ Thanh Tùng óc chó", R.drawable.avt_6, "17:55"));
-        userModelList.add(new UserModel("7", "Phúc", "Đỗ Thanh Tùng óc chó", R.drawable.avt_7, "18:20"));
-        userModelList.add(new UserModel("8", "Nam", "Đỗ Thanh Tùng óc chó", R.drawable.avt_8, "19:05"));
-        userModelList.add(new UserModel("9", "Lương", "Đỗ Thanh Tùng óc chó", R.drawable.avt_9, "20:40"));
-        userModelList.add(new UserModel("10", "Hòa", "Đỗ Thanh Tùng óc chó", R.drawable.avt_10, "21:15"));
-        userModelList.add(new UserModel("11", "Phúc", "Đỗ Thanh Tùng óc chó", R.drawable.avt_3, "22:00"));
-        userModelList.add(new UserModel("12", "Nam", "Đỗ Thanh Tùng óc chó", R.drawable.avt_5, "23:30"));
+        ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
 
-        // Thông báo Adapter cập nhật dữ liệu
-        userAdapter.notifyDataSetChanged();
-        userAvtImageUnderSearchAdapter.notifyDataSetChanged();
+        apiService.getAllMessagerBox(NewfeedActivity.username).enqueue(new Callback<List<UserModel>>() {
+            @Override
+            public void onResponse(@NonNull Call<List<UserModel>> call, @NonNull Response<List<UserModel>> response) {
+                if (response.isSuccessful()) {
+                    List<UserModel> boxs = response.body();
+                    assert response.body() != null;
+                    Log.d("API_SUCCESS", response.toString());
+                    userModelList.clear();
+                    assert boxs != null;
+                    for (UserModel userModel: boxs){
+                        userModel.setImageResId(R.drawable.avt_1);
+                        System.out.println(userModel.getOtherUserNames());
+                        userModelList.add(userModel);
+                    }
+                    // Thông báo Adapter cập nhật dữ liệu
+                    userAdapter.notifyDataSetChanged();
+                    userAvtImageUnderSearchAdapter.notifyDataSetChanged();
+                } else {
+                    Log.d("API_ERROR", "Code: " + response.code());
+                }
+            }
+            @Override
+            public void onFailure(@NonNull Call<List<UserModel>> call, @NonNull Throwable t) {
+                Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
+            }
+        });
+
+
+
     }
 }

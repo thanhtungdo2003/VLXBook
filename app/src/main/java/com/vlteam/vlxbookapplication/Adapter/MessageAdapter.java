@@ -1,5 +1,6 @@
 package com.vlteam.vlxbookapplication.Adapter;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.vlteam.vlxbookapplication.NewfeedActivity;
 import com.vlteam.vlxbookapplication.R;
 import com.vlteam.vlxbookapplication.model.MessageModel;
 
@@ -40,10 +42,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     public void onBindViewHolder(@NonNull MessageViewHolder holder, int position) {
         MessageModel message = messageList.get(position);
         if (message == null) return;
-
-        holder.tvMessage.setText(message.getContent());
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-        holder.tvTime.setText(sdf.format(message.getTimeOfSend()));
+        holder.contentTv.setText(message.getContent());
     }
 
     @Override
@@ -54,7 +53,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     @Override
     public int getItemViewType(int position) {
         MessageModel message = messageList.get(position);
-        if (message.getMessagerID().equals(currentUserId)) {
+        if (message.getUserName().equals(NewfeedActivity.username)) {
             return TYPE_SENT;
         } else {
             return TYPE_RECEIVED;
@@ -62,12 +61,11 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     }
 
     public static class MessageViewHolder extends RecyclerView.ViewHolder {
-        private TextView tvMessage, tvTime;
+        private TextView contentTv;
 
         public MessageViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvMessage = itemView.findViewById(R.id.tv_message);
-            tvTime = itemView.findViewById(R.id.tv_time);
+            contentTv = itemView.findViewById(R.id.text_message_received);
         }
     }
 }

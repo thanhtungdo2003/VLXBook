@@ -142,12 +142,13 @@
             android:id="@+id/edt_message_input"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:background="@drawable/rounded_search"
             android:layout_weight="1"
+            android:background="@drawable/rounded_search"
             android:hint="Nhắn tin"
-            android:paddingHorizontal="12dp"
             android:maxLines="4"
-            android:minHeight="40dp" />
+            android:minHeight="40dp"
+            android:paddingHorizontal="12dp"
+            android:textColor="#1D1D1D" />
 
         <!-- Nút gửi -->
         <ImageView

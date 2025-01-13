@@ -2,12 +2,15 @@ package com.vlteam.vlxbookapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -16,11 +19,20 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.vlteam.vlxbookapplication.Adapter.MessageAdapter;
+import com.vlteam.vlxbookapplication.httpservice.ApiService;
+import com.vlteam.vlxbookapplication.httpservice.RetrofitClient;
+import com.vlteam.vlxbookapplication.model.ChatMessagerSendReponse;
 import com.vlteam.vlxbookapplication.model.MessageModel;
+import com.vlteam.vlxbookapplication.model.UserModel;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ChattingInterface extends AppCompatActivity {
     ImageView btnBackChat, btnCallChat, btnCallVideoChat, btnInfoChat, btnSendMessage;
@@ -30,7 +42,8 @@ public class ChattingInterface extends AppCompatActivity {
     RecyclerView rcvMessages;
     MessageAdapter messageAdapter;
     List<MessageModel> messageList;
-
+    public static String currentMessagerBoxID = "";
+    public static String currentOtherUserName = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,22 +62,71 @@ public class ChattingInterface extends AppCompatActivity {
         rcvMessages.setAdapter(messageAdapter);
 
         Intent intent = getIntent();
-        String userName = intent.getStringExtra("userName");
+        currentOtherUserName = intent.getStringExtra("userName");
+        String messBoxID = intent.getStringExtra("messBoxID");
+        String otherFullName = intent.getStringExtra("otherFullName");
         int userImageResId = intent.getIntExtra("userImage", 0);
-
-        tvUserNameChatting.setText(userName);
+        currentMessagerBoxID = messBoxID;
+        tvUserNameChatting.setText(otherFullName);
         CimgAvtUserChat.setImageResource(userImageResId);
 
         btnBackChat.setOnClickListener(v -> finish());
+        ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
 
         btnSendMessage.setOnClickListener(v -> {
             String messageText = edtMessageInput.getText().toString().trim();
             if (!messageText.isEmpty()) {
-                MessageModel newMessage = new MessageModel(messageText, "chatID", userName, "msgID", null, new Date());
-                messageList.add(newMessage);
-                messageAdapter.notifyItemInserted(messageList.size() - 1);
-                rcvMessages.scrollToPosition(messageList.size() - 1);
                 edtMessageInput.setText("");
+
+                apiService.sendMessager(NewfeedActivity.username, currentMessagerBoxID, messageText).enqueue(new Callback<ChatMessagerSendReponse>() {
+                    @Override
+                    public void onResponse(@NonNull Call<ChatMessagerSendReponse> call, @NonNull Response<ChatMessagerSendReponse> response) {
+                        if (response.isSuccessful()) {
+                            ChatMessagerSendReponse messagers = response.body();
+                            assert response.body() != null;
+                            Log.d("API_SUCCESS", response.toString());
+                            MessageModel newMessage = new MessageModel();
+                            newMessage.ChatMessagerID = messagers.ChatMessagerID;
+                            newMessage.MessagerID = messagers.MessagerID;
+                            newMessage.setContent(messagers.content);
+                            newMessage.setUserName(NewfeedActivity.username);
+                            messageList.add(newMessage);
+                            messageAdapter.notifyItemInserted(messageList.size() - 1);
+                            rcvMessages.scrollToPosition(messageList.size() - 1);
+                        } else {
+                            Log.d("API_ERROR", "Code: " + response.code());
+                        }
+                    }
+                    @Override
+                    public void onFailure(@NonNull Call<ChatMessagerSendReponse> call, @NonNull Throwable t) {
+                        Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
+                    }
+                });
+            }
+        });
+
+        apiService.getChatMessagerByID(currentMessagerBoxID).enqueue(new Callback<List<MessageModel>>() {
+            @Override
+            public void onResponse(@NonNull Call<List<MessageModel>> call, @NonNull Response<List<MessageModel>> response) {
+                if (response.isSuccessful()) {
+                    List<MessageModel> messagers = response.body();
+                    assert response.body() != null;
+                    Log.d("API_SUCCESS", response.toString());
+                    for (MessageModel model : messagers){
+                        if (Objects.equals(model.getContent(), "")){
+                            continue;
+                        }
+                        messageList.add(model);
+                    }
+                    messageAdapter.notifyItemInserted(messageList.size() - 1);
+                    rcvMessages.scrollToPosition(messageList.size() - 1);
+                } else {
+                    Log.d("API_ERROR", "Code: " + response.code());
+                }
+            }
+            @Override
+            public void onFailure(@NonNull Call<List<MessageModel>> call, @NonNull Throwable t) {
+                Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
             }
         });
     }

@@ -1,44 +1,60 @@
 package com.vlteam.vlxbookapplication.model;
 
-public class UserModel {
-    private String uid;
-    private String name;
-    private String message;
-    private int imageResId;
-    private String time; // Thêm thuộc tính giờ (dạng chuỗi)
+import android.os.Build;
 
-    // Constructor
-    public UserModel(String uid, String name, String message, int imageResId, String time) {
-        this.uid = uid;
-        this.name = name;
-        this.message = message;
-        this.imageResId = imageResId;
-        this.time = time;  // Khởi tạo giờ
-    }
+import androidx.annotation.RequiresApi;
+
+import java.time.LocalDateTime;
+
+public class UserModel {
+    private String MessagerID;
+    private String OtherUserNames;
+    private String Content;
+    private String FullName;
+    private String FullNameOther;
+    private int imageResId;
+    private String TimeOfSend; // Thêm thuộc tính giờ (dạng chuỗi)
+
 
     // Getters and setters
-    public String getUid() {
-        return uid;
+    public String getMessagerID() {
+        return MessagerID;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setMessagerID(String messagerID) {
+        this.MessagerID = messagerID;
     }
 
-    public String getName() {
-        return name;
+    public String getOtherUserNames() {
+        return OtherUserNames;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getFullNameOther() {
+        return FullNameOther;
     }
 
-    public String getMessage() {
-        return message;
+    public void setFullNameOther(String fullNameOther) {
+        FullNameOther = fullNameOther;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public String getFullName() {
+        return FullName;
+    }
+
+    public void setFullName(String fullName) {
+        FullName = fullName;
+    }
+
+    public void setOtherUserNames(String otherUserNames) {
+        OtherUserNames = otherUserNames;
+    }
+
+    public String getContent() {
+        return Content;
+    }
+
+    public void setContent(String content) {
+        this.Content = content;
     }
 
     public int getImageResId() {
@@ -49,12 +65,13 @@ public class UserModel {
         this.imageResId = imageResId;
     }
 
-    public String getTime() {
-        return time;
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public LocalDateTime getTimeOfSend() {
+        return LocalDateTime.parse(TimeOfSend);
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setTimeOfSend(String timeOfSend) {
+        this.TimeOfSend = timeOfSend;
     }
 }
 

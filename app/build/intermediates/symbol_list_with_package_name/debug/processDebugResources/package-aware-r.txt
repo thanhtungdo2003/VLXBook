@@ -3391,8 +3391,6 @@ id easeInOut
 id easeOut
 id east
 id edge
-id editTextText
-id editTextText2
 id editTextText3
 id edit_query
 id edit_text_id
@@ -3458,7 +3456,6 @@ id imageButton2
 id imageButton3
 id imageButton4
 id imageButton5
-id imageButton6
 id imageButton7
 id imageButton8
 id imageButton9
@@ -3559,6 +3556,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id name_input
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3580,6 +3578,7 @@ id notification_main_column_container
 id off
 id on
 id onInterceptTouchReturnSwipe
+id open_messager_btn
 id open_messager_infopage_btn
 id open_search_bar_text_view
 id open_search_view_background
@@ -3696,6 +3695,7 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id surname_input
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3734,7 +3734,6 @@ id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
 id text_message_received
-id text_message_sent
 id textinput_counter
 id textinput_error
 id textinput_helper_text

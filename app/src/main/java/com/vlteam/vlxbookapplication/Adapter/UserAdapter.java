@@ -1,5 +1,7 @@
 package com.vlteam.vlxbookapplication.Adapter;
 
+import android.annotation.SuppressLint;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,14 +38,17 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         return new UserViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
         UserModel user = userModelList.get(position);
         if (user == null) return;
 
-        holder.tvUserName.setText(user.getName());
-        holder.tvMessage.setText(user.getMessage());
-        holder.tvTime.setText(user.getTime());
+        holder.tvUserName.setText(user.getFullNameOther());
+        holder.tvMessage.setText(user.getContent());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            holder.tvTime.setText(user.getTimeOfSend().getHour() + ":" + user.getTimeOfSend().getMinute());
+        }
         holder.imgAvtUser.setImageResource(user.getImageResId());
 
         holder.itemView.setOnClickListener(v -> onItemClickListener.onItemClick(user, v));

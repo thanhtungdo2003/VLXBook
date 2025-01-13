@@ -1,5 +1,6 @@
 package com.vlteam.vlxbookapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,13 +27,23 @@ public class NewfeedActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ArticleAdapter postAdapter;
     private List<Article> postList;
+    public static String tokenAccount = "";
+    public static String username = "";
     ImageButton btnNext;
     Button btnCreateSTT;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.newfeed);
+
+
+        if (username.isEmpty()){
+            startActivity(new Intent(this, login.class));
+            return;
+        }
+
         btnCreateSTT = findViewById(R.id.btnCreateStatus);
         btnCreateSTT.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +52,13 @@ public class NewfeedActivity extends AppCompatActivity {
                 nextToCreateSTTPage.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
                 startActivity(nextToCreateSTTPage);
+            }
+        });
+        findViewById(R.id.open_messager_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NewfeedActivity.this, MessengerInterface.class));
+
             }
         });
 

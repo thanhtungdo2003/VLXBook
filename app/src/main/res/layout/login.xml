@@ -41,8 +41,9 @@
                 android:ems="10"
                 android:fontFamily="@font/alata"
                 android:gravity="center|left"
-                android:hint="Số di động hoặc email"
-                android:paddingLeft="10dp" />
+                android:hint="Tên đăng nhập"
+                android:paddingLeft="10dp"
+                android:textColor="#1B1B1B" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,7 +74,8 @@
                 android:fontFamily="@font/alata"
                 android:gravity="center|left"
                 android:inputType="text"
-                android:paddingLeft="10dp" />
+                android:paddingLeft="10dp"
+                android:textColor="#212121" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>

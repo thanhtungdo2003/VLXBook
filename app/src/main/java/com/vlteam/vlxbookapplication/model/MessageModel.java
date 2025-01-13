@@ -1,5 +1,10 @@
 package com.vlteam.vlxbookapplication.model;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class MessageModel {
@@ -7,29 +12,30 @@ public class MessageModel {
     public String UserName ;
     public String MessagerID ;
     public String Content ;
+    public String FullName ;
     public String Images ;
-    public Date TimeOfSend ;
+    public String TimeOfSend ;
     public boolean isSent(String currentUserId) {
         return MessagerID.equals(currentUserId);
-    }
-
-    public MessageModel(String content, String chatMessagerID, String userName, String messagerID, String images, Date timeOfSend) {
-        Content = content;
-        ChatMessagerID = chatMessagerID;
-        UserName = userName;
-        MessagerID = messagerID;
-        Images = images;
-        TimeOfSend = timeOfSend;
     }
 
     public MessageModel() {
     }
 
-    public Date getTimeOfSend() {
-        return TimeOfSend;
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public LocalDateTime getTimeOfSend() {
+        return LocalDateTime.parse(TimeOfSend);
     }
 
-    public void setTimeOfSend(Date timeOfSend) {
+    public String getFullName() {
+        return FullName;
+    }
+
+    public void setFullName(String fullName) {
+        FullName = fullName;
+    }
+
+    public void setTimeOfSend(String timeOfSend) {
         TimeOfSend = timeOfSend;
     }
 

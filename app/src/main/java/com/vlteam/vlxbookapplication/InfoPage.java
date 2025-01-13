@@ -48,33 +48,8 @@ public class InfoPage extends AppCompatActivity {
         findViewById(R.id.open_messager_infopage_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
 
-                // Gọi API GET
-                apiService.getAccount("thanhtung").enqueue(new Callback<AccountModel>() {
-                    @Override
-                    public void onResponse(@NonNull Call<AccountModel> call, @NonNull Response<AccountModel> response) {
-                        if (response.isSuccessful()) {
-                            AccountModel account = response.body();
-                            assert response.body() != null;
-                            Log.d("API_SUCCESS", response.toString());
-                            System.out.println("username: "+account.userName);
-                            System.out.println("password: "+account.password);
-                            System.out.println("dayOfCreate: "+account.dateCreated);
-                            System.out.println("key: "+account.key);
-                        } else {
-                            Log.d("API_ERROR", "Code: " + response.code());
-                            System.out.println("LỖI 1");
 
-                        }
-                    }
-                    @Override
-                    public void onFailure(@NonNull Call<AccountModel> call, @NonNull Throwable t) {
-                        Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
-                        System.out.println("LỖI 2");
-
-                    }
-                });
             }
         });
 
