@@ -25,6 +25,7 @@ import com.vlteam.vlxbookapplication.model.ChatMessagerSendReponse;
 import com.vlteam.vlxbookapplication.model.MessageModel;
 import com.vlteam.vlxbookapplication.model.UserModel;
 
+import java.io.Console;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -44,6 +45,7 @@ public class ChattingInterface extends AppCompatActivity {
     RecyclerView rcvMessages;
     MessageAdapter messageAdapter;
     List<MessageModel> messageList;
+    List<String> messageIDList = new ArrayList<>();
     public static String currentMessagerBoxID = "";
     public static String currentOtherUserName = "";
     @Override
@@ -117,16 +119,21 @@ public class ChattingInterface extends AppCompatActivity {
                             List<MessageModel> messagers = response.body();
                             assert response.body() != null;
                             Log.d("API_SUCCESS", response.toString());
+                            boolean isNewChat = false;
                             for (MessageModel model : messagers){
                                 if (Objects.equals(model.getContent(), "")){
                                     continue;
                                 }
-                                if (!messageList.contains(model)){
+                                if (!messageIDList.contains(model.ChatMessagerID)){
                                     messageList.add(model);
+                                    messageIDList.add(model.ChatMessagerID);
+                                    isNewChat = true;
                                 }
                             }
-                            messageAdapter.notifyItemInserted(messageList.size() - 1);
-                            rcvMessages.scrollToPosition(messageList.size() - 1);
+                            if (isNewChat) {
+                                messageAdapter.notifyItemInserted(messageList.size() - 1);
+                                rcvMessages.scrollToPosition(messageList.size() - 1);
+                            }
                         } else {
                             Log.d("API_ERROR", "Code: " + response.code());
                         }
