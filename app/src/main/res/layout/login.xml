@@ -119,7 +119,7 @@
         app:backgroundTint="@null" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/fullName_tv_info"
         android:layout_width="match_parent"
         android:layout_height="31dp"
         android:gravity="center"

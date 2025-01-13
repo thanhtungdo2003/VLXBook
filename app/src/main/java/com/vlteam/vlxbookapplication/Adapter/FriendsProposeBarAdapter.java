@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,9 +46,10 @@ public class FriendsProposeBarAdapter extends RecyclerView.Adapter<FriendsPropos
 
         holder.tvFullName.setText(user.getFullName());
         holder.imgAvtUser.setImageResource(R.drawable.avt_1);
-
+        ImageButton open_mess_button = holder.itemView.findViewById(R.id.open_messager_box_fp_btn);
+        open_mess_button.setTag(user.getFullName());
+        holder.itemView.findViewById(R.id.open_messager_box_fp_btn).setOnClickListener(v -> onItemClickListener.onItemClick(user, v));
         holder.itemView.setOnClickListener(v -> onItemClickListener.onItemClick(user, v));
-
     }
 
     @Override

@@ -93,6 +93,7 @@ drawable tvicon
 font alata
 font roboto_thin
 id addImageVideo
+id back_btn
 id btnBackIMG
 id btnBackToNewfeed
 id btnCreateStatus
@@ -124,16 +125,15 @@ id dotTextView
 id editTextText3
 id edt_message_input
 id et_search
+id fullName_tv_info
 id icon_add
 id icon_camera
 id icon_image
 id icon_microphone
-id imageButton
 id imageButton10
 id imageButton12
 id imageButton2
 id imageButton3
-id imageButton4
 id imageButton7
 id imageButton8
 id imageButton9
@@ -157,6 +157,7 @@ id message_area
 id name_input
 id open_friend_find_btn
 id open_home_btn
+id open_messager_box_fp_btn
 id open_messager_btn
 id open_messager_infopage_btn
 id openinfo_btn
@@ -175,7 +176,6 @@ id textView11
 id textView12
 id textView13
 id textView15
-id textView2
 id textView3
 id textView4
 id textView5

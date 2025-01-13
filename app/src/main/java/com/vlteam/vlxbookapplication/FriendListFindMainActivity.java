@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -37,6 +38,7 @@ public class FriendListFindMainActivity extends AppCompatActivity {
     private RecyclerView rcvUsersItems;
     private List<UserInfoModel> userModelList;
     private FriendsProposeBarAdapter userAdapter;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,31 +71,37 @@ public class FriendListFindMainActivity extends AppCompatActivity {
         userModelList = new ArrayList<>();
 
         userAdapter = new FriendsProposeBarAdapter(userModelList, (userInfoModel, view) -> {
+                if ((view.getId() == R.id.open_messager_box_fp_btn)) {
+                    apiService.createBoxMess(NewfeedActivity.username, userInfoModel.UserName).enqueue(new Callback<UserModel>() {
+                        @Override
+                        public void onResponse(@NonNull Call<UserModel> call, @NonNull Response<UserModel> response) {
+                            if (response.isSuccessful()) {
+                                UserModel box = response.body();
+                                assert response.body() != null;
+                                Log.d("API_SUCCESS", response.toString());
+                                Intent intent = new Intent(view.getContext(), ChattingInterface.class);
+                                intent.putExtra("userImage", box.getImageResId());
+                                intent.putExtra("userName", box.getOtherUserNames());
+                                intent.putExtra("messBoxID", box.getMessagerID());
+                                intent.putExtra("otherFullName", view.getTag().toString());
+                                view.getContext().startActivity(intent);
 
-            apiService.createBoxMess(NewfeedActivity.username, userInfoModel.UserName).enqueue(new Callback<UserModel>() {
-                @Override
-                public void onResponse(@NonNull Call<UserModel> call, @NonNull Response<UserModel> response) {
-                    if (response.isSuccessful()) {
-                        UserModel box = response.body();
-                        assert response.body() != null;
-                        Log.d("API_SUCCESS", response.toString());
-                        Intent intent = new Intent(view.getContext(), ChattingInterface.class);
-                        intent.putExtra("userImage", box.getImageResId());
-                        intent.putExtra("userName", box.getOtherUserNames());
-                        intent.putExtra("messBoxID", box.getMessagerID());
-                        intent.putExtra("otherFullName",((TextView)view.findViewById(R.id.tv_fullname)).getText().toString());
-                        view.getContext().startActivity(intent);
 
+                            } else {
+                                Log.d("API_ERROR", "Code: " + response.code());
+                            }
+                        }
 
-                    } else {
-                        Log.d("API_ERROR", "Code: " + response.code());
-                    }
-                }
-                @Override
-                public void onFailure(@NonNull Call<UserModel> call, @NonNull Throwable t) {
-                    Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
-                }
-            });
+                        @Override
+                        public void onFailure(@NonNull Call<UserModel> call, @NonNull Throwable t) {
+                            Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
+                        }
+                    });
+            }else {
+                Intent intent = new Intent(view.getContext(), InfoPage.class);
+                intent.putExtra("other_username", userInfoModel.UserName);
+                view.getContext().startActivity(intent);
+            }
         });
 
         // Kết nối Adapter
@@ -109,8 +117,8 @@ public class FriendListFindMainActivity extends AppCompatActivity {
                     assert response.body() != null;
                     Log.d("API_SUCCESS", response.toString());
                     userModelList.clear();
-                    for(UserInfoModel info: users){
-                        if (info.UserName.equals(NewfeedActivity.username))continue;
+                    for (UserInfoModel info : users) {
+                        if (info.UserName.equals(NewfeedActivity.username)) continue;
                         userModelList.add(info);
                     }
                     userAdapter.notifyDataSetChanged();
@@ -118,10 +126,12 @@ public class FriendListFindMainActivity extends AppCompatActivity {
                     Log.d("API_ERROR", "Code: " + response.code());
                 }
             }
+
             @Override
             public void onFailure(@NonNull Call<List<UserInfoModel>> call, @NonNull Throwable t) {
                 Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
             }
         });
+
     }
 }

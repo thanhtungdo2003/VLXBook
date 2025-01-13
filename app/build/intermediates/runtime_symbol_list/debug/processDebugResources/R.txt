@@ -3285,6 +3285,7 @@ int id autoComplete 0x7f0a0056
 int id autoCompleteToEnd 0x7f0a0057
 int id autoCompleteToStart 0x7f0a0058
 int id axisRelative 0x7f0a0059
+int id back_btn 0x7f0a026c
 int id barrier 0x7f0a005a
 int id baseline 0x7f0a005b
 int id beginOnFirstDraw 0x7f0a005c
@@ -3429,6 +3430,7 @@ int id floating 0x7f0a00e7
 int id forever 0x7f0a00e8
 int id fragment_container_view_tag 0x7f0a00e9
 int id frost 0x7f0a00ea
+int id fullName_tv_info 0x7f0a026d
 int id fullscreen_header 0x7f0a00eb
 int id ghost_view 0x7f0a00ec
 int id ghost_view_holder 0x7f0a00ed
@@ -3456,12 +3458,10 @@ int id ifRoom 0x7f0a0102
 int id ignore 0x7f0a0103
 int id ignoreRequest 0x7f0a0104
 int id image 0x7f0a0105
-int id imageButton 0x7f0a0106
 int id imageButton10 0x7f0a0107
 int id imageButton12 0x7f0a0108
 int id imageButton2 0x7f0a0109
 int id imageButton3 0x7f0a010a
-int id imageButton4 0x7f0a010b
 int id imageButton7 0x7f0a010d
 int id imageButton8 0x7f0a010e
 int id imageButton9 0x7f0a010f
@@ -3586,6 +3586,7 @@ int id on 0x7f0a0184
 int id onInterceptTouchReturnSwipe 0x7f0a0185
 int id open_friend_find_btn 0x7f0a0265
 int id open_home_btn 0x7f0a0266
+int id open_messager_box_fp_btn 0x7f0a026b
 int id open_messager_btn 0x7f0a0186
 int id open_messager_infopage_btn 0x7f0a0187
 int id open_search_bar_text_view 0x7f0a0188
@@ -3731,7 +3732,6 @@ int id textView11 0x7f0a0212
 int id textView12 0x7f0a0213
 int id textView13 0x7f0a0214
 int id textView15 0x7f0a0269
-int id textView2 0x7f0a0215
 int id textView3 0x7f0a0216
 int id textView4 0x7f0a0217
 int id textView5 0x7f0a0218

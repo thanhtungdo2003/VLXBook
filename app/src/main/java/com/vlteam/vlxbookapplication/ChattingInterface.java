@@ -29,6 +29,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -105,29 +107,37 @@ public class ChattingInterface extends AppCompatActivity {
             }
         });
 
-        apiService.getChatMessagerByID(currentMessagerBoxID).enqueue(new Callback<List<MessageModel>>() {
+        new Timer().schedule(new TimerTask() {
             @Override
-            public void onResponse(@NonNull Call<List<MessageModel>> call, @NonNull Response<List<MessageModel>> response) {
-                if (response.isSuccessful()) {
-                    List<MessageModel> messagers = response.body();
-                    assert response.body() != null;
-                    Log.d("API_SUCCESS", response.toString());
-                    for (MessageModel model : messagers){
-                        if (Objects.equals(model.getContent(), "")){
-                            continue;
+            public void run() {
+                apiService.getChatMessagerByID(currentMessagerBoxID).enqueue(new Callback<List<MessageModel>>() {
+                    @Override
+                    public void onResponse(@NonNull Call<List<MessageModel>> call, @NonNull Response<List<MessageModel>> response) {
+                        if (response.isSuccessful()) {
+                            List<MessageModel> messagers = response.body();
+                            assert response.body() != null;
+                            Log.d("API_SUCCESS", response.toString());
+                            for (MessageModel model : messagers){
+                                if (Objects.equals(model.getContent(), "")){
+                                    continue;
+                                }
+                                if (!messageList.contains(model)){
+                                    messageList.add(model);
+                                }
+                            }
+                            messageAdapter.notifyItemInserted(messageList.size() - 1);
+                            rcvMessages.scrollToPosition(messageList.size() - 1);
+                        } else {
+                            Log.d("API_ERROR", "Code: " + response.code());
                         }
-                        messageList.add(model);
                     }
-                    messageAdapter.notifyItemInserted(messageList.size() - 1);
-                    rcvMessages.scrollToPosition(messageList.size() - 1);
-                } else {
-                    Log.d("API_ERROR", "Code: " + response.code());
-                }
+                    @Override
+                    public void onFailure(@NonNull Call<List<MessageModel>> call, @NonNull Throwable t) {
+                        Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
+                    }
+                });
             }
-            @Override
-            public void onFailure(@NonNull Call<List<MessageModel>> call, @NonNull Throwable t) {
-                Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
-            }
-        });
+        },0,2000);
+
     }
 }

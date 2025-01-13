@@ -22,7 +22,8 @@ public interface ApiService {
 
     @GET("api/Account/get-all-user/{page}")
     Call<List<UserInfoModel>> getAllUser(@Path("page") int page);
-
+    @GET("api/Account/get-info-by-username/{userName}")
+    Call<List<UserInfoModel>> getUser(@Path("userName") String userName);
     @GET("api/Messager/get-all-messager-by-username/{username}")
     Call<List<UserModel>> getAllMessagerBox(@Path("username") String username);
 
