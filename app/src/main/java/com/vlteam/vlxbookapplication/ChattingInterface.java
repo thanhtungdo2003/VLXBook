@@ -45,6 +45,7 @@ public class ChattingInterface extends AppCompatActivity {
     RecyclerView rcvMessages;
     MessageAdapter messageAdapter;
     List<MessageModel> messageList;
+    boolean isActivityVisible = true;
     List<String> messageIDList = new ArrayList<>();
     public static String currentMessagerBoxID = "";
     public static String currentOtherUserName = "";
@@ -112,6 +113,9 @@ public class ChattingInterface extends AppCompatActivity {
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
+                if (!isActivityVisible){
+                    this.cancel();
+                }
                 apiService.getChatMessagerByID(currentMessagerBoxID).enqueue(new Callback<List<MessageModel>>() {
                     @Override
                     public void onResponse(@NonNull Call<List<MessageModel>> call, @NonNull Response<List<MessageModel>> response) {
@@ -146,5 +150,15 @@ public class ChattingInterface extends AppCompatActivity {
             }
         },0,2000);
 
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        isActivityVisible = false;
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        isActivityVisible = true;
     }
 }

@@ -14,7 +14,7 @@ import java.util.Map;
 public class SimpleDatabaseManager extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1; // Phiên bản cơ sở dữ liệu
-    private static final String DATABASE_NAME = "example.db"; // Tên cơ sở dữ liệu
+    private static final String DATABASE_NAME = "vlxbook.db"; // Tên cơ sở dữ liệu
 
     public SimpleDatabaseManager(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

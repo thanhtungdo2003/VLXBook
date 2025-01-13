@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.vlteam.vlxbookapplication.Adapter.ArticleAdapter;
 import com.vlteam.vlxbookapplication.model.Article;
+import com.vlteam.vlxbookapplication.storage.UserStorage;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -29,6 +30,7 @@ public class NewfeedActivity extends AppCompatActivity {
     private List<Article> postList;
     public static String tokenAccount = "";
     public static String username = "";
+    public static UserStorage userStorage;
     ImageButton btnNext;
     Button btnCreateSTT;
     @SuppressLint("MissingInflatedId")
@@ -38,6 +40,8 @@ public class NewfeedActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.newfeed);
 
+        userStorage = new UserStorage(this);
+        username = userStorage.getUserName();
 
         if (username.isEmpty()){
             startActivity(new Intent(this, login.class));

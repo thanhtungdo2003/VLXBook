@@ -61,9 +61,12 @@ public class login extends AppCompatActivity {
                             AuthModel token = response.body();
                             assert response.body() != null;
                             Log.d("API_SUCCESS", response.toString());
-                            NewfeedActivity.tokenAccount = token.token;
-                            NewfeedActivity.username = token.userName;
-                            startActivity(new Intent(login.this, NewfeedActivity.class));
+
+                            NewfeedActivity.userStorage.update(token.userName, pass);
+                            Intent intent = new Intent(login.this, NewfeedActivity.class);
+                            intent.putExtra("username", token.userName);
+                            intent.putExtra("password", pass);
+                            startActivity(intent);
                         } else {
                             Log.d("API_ERROR", "Code: " + response.code());
                             if (response.code() == 409){

@@ -16,12 +16,12 @@
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_infomation_icon.png.flat",
-        "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\infomation_icon.png"
-    },
-    {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_category_messenger_icon.png.flat",
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\category_messenger_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_infomation_icon.png.flat",
+        "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\infomation_icon.png"
     },
     {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_arrow_left.xml.flat",
@@ -72,12 +72,12 @@
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\mic_icon.png"
     },
     {
-        "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_search_icon.xml.flat",
-        "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\search_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\layout_activity_info_page.xml.flat",
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\layout\\activity_info_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_search_icon.xml.flat",
+        "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\search_icon.xml"
     },
     {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_logo_mesenger.png.flat",
@@ -92,12 +92,12 @@
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\send_icon.png"
     },
     {
-        "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_trashicon.png.flat",
-        "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\trashicon.png"
-    },
-    {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\anim_slide_out_right.xml.flat",
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\anim\\slide_out_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_trashicon.png.flat",
+        "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\trashicon.png"
     },
     {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_back_icon.png.flat",
@@ -128,12 +128,12 @@
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\custom_btn_border_radius_10.xml"
     },
     {
-        "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_tagicon.png.flat",
-        "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\tagicon.png"
-    },
-    {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_custom_addnewstatus.xml.flat",
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\custom_addnewstatus.xml"
+    },
+    {
+        "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_tagicon.png.flat",
+        "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\tagicon.png"
     },
     {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_openrightside.png.flat",
@@ -158,10 +158,6 @@
     {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_searchicon.png.flat",
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\searchicon.png"
-    },
-    {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-31:/layout_newfeed.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-33:/layout/newfeed.xml"
     },
     {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\mipmap-hdpi_ic_launcher.webp.flat",
@@ -272,10 +268,6 @@
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\likeicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-31:/layout_activity_friend_list_find_main.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-33:/layout/activity_friend_list_find_main.xml"
-    },
-    {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\layout_activity_messenger_interface.xml.flat",
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\layout\\activity_messenger_interface.xml"
     },
@@ -302,10 +294,6 @@
     {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\font_alata.xml.flat",
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\font\\alata.xml"
-    },
-    {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-31:/layout_login.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-33:/layout/login.xml"
     },
     {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_arrowlefticon.png.flat",

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,7 @@ import retrofit2.Response;
 
 public class InfoPage extends AppCompatActivity {
     private String currentUserName = "";
+
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,17 +78,17 @@ public class InfoPage extends AppCompatActivity {
                     introTitle.setText("Chi tiết");
                     introTitle.setTextSize(17);
                     info_intro.addView(introTitle);
-                    for (int i = 0; i < 5; i++) {
-                        TextView detail_item = new TextView(InfoPage.this);
-                        detail_item.setText("Sống tại: Mỹ");
-                        detail_item.setTextSize(16);
-                        detail_item.setPadding(0,13,0,0);
-                        info_intro.addView(detail_item);
-                    }
+
+                    info_intro.addView(user.getTextView(InfoPage.this, "location"));
+                    info_intro.addView(user.getTextView(InfoPage.this, "job"));
+                    info_intro.addView(user.getTextView(InfoPage.this, "phone"));
+                    info_intro.addView(user.getTextView(InfoPage.this, "birth"));
+
+
                     //Tạo khung chứa bạn bè
                     LinearLayout info_friends = new LinearLayout(InfoPage.this);
                     info_friends.setOrientation(LinearLayout.VERTICAL);
-                    info_friends.setPadding(0,30,0,0);
+                    info_friends.setPadding(0, 30, 0, 0);
                     infoMain.addView(info_friends);
                     info_friends.setLayoutParams(new LinearLayout.LayoutParams(
                             ViewGroup.LayoutParams.MATCH_PARENT,
@@ -112,21 +114,22 @@ public class InfoPage extends AppCompatActivity {
                                     ViewGroup.LayoutParams.MATCH_PARENT,
                                     1
                             ));
-                            friendContainer.setPadding(5,5,5,5);
+                            friendContainer.setPadding(5, 5, 5, 5);
                             friendContainer.setOrientation(LinearLayout.VERTICAL);
                             //
                             Button test = new Button(InfoPage.this);
                             friendContainer.addView(test);
                             test.setWidth(200);
                             test.setHeight(200);
-                            test.setBackgroundColor(Color.rgb(245,245,245));
-                            test.setText(count+"");
+                            test.setBackgroundColor(Color.rgb(245, 245, 245));
+                            test.setText(count + "");
                         }
                     }
                 } else {
                     Log.d("API_ERROR", "Code: " + response.code());
                 }
             }
+
             @Override
             public void onFailure(@NonNull Call<List<UserInfoModel>> call, @NonNull Throwable t) {
                 Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
