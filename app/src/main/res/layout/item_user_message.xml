@@ -35,9 +35,10 @@
                 android:id="@+id/tv_fullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
                 android:layout_gravity="start"
+                android:layout_marginTop="0dp"
                 android:text="TextView"
+                android:textColor="#4E4E4E"
                 android:textSize="18sp" />
 
             <LinearLayout
@@ -53,6 +54,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="0dp"
                     android:text="TextView"
+                    android:textColor="#4E4E4E"
                     android:textSize="14sp" />
 
                 <TextView
@@ -60,16 +62,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="."
+                    android:textColor="#4E4E4E"
                     android:textSize="24sp" />
+
                 <TextView
                     android:id="@+id/tv_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="22:09"
-                    android:textSize="14sp"
-                    android:layout_marginStart="8dp"
                     android:layout_alignParentEnd="true"
-                    android:gravity="end" />
+                    android:layout_marginStart="8dp"
+                    android:gravity="end"
+                    android:text="22:09"
+                    android:textColor="#4E4E4E"
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

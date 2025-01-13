@@ -96,10 +96,6 @@
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\anim\\slide_out_right.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-31:/layout_item_friend_propose.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-33:/layout/item_friend_propose.xml"
-    },
-    {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_back_icon.png.flat",
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\back_icon.png"
     },
@@ -268,10 +264,6 @@
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\likeicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-31:/layout_activity_friend_list_find_main.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-33:/layout/activity_friend_list_find_main.xml"
-    },
-    {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\layout_activity_messenger_interface.xml.flat",
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\layout\\activity_messenger_interface.xml"
     },
@@ -326,6 +318,10 @@
     {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\drawable_friendicon.xml.flat",
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\drawable\\friendicon.xml"
+    },
+    {
+        "merged": "com.vlteam.vlxbookapplication.app-debug-31:/layout_item_user_message.xml.flat",
+        "source": "com.vlteam.vlxbookapplication.app-main-33:/layout/item_user_message.xml"
     },
     {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\layout_activity_chatting_interface.xml.flat",

@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -79,8 +81,10 @@ public class FriendListFindMainActivity extends AppCompatActivity {
                         intent.putExtra("userImage", box.getImageResId());
                         intent.putExtra("userName", box.getOtherUserNames());
                         intent.putExtra("messBoxID", box.getMessagerID());
-                        intent.putExtra("otherFullName", box.getFullName());
+                        intent.putExtra("otherFullName",((TextView)view.findViewById(R.id.tv_fullname)).getText().toString());
                         view.getContext().startActivity(intent);
+
+
                     } else {
                         Log.d("API_ERROR", "Code: " + response.code());
                     }
