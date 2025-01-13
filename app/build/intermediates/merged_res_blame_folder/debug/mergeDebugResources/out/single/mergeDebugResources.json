@@ -340,8 +340,17 @@
         "source": "com.vlteam.vlxbookapplication.app-main-33:/drawable/messagericon.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "com.vlteam.vlxbookapplication.app-debug-31:/layout_item_post.xml.flat",
         "source": "com.vlteam.vlxbookapplication.app-main-33:/layout/item_post.xml"
+=======
+        "merged": "com.vlteam.vlxbookapplication.app-debug-31:/layout_item_message_received.xml.flat",
+        "source": "com.vlteam.vlxbookapplication.app-main-33:/layout/item_message_received.xml"
+    },
+    {
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-31:\\layout_item_message_send.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-33:\\layout\\item_message_send.xml"
+>>>>>>> origin/main
     },
     {
         "merged": "com.vlteam.vlxbookapplication.app-debug-31:/drawable_camera_icon.png.flat",
