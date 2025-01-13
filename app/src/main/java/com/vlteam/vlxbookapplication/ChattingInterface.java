@@ -91,11 +91,12 @@ public class ChattingInterface extends AppCompatActivity {
                             assert response.body() != null;
                             Log.d("API_SUCCESS", response.toString());
                             MessageModel newMessage = new MessageModel();
-                            newMessage.ChatMessagerID = messagers.ChatMessagerID;
+                            newMessage.ChatMessagerID = messagers.chatMessagerID;
                             newMessage.MessagerID = messagers.MessagerID;
                             newMessage.setContent(messagers.content);
                             newMessage.setUserName(NewfeedActivity.username);
                             messageList.add(newMessage);
+                            messageIDList.add(newMessage.ChatMessagerID);
                             messageAdapter.notifyItemInserted(messageList.size() - 1);
                             rcvMessages.scrollToPosition(messageList.size() - 1);
                         } else {

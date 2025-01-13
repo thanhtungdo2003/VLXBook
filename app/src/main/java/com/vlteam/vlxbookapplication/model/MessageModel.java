@@ -9,6 +9,7 @@ import java.util.Date;
 
 public class MessageModel {
     public String ChatMessagerID ;
+    public String chatMessagerID ;
     public String UserName ;
     public String MessagerID ;
     public String Content ;

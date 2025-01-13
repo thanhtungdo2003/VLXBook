@@ -1,12 +1,12 @@
 package com.vlteam.vlxbookapplication.model;
 
 public class ChatMessagerSendReponse {
-    public String ChatMessagerID;
+    public String chatMessagerID;
     public String content;
     public String MessagerID;
 
     public String getChatMessagerID() {
-        return ChatMessagerID;
+        return chatMessagerID;
     }
 
     public void setMessagerID(String messagerID) {
@@ -18,7 +18,7 @@ public class ChatMessagerSendReponse {
     }
 
     public void setChatMessagerID(String chatMessagerID) {
-        ChatMessagerID = chatMessagerID;
+        chatMessagerID = chatMessagerID;
     }
 
     public String getContent() {
