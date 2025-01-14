@@ -55,8 +55,8 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
 
     public static class ArticleViewHolder extends RecyclerView.ViewHolder {
         public TextView tvNameUser, tvDateOfPost, tvCaption;
-        public ImageView imgAvatar, imgItemimg;
-        public Button btnLike, btnComment, btnShare;
+        public ImageView imgAvatar, imgItemimg,btnShare;
+        public Button btnLike, btnComment ;
         public ImageButton btnNext;
         public ArticleViewHolder(View itemView) {
             super(itemView);
@@ -65,9 +65,9 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
             tvNameUser = itemView.findViewById(R.id.tvNameUser);
             tvDateOfPost = itemView.findViewById(R.id.tvDateOfPost);
             tvCaption = itemView.findViewById(R.id.tvCaption);
-            btnLike = itemView.findViewById(R.id.button);
+            btnLike = itemView.findViewById(R.id.btn_like);
             btnComment = itemView.findViewById(R.id.btn_view_cmt);
-            btnShare = itemView.findViewById(R.id.button5);
+            btnShare = itemView.findViewById(R.id.btn_share_post);
             btnNext = itemView.findViewById(R.id.btnNextIMG);
         }
     }

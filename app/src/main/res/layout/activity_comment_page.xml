@@ -6,12 +6,43 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".CommentPage">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/btn_back_comment_to_newfeed"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_left_icon"
+            android:contentDescription="Quay lại" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bài viết của Tùng"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/btn_search_in_comment_page"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/search_icon_in_page_comment"
+            android:contentDescription="Tìm kiếm"
+            android:layout_marginRight="5dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
 
 
         <ImageView
@@ -116,63 +147,69 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="28dp"
-        android:orientation="horizontal">
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+        >
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_like"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:background="@drawable/custom_addnewstatus"
             android:drawableLeft="@drawable/likeicon"
-            android:paddingLeft="10dp"
-            android:text="1,5K" />
+            android:gravity="center"
+            android:text="1,5K"
+            android:paddingLeft="10dp"/>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_view_cmt"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:background="@drawable/custom_addnewstatus"
             android:drawableLeft="@drawable/commenticon"
-            android:paddingLeft="10dp"
-            android:text="20" />
+            android:gravity="center"
+            android:text="20"
+            android:paddingLeft="10dp"/>
 
-        <Button
-            android:id="@+id/button3"
+        <ImageButton
+            android:id="@+id/btn_copy_link_address"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:background="@drawable/custom_addnewstatus"
-            android:drawableStart="@drawable/linkicon"
-            android:paddingLeft="10dp" />
+            android:src="@drawable/linkicon"
+            android:scaleType="centerInside"
+            android:contentDescription="Icon Button"/>
 
-        <Button
-            android:id="@+id/button5"
+        <ImageButton
+            android:id="@+id/btn_share_post"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:background="@drawable/custom_addnewstatus"
-            android:drawableLeft="@drawable/shareicon"
-            android:paddingLeft="10dp" />
+            android:src="@drawable/shareicon"
+            android:scaleType="centerInside"
+            android:contentDescription="Icon Button"/>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/comment_area"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="440dp"
         android:background="@color/cardview_light_background"
         android:orientation="vertical">
 
-        <!-- ListView hoặc RecyclerView để hiển thị tin nhắn -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcv_comment"
             android:layout_width="match_parent"

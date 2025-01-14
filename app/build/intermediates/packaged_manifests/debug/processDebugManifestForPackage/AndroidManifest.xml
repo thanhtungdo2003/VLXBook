@@ -70,6 +70,9 @@
             android:name="com.vlteam.vlxbookapplication.login"
             android:exported="false" />
         <activity
+            android:name="com.vlteam.vlxbookapplication.CommentPage"
+            android:exported="false" />
+        <activity
             android:name="com.vlteam.vlxbookapplication.update_infouser_pageActivity"
             android:exported="true" >
             <intent-filter>

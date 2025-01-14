@@ -55,6 +55,9 @@
             android:name=".login"
             android:exported="false" />
         <activity
+            android:name=".CommentPage"
+            android:exported="false" />
+        <activity
             android:name=".update_infouser_pageActivity"
             android:exported="true">
             <intent-filter>

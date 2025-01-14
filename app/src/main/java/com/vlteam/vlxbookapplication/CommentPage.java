@@ -1,6 +1,8 @@
 package com.vlteam.vlxbookapplication;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,12 +23,18 @@ public class CommentPage extends AppCompatActivity {
     private RecyclerView rcvComment;
     private CommentAdapter commentAdapter;
     private List<CommentModel> commentList;
+    ImageView btnBackCommentToNewfeed, btnComment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_comment_page);
+
+        btnBackCommentToNewfeed = findViewById(R.id.btn_back_comment_to_newfeed);
+        btnComment = findViewById(R.id.btn_comment);
+
+        btnBackCommentToNewfeed.setOnClickListener(v -> finish());
 
         rcvComment = findViewById(R.id.rcv_comment);
         rcvComment.setLayoutManager(new LinearLayoutManager(this));
