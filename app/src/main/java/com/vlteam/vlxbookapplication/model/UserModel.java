@@ -1,11 +1,26 @@
 package com.vlteam.vlxbookapplication.model;
 
+import android.content.ContentResolver;
+import android.content.Context;
 import android.net.Uri;
 import android.os.Build;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.annotation.RequiresApi;
 
+import com.vlteam.vlxbookapplication.MessengerInterface;
+import com.vlteam.vlxbookapplication.R;
+import com.vlteam.vlxbookapplication.httpservice.ApiService;
+import com.vlteam.vlxbookapplication.httpservice.FileManager;
+
 import java.time.LocalDateTime;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class UserModel {
     private String MessagerID;
@@ -17,7 +32,92 @@ public class UserModel {
     private Uri AvataUri;
     private String TimeOfSend;
 
+    private Context context;
+    private ApiService apiService;
+    private FileManager fileManager;
 
+
+    public ApiService getApiService() {
+        return apiService;
+    }
+
+    public void setApiService(ApiService apiService) {
+        this.apiService = apiService;
+    }
+
+    public void setContext(Context context) {
+        this.context = context;
+    }
+
+    public void setFileManager(FileManager fileManager) {
+        this.fileManager = fileManager;
+    }
+
+    public void renderAvata(ImageView imageView){
+        if (getAvataUri() != null){
+            imageView.setImageURI(getAvataUri());
+            return;
+        }
+        if (getAvataOther().equals("NONE")) {
+            imageView.setImageResource(R.drawable.default_avatar);
+
+        } else {
+            Call<ResponseBody> avataCall = apiService.downloadAvatar(getAvataOther());
+            avataCall.enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                    if (response.isSuccessful() && response.body() != null) {
+                        boolean isSaved = fileManager.saveFileToInternalStorage(context, response.body(), getAvataOther());
+                        if (isSaved) {
+                            Uri fileUri = fileManager.getFileUri(context, getAvataOther());
+                            setAvataUri(fileUri);
+                            imageView.setImageURI(fileUri);
+                        }
+                    }else {
+                        imageView.setImageResource(R.drawable.default_avatar);
+
+                    }
+                }
+                @Override
+                public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    imageView.setImageResource(R.drawable.default_avatar);
+                }
+            });
+        }
+    }
+    public void renderAvata(ImageButton imageView){
+        if (getAvataUri() != null){
+            imageView.setImageURI(getAvataUri());
+            return;
+        }
+        if (getAvataOther().equals("NONE")) {
+            imageView.setImageResource(R.drawable.default_avatar);
+
+        } else {
+            Call<ResponseBody> avataCall = apiService.downloadAvatar(getAvataOther());
+            avataCall.enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                    if (response.isSuccessful() && response.body() != null) {
+                        boolean isSaved = fileManager.saveFileToInternalStorage(context, response.body(), getAvataOther());
+                        if (isSaved) {
+                            Uri fileUri = fileManager.getFileUri(context, getAvataOther());
+                            setAvataUri(fileUri);
+                            imageView.setImageURI(fileUri);
+                        }
+                    }else {
+                        imageView.setImageResource(R.drawable.default_avatar);
+
+                    }
+                }
+                @Override
+                public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    imageView.setImageResource(R.drawable.default_avatar);
+
+                }
+            });
+        }
+    }
     // Getters and setters
     public String getMessagerID() {
         return MessagerID;
