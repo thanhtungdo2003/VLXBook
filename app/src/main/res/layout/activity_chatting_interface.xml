@@ -75,9 +75,7 @@
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
-    <!-- Khu vực tin nhắn -->
 
-    <!-- Khung chat cố định dưới cùng -->
     <LinearLayout
         android:id="@+id/message_area"
         android:layout_width="match_parent"
@@ -86,7 +84,6 @@
         android:background="@color/cardview_light_background"
         android:orientation="vertical">
 
-    <!-- ListView hoặc RecyclerView để hiển thị tin nhắn -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcv_message_box"
             android:layout_width="match_parent"

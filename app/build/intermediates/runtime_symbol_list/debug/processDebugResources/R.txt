@@ -3037,6 +3037,7 @@ int drawable avt_9 0x7f080089
 int drawable avt_list_user 0x7f08008a
 int drawable back 0x7f08008b
 int drawable back_icon 0x7f08008c
+int drawable bg_comment 0x7f080132
 int drawable bg_message_received 0x7f08008d
 int drawable bg_message_sent 0x7f08008e
 int drawable boder_radious_50 0x7f080131
@@ -3319,10 +3320,12 @@ int id btn_call_chatting 0x7f0a006e
 int id btn_call_video_chatting 0x7f0a006f
 int id btn_camera 0x7f0a027c
 int id btn_choose_image 0x7f0a027d
+int id btn_comment 0x7f0a028a
 int id btn_info_chatting 0x7f0a0070
 int id btn_micro 0x7f0a027e
 int id btn_send_message 0x7f0a0071
 int id btn_show_bar_left_message_input 0x7f0a027f
+int id btn_view_cmt 0x7f0a0281
 int id btnlogin 0x7f0a0072
 int id btnsignup 0x7f0a0073
 int id button 0x7f0a0074
@@ -3365,6 +3368,7 @@ int id clip_vertical 0x7f0a0098
 int id clockwise 0x7f0a0099
 int id closest 0x7f0a009a
 int id collapseActionView 0x7f0a009b
+int id comment_area 0x7f0a028c
 int id compress 0x7f0a009c
 int id confirm_button 0x7f0a009d
 int id constraint 0x7f0a009e
@@ -3422,6 +3426,7 @@ int id editTextText3 0x7f0a00d1
 int id editTextText4 0x7f0a00d2
 int id edit_query 0x7f0a00d3
 int id edit_text_id 0x7f0a00d4
+int id edt_comment_input 0x7f0a0288
 int id edt_message_input 0x7f0a00d5
 int id elastic 0x7f0a00d6
 int id embed 0x7f0a00d7
@@ -3496,6 +3501,7 @@ int id imageViewSignup 0x7f0a011f
 int id imgAvatar 0x7f0a0120
 int id imgItemimg 0x7f0a0121
 int id img_avt_user_chating 0x7f0a0122
+int id img_avt_user_coment 0x7f0a0283
 int id img_avt_user_list 0x7f0a0123
 int id img_avt_user_message_received 0x7f0a0280
 int id img_user_avatar_under_search 0x7f0a0124
@@ -3650,6 +3656,7 @@ int id progress_circular 0x7f0a01b8
 int id progress_horizontal 0x7f0a01b9
 int id radio 0x7f0a01ba
 int id ratio 0x7f0a01bb
+int id rcv_comment 0x7f0a0284
 int id rcv_horizontal_users 0x7f0a01bc
 int id rcv_message_box 0x7f0a01bd
 int id rcv_user_list 0x7f0a01be
@@ -3809,10 +3816,13 @@ int id tvDateOfPost 0x7f0a0257
 int id tvHr 0x7f0a0258
 int id tvNameUser 0x7f0a0259
 int id tvNextToLogin 0x7f0a025a
+int id tv_comment_content 0x7f0a0285
 int id tv_fullname 0x7f0a025b
 int id tv_message 0x7f0a025c
 int id tv_name_user_chatting 0x7f0a025d
 int id tv_time 0x7f0a025e
+int id tv_time_comment 0x7f0a0286
+int id tv_user_name_comment 0x7f0a0287
 int id tv_user_name_under_search 0x7f0a025f
 int id unchecked 0x7f0a0260
 int id uniform 0x7f0a0261
@@ -3956,6 +3966,7 @@ int layout abc_search_view 0x7f0d0019
 int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
 int layout activity_chatting_interface 0x7f0d001c
+int layout activity_comment_page 0x7f0d0085
 int layout activity_friend_list_find_main 0x7f0d001d
 int layout activity_info_page 0x7f0d001e
 int layout activity_main 0x7f0d001f
@@ -3979,6 +3990,7 @@ int layout design_text_input_end_icon 0x7f0d0030
 int layout design_text_input_start_icon 0x7f0d0031
 int layout ime_base_split_test_activity 0x7f0d0032
 int layout ime_secondary_split_test_activity 0x7f0d0033
+int layout item_comment 0x7f0d0086
 int layout item_friend_propose 0x7f0d0034
 int layout item_message_received 0x7f0d0035
 int layout item_message_send 0x7f0d0036

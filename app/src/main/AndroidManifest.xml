@@ -21,7 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         tools:targetApi="31">
-
+        <activity
+            android:name=".CommentPage"
+            android:exported="false" />
         <activity
             android:name=".update_infouser_pageActivity"
             android:exported="false" />
@@ -48,6 +50,9 @@
             android:exported="false" />
         <activity
             android:name=".MessengerInterface"
+            android:exported="false" />
+        <activity
+            android:name=".PostActivity"
             android:exported="false" />
         <activity
             android:name=".NewfeedActivity"

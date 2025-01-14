@@ -12,8 +12,10 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/boder_radious_50"
+        android:src="@drawable/avt_5"
         android:layout_marginLeft="3dp"
         android:scaleType="centerCrop"
+        android:clipToOutline="true"
         android:layout_gravity="bottom"/>
     <TextView
         android:id="@+id/text_message_received"

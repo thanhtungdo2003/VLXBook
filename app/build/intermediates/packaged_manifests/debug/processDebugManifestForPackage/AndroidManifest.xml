@@ -37,6 +37,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
         <activity
+            android:name="com.vlteam.vlxbookapplication.CommentPage"
+            android:exported="false" />
+        <activity
             android:name="com.vlteam.vlxbookapplication.update_infouser_pageActivity"
             android:exported="false" />
         <activity
@@ -62,6 +65,9 @@
             android:exported="false" />
         <activity
             android:name="com.vlteam.vlxbookapplication.MessengerInterface"
+            android:exported="false" />
+        <activity
+            android:name="com.vlteam.vlxbookapplication.PostActivity"
             android:exported="false" />
         <activity
             android:name="com.vlteam.vlxbookapplication.NewfeedActivity"

@@ -84,8 +84,18 @@ public class NewfeedActivity extends AppCompatActivity {
         postList.add(new Article("Tùng Ăn D", "1", "Ăn c 2", "image_path", new Date(), "video_path"));
         postList.add(new Article("Tùng Ăn D", "1", "Ăn c 2", "image_path", new Date(), "video_path"));
         postAdapter = new ArticleAdapter(postList);
-        postAdapter.setOnItemClickListener((position,article)->{
-            Toast.makeText(this, "CLicked at positon:"+position, Toast.LENGTH_SHORT).show();
+        postAdapter.setOnItemClickListener(new ArticleAdapter.OnItemClickListener() {
+            @Override
+            public void Onclick(int position, Article article) {
+                Toast.makeText(NewfeedActivity.this, "Clicked at position: " + position, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void OnCommentClick(int position, Article article) {
+                Toast.makeText(NewfeedActivity.this, "Comment clicked at position: " + position, Toast.LENGTH_SHORT).show();
+                Intent pageViewCmt = new Intent(NewfeedActivity.this,CommentPage.class);
+                startActivity(pageViewCmt);
+            }
         });
 
         recyclerView.setFocusable(false);
