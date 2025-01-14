@@ -1,6 +1,7 @@
 package com.vlteam.vlxbookapplication;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -31,6 +32,7 @@ import com.vlteam.vlxbookapplication.model.UserModel;
 import java.io.Console;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 import java.util.Timer;
@@ -50,6 +52,7 @@ public class ChattingInterface extends AppCompatActivity {
     List<MessageModel> messageList;
     boolean isActivityVisible = true;
     List<String> messageIDList = new ArrayList<>();
+    HashMap<String, Uri> imgsForUserName = new HashMap<>();
     public static String currentMessagerBoxID = "";
     public static String currentOtherUserName = "";
     @Override
@@ -70,17 +73,18 @@ public class ChattingInterface extends AppCompatActivity {
         CimgAvtUserChat = findViewById(R.id.img_avt_user_chating);
         edtMessageInput = findViewById(R.id.edt_message_input);
         rcvMessages = findViewById(R.id.rcv_message_box);
-
-        messageList = new ArrayList<>();
-        messageAdapter = new MessageAdapter(messageList);
-        rcvMessages.setLayoutManager(new LinearLayoutManager(this));
-        rcvMessages.setAdapter(messageAdapter);
-
         Intent intent = getIntent();
         currentOtherUserName = intent.getStringExtra("userName");
         String messBoxID = intent.getStringExtra("messBoxID");
         String otherFullName = intent.getStringExtra("otherFullName");
         int userImageResId = intent.getIntExtra("userImage", 0);
+        Uri avataUri = intent.getParcelableExtra("avataUri");
+        messageList = new ArrayList<>();
+        messageAdapter = new MessageAdapter(messageList, avataUri);
+        rcvMessages.setLayoutManager(new LinearLayoutManager(this));
+        rcvMessages.setAdapter(messageAdapter);
+
+
         currentMessagerBoxID = messBoxID;
         tvUserNameChatting.setText(otherFullName);
         CimgAvtUserChat.setImageResource(userImageResId);
@@ -183,6 +187,8 @@ public class ChattingInterface extends AppCompatActivity {
                                     messageIDList.add(model.ChatMessagerID);
                                     isNewChat = true;
                                 }
+
+
                             }
                             if (isNewChat) {
                                 messageAdapter.notifyItemInserted(messageList.size() - 1);

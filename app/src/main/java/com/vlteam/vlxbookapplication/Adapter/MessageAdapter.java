@@ -1,9 +1,9 @@
 package com.vlteam.vlxbookapplication.Adapter;
-
-import android.annotation.SuppressLint;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,18 +12,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.vlteam.vlxbookapplication.NewfeedActivity;
 import com.vlteam.vlxbookapplication.R;
 import com.vlteam.vlxbookapplication.model.MessageModel;
+import com.vlteam.vlxbookapplication.model.UserModel;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {
     private List<MessageModel> messageList;
     private static final int TYPE_SENT = 1;
     private static final int TYPE_RECEIVED = 2;
+    private Uri avatarOtherUri;
     private String currentUserId;
 
-    public MessageAdapter(List<MessageModel> messageList) {
+    public MessageAdapter(List<MessageModel> messageList, Uri avatarOtherUri) {
         this.messageList = messageList;
+        this.avatarOtherUri = avatarOtherUri;
     }
 
     @NonNull
@@ -43,6 +45,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         MessageModel message = messageList.get(position);
         if (message == null) return;
         holder.contentTv.setText(message.getContent());
+        if (avatarOtherUri != null && holder.senderAvata != null){
+            holder.senderAvata.setImageURI(avatarOtherUri);
+        }
     }
 
     @Override
@@ -62,10 +67,11 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
 
     public static class MessageViewHolder extends RecyclerView.ViewHolder {
         private TextView contentTv;
-
+        private ImageView senderAvata;
         public MessageViewHolder(@NonNull View itemView) {
             super(itemView);
             contentTv = itemView.findViewById(R.id.text_message_received);
+            senderAvata = itemView.findViewById(R.id.img_avt_user_message_received);
         }
     }
 }

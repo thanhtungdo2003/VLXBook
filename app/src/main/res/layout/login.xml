@@ -41,10 +41,10 @@
                 android:ems="10"
                 android:fontFamily="@font/alata"
                 android:gravity="center|left"
-                android:textColorHint="#666666"
                 android:hint="Tên đăng nhập"
                 android:paddingLeft="10dp"
-                android:textColor="#1B1B1B" />
+                android:textColor="#1B1B1B"
+                android:textColorHint="#666666" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,11 +73,11 @@
                 android:background="@drawable/custom_input_login"
                 android:ems="10"
                 android:fontFamily="@font/alata"
-                android:textColorHint="#666666"
                 android:gravity="center|left"
                 android:inputType="text"
                 android:paddingLeft="10dp"
-                android:textColor="#212121" />
+                android:textColor="#212121"
+                android:textColorHint="#383838" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>

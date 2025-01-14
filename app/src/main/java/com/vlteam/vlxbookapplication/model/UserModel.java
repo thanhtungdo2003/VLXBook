@@ -85,6 +85,29 @@ public class UserModel {
             });
         }
     }
+    public void setUpAvataUri(){
+        if (!getAvataOther().equals("NONE")) {
+            Call<ResponseBody> avataCall = apiService.downloadAvatar(getAvataOther());
+            avataCall.enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                    if (response.isSuccessful() && response.body() != null) {
+                        boolean isSaved = fileManager.saveFileToInternalStorage(context, response.body(), getAvataOther());
+                        if (isSaved) {
+                            Uri fileUri = fileManager.getFileUri(context, getAvataOther());
+                            setAvataUri(fileUri);
+                        }
+                    }else {
+                        setAvataUri(null);
+                    }
+                }
+                @Override
+                public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    setAvataUri(null);
+                }
+            });
+        }
+    }
     public void renderAvata(ImageButton imageView){
         if (getAvataUri() != null){
             imageView.setImageURI(getAvataUri());

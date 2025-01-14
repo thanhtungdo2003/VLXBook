@@ -3061,6 +3061,7 @@ drawable coverphoto
 drawable custom_addnewstatus
 drawable custom_backgroundcolor
 drawable custom_btn_border_radius_10
+drawable custom_btn_border_radius_10_red
 drawable custom_btnlogin
 drawable custom_btnsignup
 drawable custom_input_login
@@ -3529,6 +3530,7 @@ id linear
 id listMode
 id list_item
 id location_input
+id logout_btn
 id m3_side_sheet
 id main
 id marquee

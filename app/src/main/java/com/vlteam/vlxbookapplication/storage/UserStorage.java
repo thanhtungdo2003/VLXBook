@@ -18,7 +18,10 @@ public class UserStorage {
         databaseManager.createSimpleTable(table_name, model.getDataStruct());
         UserStorage.context = context;
     }
+    public void drop(){
+        databaseManager.dropTable(table_name);
 
+    }
     public void update(String username, String password){
         databaseManager.dropTable(table_name);
         databaseManager.createSimpleTable(table_name, model.getDataStruct());

@@ -62,9 +62,10 @@ public class login extends AppCompatActivity {
                             assert response.body() != null;
                             Log.d("API_SUCCESS", response.toString());
 
-                            NewfeedActivity.userStorage.update(token.userName, pass);
+                            NewfeedActivity.userStorage.update(username, pass);
+                            NewfeedActivity.username = username;
                             Intent intent = new Intent(login.this, NewfeedActivity.class);
-                            intent.putExtra("username", token.userName);
+                            intent.putExtra("username", username);
                             intent.putExtra("password", pass);
                             startActivity(intent);
                         } else {

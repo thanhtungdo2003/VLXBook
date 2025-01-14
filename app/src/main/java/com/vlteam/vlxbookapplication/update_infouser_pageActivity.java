@@ -144,6 +144,13 @@ public class update_infouser_pageActivity extends AppCompatActivity {
                 finish();
             }
         });
+        findViewById(R.id.logout_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(update_infouser_pageActivity.this, login.class));
+                NewfeedActivity.userStorage.drop();
+            }
+        });
         avataImage = findViewById(R.id.avataImage);
         avataContainer = findViewById(R.id.avataContainer);
 

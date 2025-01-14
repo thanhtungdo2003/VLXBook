@@ -51,6 +51,7 @@ drawable coverphoto
 drawable custom_addnewstatus
 drawable custom_backgroundcolor
 drawable custom_btn_border_radius_10
+drawable custom_btn_border_radius_10_red
 drawable custom_btnlogin
 drawable custom_btnsignup
 drawable custom_input_login
@@ -172,6 +173,7 @@ id img_user_avatar_under_search
 id info_main
 id job_input
 id location_input
+id logout_btn
 id main
 id message_area
 id name_input

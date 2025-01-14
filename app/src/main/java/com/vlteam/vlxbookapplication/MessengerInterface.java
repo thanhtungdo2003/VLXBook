@@ -54,23 +54,29 @@ public class MessengerInterface extends AppCompatActivity {
         rcvUser = findViewById(R.id.rcv_user_list);
         userModelList = new ArrayList<>();
         userAdapter = new UserAdapter(userModelList, (userModel, view) -> {
+            userModel.setUpAvataUri();
+
             Intent intent = new Intent(view.getContext(), ChattingInterface.class);
             intent.putExtra("userImage", userModel.getAvataOther());
             intent.putExtra("userName", userModel.getOtherUserNames());
             intent.putExtra("messBoxID", userModel.getMessagerID());
             intent.putExtra("otherFullName", userModel.getFullNameOther());
+            if (userModel.getAvataUri() != null) {
+                intent.putExtra("avataUri", userModel.getAvataUri());
+            }
             view.getContext().startActivity(intent);
         });
 
         userAvtImageUnderSearchAdapter = new UserAvtImageUnderSearch(userModelList, (userModel, view) -> {
-
-
+            userModel.setUpAvataUri();
             Intent intent = new Intent(view.getContext(), ChattingInterface.class);
             intent.putExtra("userImage", userModel.getAvataOther());
             intent.putExtra("userName", userModel.getOtherUserNames());
             intent.putExtra("messBoxID", userModel.getMessagerID());
             intent.putExtra("otherFullName", userModel.getFullNameOther());
-
+            if (userModel.getAvataUri() != null) {
+                intent.putExtra("avataUri", userModel.getAvataUri());
+            }
             view.getContext().startActivity(intent);
         });
 
