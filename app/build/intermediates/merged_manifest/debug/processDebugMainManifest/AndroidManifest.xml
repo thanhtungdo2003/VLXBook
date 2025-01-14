@@ -37,7 +37,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
         <activity
-            android:name="com.vlteam.vlxbookapplication.NewfeedActivity"
+            android:name="com.vlteam.vlxbookapplication.update_infouser_pageActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -70,7 +70,7 @@
             android:name="com.vlteam.vlxbookapplication.login"
             android:exported="false" />
         <activity
-            android:name="com.vlteam.vlxbookapplication.update_infouser_pageActivity"
+            android:name="com.vlteam.vlxbookapplication.NewfeedActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

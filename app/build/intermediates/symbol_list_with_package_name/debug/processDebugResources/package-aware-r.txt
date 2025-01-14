@@ -3038,8 +3038,10 @@ drawable avt_9
 drawable avt_list_user
 drawable back
 drawable back_icon
+drawable bg_comment
 drawable bg_message_received
 drawable bg_message_sent
+drawable boder_radious_50
 drawable borderradius100
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3095,6 +3097,8 @@ drawable ic_search_black_24
 drawable image_icon
 drawable imageic
 drawable imageicon
+drawable img
+drawable img_1
 drawable imgvideo_border
 drawable indeterminate_static
 drawable infomation_icon
@@ -3193,6 +3197,7 @@ drawable search_icon
 drawable searchicon
 drawable send_icon
 drawable shareicon
+drawable show_bar_left_message_input
 drawable tagicon
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -3313,11 +3318,18 @@ id btnBackToNewfeed
 id btnCreateStatus
 id btnNextIMG
 id btnNextToSignup
+id btn_add_something
 id btn_back_chatting
 id btn_call_chatting
 id btn_call_video_chatting
+id btn_camera
+id btn_choose_image
+id btn_comment
 id btn_info_chatting
+id btn_micro
 id btn_send_message
+id btn_show_bar_left_message_input
+id btn_view_cmt
 id btnlogin
 id btnsignup
 id button
@@ -3359,6 +3371,7 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id comment_area
 id compress
 id confirm_button
 id constraint
@@ -3413,6 +3426,7 @@ id edge
 id editTextText3
 id edit_query
 id edit_text_id
+id edt_comment_input
 id edt_message_input
 id elastic
 id embed
@@ -3461,11 +3475,7 @@ id honorRequest
 id horizontal
 id horizontal_only
 id icon
-id icon_add
-id icon_camera
 id icon_group
-id icon_image
-id icon_microphone
 id ifRoom
 id ignore
 id ignoreRequest
@@ -3488,7 +3498,9 @@ id imageViewSignup
 id imgAvatar
 id imgItemimg
 id img_avt_user_chating
+id img_avt_user_coment
 id img_avt_user_list
+id img_avt_user_message_received
 id img_user_avatar_under_search
 id immediateStop
 id included
@@ -3645,6 +3657,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id rcv_comment
 id rcv_horizontal_users
 id rcv_message_box
 id rcv_user_list
@@ -3804,10 +3817,13 @@ id tvDateOfPost
 id tvHr
 id tvNameUser
 id tvNextToLogin
+id tv_comment_content
 id tv_fullname
 id tv_message
 id tv_name_user_chatting
 id tv_time
+id tv_time_comment
+id tv_user_name_comment
 id tv_user_name_under_search
 id unchecked
 id uniform
@@ -3952,6 +3968,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_chatting_interface
+layout activity_comment_page
 layout activity_friend_list_find_main
 layout activity_info_page
 layout activity_main
@@ -3975,6 +3992,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_comment
 layout item_friend_propose
 layout item_message_received
 layout item_message_send

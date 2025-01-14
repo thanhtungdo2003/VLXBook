@@ -1,446 +1,474 @@
 [
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_item_message_send.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/item_message_send.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\font_roboto_thin.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\font\\roboto_thin.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/anim_slide_in_left.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/anim/slide_in_left.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_image_icon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\image_icon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_item_photo.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/item_photo.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_emojiicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\emojiicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_notifyicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/notifyicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_commenticon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\commenticon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_addicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/addicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_avt_5.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/avt_5.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_arrow_left.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\arrow_left.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_avatar5.jpg.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/avatar5.jpg"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_add_icon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\add_icon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_send_icon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/send_icon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_addicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\addicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_activity_main.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/activity_main.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_tvicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\tvicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_logo_mesenger.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/logo_mesenger.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_custom_btn_border_radius_10.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\custom_btn_border_radius_10.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_item_post.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/item_post.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_item_photo.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\item_photo.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/anim_slide_out_left.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/anim/slide_out_left.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_show_bar_left_message_input.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\show_bar_left_message_input.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_imageic.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/imageic.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_bg_message_received.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\bg_message_received.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_back.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/back.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_locationic.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\locationic.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_avt_6.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/avt_6.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_activity_friend_list_find_main.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\activity_friend_list_find_main.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_item_user_avt_name_under_search.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/item_user_avt_name_under_search.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_tagicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\tagicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_update_infouser_page.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/update_infouser_page.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_logonamefb.jpg.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\logonamefb.jpg"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_camera_icon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/camera_icon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_arrowlefticon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\arrowlefticon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_mic_icon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/mic_icon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_locationic.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/locationic.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_likeicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/likeicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_logo_mesenger.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\logo_mesenger.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_avatar5.jpg.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\avatar5.jpg"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_activity_messenger_interface.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/activity_messenger_interface.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_next.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\next.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_next.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/next.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_imgvideo_border.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/imgvideo_border.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\anim_slide_out_left.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\anim\\slide_out_left.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_avt_7.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\avt_7.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_dropdownic.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/dropdownic.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_borderradius100.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\borderradius100.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_knightblock.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\knightblock.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_custom_btnlogin.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\custom_btnlogin.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_searchicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/searchicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_send_icon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\send_icon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_messagericon.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/messagericon.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_coverphoto.jpg.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\coverphoto.jpg"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_logox.jpg.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/logox.jpg"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_item_user_avt_name_under_search.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\item_user_avt_name_under_search.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_logo_vlxbook.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/logo_vlxbook.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_back.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\back.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_item_ripple.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/item_ripple.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_anlan.jpg.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\anlan.jpg"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_avt_3.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/avt_3.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_avt_5.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\avt_5.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_spinner_items.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/spinner_items.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\anim_slide_in_left.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\anim\\slide_in_left.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_arrowlefticon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/arrowlefticon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_avt_8.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/avt_8.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_avt_10.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\avt_10.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_search_icon.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/search_icon.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_imageic.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\imageic.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_custom_input_login.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/custom_input_login.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_shareicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/shareicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_messicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\messicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_openrightside.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/openrightside.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_avt_8.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\avt_8.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_category_messenger_icon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/category_messenger_icon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_logo.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\logo.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_newfeed.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/newfeed.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_custom_btnsignup.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\custom_btnsignup.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/font_roboto_thin.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/font/roboto_thin.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_custom_btnlogin.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/custom_btnlogin.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_friendicon_select.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\friendicon_select.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_activity_friend_list_find_main.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/activity_friend_list_find_main.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_searchicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\searchicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_create_status_page.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/create_status_page.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_imgvideo_border.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\imgvideo_border.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_add_icon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/add_icon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_search_icon.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\search_icon.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_anlan.jpg.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/anlan.jpg"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_friendic.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\friendic.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_tagicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/tagicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_logo_vlxbook.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\logo_vlxbook.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_trashicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/trashicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_boder_radious_50.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\boder_radious_50.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_logo.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/logo.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_likeicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\likeicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_avt_9.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/avt_9.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_linkicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/linkicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\anim_slide_out_right.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\anim\\slide_out_right.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_knightblock.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/knightblock.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_avt_2.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\avt_2.png"
+    },
+    {
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_linkicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\linkicon.png"
+    },
+    {
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_item_friend_propose.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\item_friend_propose.xml"
+    },
+    {
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_openrightside.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\openrightside.png"
+    },
+    {
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_logox.jpg.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\logox.jpg"
     },
     {
         "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_item_message_received.xml.flat",
         "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/item_message_received.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_avt_list_user.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/avt_list_user.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_infomation_icon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\infomation_icon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/anim_slide_out_right.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/anim/slide_out_right.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_bg_comment.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\bg_comment.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_avt_3.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\avt_3.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_friendic.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/friendic.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_activity_messenger_interface.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\activity_messenger_interface.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_rounded_search.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/rounded_search.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_activity_comment_page.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\activity_comment_page.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_homeicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/homeicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_dropdownic.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\dropdownic.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_custom_backgroundcolor.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/custom_backgroundcolor.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_shareicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\shareicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_menuicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/menuicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_avt_list_user.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\avt_list_user.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_arrow_left.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/arrow_left.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_login.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\login.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/font_alata.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/font/alata.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_category_messenger_icon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\category_messenger_icon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_custom_addnewstatus.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/custom_addnewstatus.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_friendicon.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/friendicon.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_messicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/messicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_coverphoto.jpg.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/coverphoto.jpg"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_menuicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\menuicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_homeicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\homeicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_avt_4.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\avt_4.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_imageicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/imageicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_update_infouser_page.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\update_infouser_page.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_logonamefb.jpg.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/logonamefb.jpg"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_item_message_received.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\item_message_received.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_tvicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/tvicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_camera_icon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\camera_icon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_activity_chatting_interface.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/activity_chatting_interface.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_item_ripple.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\item_ripple.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_activity_info_page.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/activity_info_page.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_messagericon.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\messagericon.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/xml_data_extraction_rules.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_friendicon.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\friendicon.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_avt_2.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/avt_2.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_trashicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\trashicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_emojiicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/emojiicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_commenticon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/commenticon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_rounded_search.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\rounded_search.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_friendicon_select.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/friendicon_select.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_back_icon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\back_icon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_custom_btnsignup.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/custom_btnsignup.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_item_comment.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\item_comment.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_newfeed.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\newfeed.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_bg_message_received.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/bg_message_received.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_item_message_send.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\item_message_send.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_avt_10.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/avt_10.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_item_user_message.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\item_user_message.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_image_icon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/image_icon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_avt_1.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\avt_1.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_infomation_icon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/infomation_icon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_img_1.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\img_1.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_bg_message_sent.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/bg_message_sent.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_marketicon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/marketicon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_activity_info_page.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\activity_info_page.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/anim_slide_in_right.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/anim/slide_in_right.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_call_icon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\call_icon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_call_icon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/call_icon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_img.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\img.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_signup.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/signup.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_imageicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\imageicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_avt_1.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/avt_1.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_item_post.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\item_post.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_login.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/login.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_bg_message_sent.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\bg_message_sent.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_call_video_icon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/call_video_icon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_call_video_icon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\call_video_icon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_item_user_message.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/item_user_message.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_custom_backgroundcolor.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\custom_backgroundcolor.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_activity_chatting_interface.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\activity_chatting_interface.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/layout_item_friend_propose.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/layout/item_friend_propose.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_signup.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\signup.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_custom_btn_border_radius_10.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/custom_btn_border_radius_10.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_create_status_page.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\create_status_page.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_borderradius100.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/borderradius100.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_avt_6.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\avt_6.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_back_icon.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/back_icon.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\font_alata.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\font\\alata.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/xml_backup_rules.xml.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_notifyicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\notifyicon.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_avt_9.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\avt_9.png"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_avt_4.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/avt_4.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_custom_addnewstatus.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\custom_addnewstatus.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/drawable_avt_7.png.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/drawable/avt_7.png"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_custom_input_login.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\custom_input_login.xml"
     },
     {
-        "merged": "com.vlteam.vlxbookapplication.app-debug-32:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.vlteam.vlxbookapplication.app-main-34:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_mic_icon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\mic_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\anim_slide_in_right.xml.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\anim\\slide_in_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_marketicon.png.flat",
+        "source": "C:\\Users\\tcao2\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\drawable\\marketicon.png"
     }
 ]

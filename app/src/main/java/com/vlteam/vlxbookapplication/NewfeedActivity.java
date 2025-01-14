@@ -33,7 +33,6 @@ public class NewfeedActivity extends AppCompatActivity {
     public static UserStorage userStorage;
     ImageButton btnNext;
     Button btnCreateSTT;
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +43,7 @@ public class NewfeedActivity extends AppCompatActivity {
         userStorage = new UserStorage(this);
         username = userStorage.getUserName();
 
-        if (username.isEmpty()) {
+        if (username.isEmpty()){
             startActivity(new Intent(this, login.class));
             return;
         }
@@ -53,7 +52,7 @@ public class NewfeedActivity extends AppCompatActivity {
         btnCreateSTT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent nextToCreateSTTPage = new Intent(NewfeedActivity.this, createStatusPage.class);
+                Intent nextToCreateSTTPage = new Intent(NewfeedActivity.this,createStatusPage.class);
                 nextToCreateSTTPage.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
                 startActivity(nextToCreateSTTPage);
@@ -65,19 +64,12 @@ public class NewfeedActivity extends AppCompatActivity {
                 startActivity(new Intent(NewfeedActivity.this, MessengerInterface.class));
 
             }
-        });
-        findViewById(R.id.open_friend_find_btn).setOnClickListener(new View.OnClickListener() {
+        }); findViewById(R.id.open_friend_find_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(NewfeedActivity.this, FriendListFindMainActivity.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
-            }
-        });
-        findViewById(R.id.open_update_info_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(NewfeedActivity.this, update_infouser_pageActivity.class));
             }
         });
 
@@ -92,8 +84,18 @@ public class NewfeedActivity extends AppCompatActivity {
         postList.add(new Article("Tùng Ăn D", "1", "Ăn c 2", "image_path", new Date(), "video_path"));
         postList.add(new Article("Tùng Ăn D", "1", "Ăn c 2", "image_path", new Date(), "video_path"));
         postAdapter = new ArticleAdapter(postList);
-        postAdapter.setOnItemClickListener((position, article) -> {
-            Toast.makeText(this, "CLicked at positon:" + position, Toast.LENGTH_SHORT).show();
+        postAdapter.setOnItemClickListener(new ArticleAdapter.OnItemClickListener() {
+            @Override
+            public void Onclick(int position, Article article) {
+                Toast.makeText(NewfeedActivity.this, "Clicked at position: " + position, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void OnCommentClick(int position, Article article) {
+                Toast.makeText(NewfeedActivity.this, "Comment clicked at position: " + position, Toast.LENGTH_SHORT).show();
+                Intent pageViewCmt = new Intent(NewfeedActivity.this,CommentPage.class);
+                startActivity(pageViewCmt);
+            }
         });
 
         recyclerView.setFocusable(false);

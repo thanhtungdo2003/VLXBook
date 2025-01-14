@@ -2,7 +2,10 @@ package com.vlteam.vlxbookapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -38,7 +41,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ChattingInterface extends AppCompatActivity {
-    ImageView btnBackChat, btnCallChat, btnCallVideoChat, btnInfoChat, btnSendMessage;
+    ImageView btnBackChat, btnCallChat, btnCallVideoChat, btnInfoChat, btnSendMessage,btnAddSomeThing, btnCamera,btnChooseImage, btnMicro,btnShowBarLeftMessageInput;
     TextView tvUserNameChatting;
     CircleImageView CimgAvtUserChat;
     EditText edtMessageInput;
@@ -56,6 +59,13 @@ public class ChattingInterface extends AppCompatActivity {
 
         btnBackChat = findViewById(R.id.btn_back_chatting);
         btnSendMessage = findViewById(R.id.btn_send_message);
+        btnAddSomeThing = findViewById(R.id.btn_add_something);
+        btnChooseImage = findViewById(R.id.btn_choose_image);
+        btnCamera = findViewById(R.id.btn_camera);
+        btnMicro = findViewById(R.id.btn_micro);
+        btnShowBarLeftMessageInput = findViewById(R.id.btn_show_bar_left_message_input);
+
+
         tvUserNameChatting = findViewById(R.id.tv_name_user_chatting);
         CimgAvtUserChat = findViewById(R.id.img_avt_user_chating);
         edtMessageInput = findViewById(R.id.edt_message_input);
@@ -77,6 +87,45 @@ public class ChattingInterface extends AppCompatActivity {
 
         btnBackChat.setOnClickListener(v -> finish());
         ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
+
+
+        btnShowBarLeftMessageInput.setVisibility(View.GONE);
+        edtMessageInput.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.toString().trim().isEmpty()) {
+                    btnShowBarLeftMessageInput.setVisibility(View.GONE);
+                    btnCamera.setVisibility(View.VISIBLE);
+                    btnAddSomeThing.setVisibility(View.VISIBLE);
+                    btnMicro.setVisibility(View.VISIBLE);
+                    btnChooseImage.setVisibility(View.VISIBLE);
+                } else {
+                    btnShowBarLeftMessageInput.setVisibility(View.VISIBLE);
+                    btnCamera.setVisibility(View.GONE);
+                    btnAddSomeThing.setVisibility(View.GONE);
+                    btnMicro.setVisibility(View.GONE);
+                    btnChooseImage.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        btnShowBarLeftMessageInput.setOnClickListener(v -> {
+            btnShowBarLeftMessageInput.setVisibility(View.GONE);
+            btnCamera.setVisibility(View.VISIBLE);
+            btnAddSomeThing.setVisibility(View.VISIBLE);
+            btnMicro.setVisibility(View.VISIBLE);
+            btnChooseImage.setVisibility(View.VISIBLE);
+        });
 
         btnSendMessage.setOnClickListener(v -> {
             String messageText = edtMessageInput.getText().toString().trim();

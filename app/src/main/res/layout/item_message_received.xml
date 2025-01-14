@@ -7,7 +7,16 @@
     android:paddingStart="8dp"
     android:paddingTop="1dp"
     android:layout_marginBottom="2dp">
-
+    <com.vlteam.vlxbookapplication.CircleImageView
+        android:id="@+id/img_avt_user_message_received"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/boder_radious_50"
+        android:src="@drawable/avt_5"
+        android:layout_marginLeft="3dp"
+        android:scaleType="centerCrop"
+        android:clipToOutline="true"
+        android:layout_gravity="bottom"/>
     <TextView
         android:id="@+id/text_message_received"
         android:layout_width="wrap_content"
@@ -17,6 +26,6 @@
         android:text="Tin nhắn nhận"
         android:textColor="@color/black"
         android:textSize="16sp"
-        android:maxWidth="300dp" />
-
+        android:maxWidth="300dp"
+        android:layout_marginLeft="3dp"/>
 </LinearLayout>

@@ -41,6 +41,11 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
                 listener.Onclick(position,art);
             }
         });
+        holder.btnComment.setOnClickListener(v -> {
+            if(listener != null){
+                listener.OnCommentClick(position, art);
+            }
+        });
     }
 
     @Override
@@ -61,7 +66,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
             tvDateOfPost = itemView.findViewById(R.id.tvDateOfPost);
             tvCaption = itemView.findViewById(R.id.tvCaption);
             btnLike = itemView.findViewById(R.id.button);
-            btnComment = itemView.findViewById(R.id.button2);
+            btnComment = itemView.findViewById(R.id.btn_view_cmt);
             btnShare = itemView.findViewById(R.id.button5);
             btnNext = itemView.findViewById(R.id.btnNextIMG);
         }
@@ -69,5 +74,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
 
     public interface OnItemClickListener {
         void Onclick(int position,Article article);
+        void OnCommentClick(int position, Article article);
+
     }
 }
