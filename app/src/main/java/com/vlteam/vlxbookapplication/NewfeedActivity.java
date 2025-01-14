@@ -73,7 +73,12 @@ public class NewfeedActivity extends AppCompatActivity {
             }
         });
 
-
+        findViewById(R.id.open_update_info_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NewfeedActivity.this, update_infouser_pageActivity.class));
+            }
+        });
         recyclerView = findViewById(R.id.recyclerViewFriendPropose);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         // Khởi tạo danh sách bài viết
