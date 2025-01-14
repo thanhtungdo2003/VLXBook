@@ -3,12 +3,15 @@ package com.vlteam.vlxbookapplication;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -21,6 +24,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.vlteam.vlxbookapplication.httpservice.ApiService;
+import com.vlteam.vlxbookapplication.httpservice.File;
+import com.vlteam.vlxbookapplication.httpservice.FileManager;
 import com.vlteam.vlxbookapplication.httpservice.RetrofitClient;
 import com.vlteam.vlxbookapplication.model.AccountModel;
 import com.vlteam.vlxbookapplication.model.ChatMessagerSendReponse;
@@ -30,6 +35,7 @@ import com.vlteam.vlxbookapplication.model.UserInfoModel;
 import java.util.List;
 import java.util.Objects;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -50,7 +56,7 @@ public class InfoPage extends AppCompatActivity {
             return insets;
         });
         ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
-
+        FileManager fileManager = new File(this);
         //Lấy LinearLayout chính
         LinearLayout infoMain = findViewById(R.id.info_main);
         findViewById(R.id.back_btn).setOnClickListener(v -> finish());
@@ -63,7 +69,23 @@ public class InfoPage extends AppCompatActivity {
             public void onResponse(@NonNull Call<List<UserInfoModel>> call, @NonNull Response<List<UserInfoModel>> response) {
                 if (response.isSuccessful()) {
                     UserInfoModel user = response.body().get(0);
-                    Log.d("API_SUCCESS", response.toString());
+                    Call<ResponseBody> avataCall = apiService.downloadAvatar(user.Avata);
+                    avataCall.enqueue(new Callback<ResponseBody>() {
+                        @Override
+                        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                            if (response.isSuccessful() && response.body() != null) {
+                                boolean isSaved = fileManager.saveFileToInternalStorage(InfoPage.this, response.body(), user.Avata);
+                                if (isSaved) {
+                                    Uri fileUri = fileManager.getFileUri(InfoPage.this, user.Avata);
+                                    ((ImageView) findViewById(R.id.avata_infoPage)).setImageURI(fileUri);
+                                }
+                            }
+                        }
+                        @Override
+                        public void onFailure(Call<ResponseBody> call, Throwable t) {
+                            // Xử lý lỗi kết nối hoặc ngoại lệ
+                        }
+                    });
                     ((TextView) findViewById(R.id.fullName_tv_info)).setText(user.getFullName());
 
                     //

@@ -80,7 +80,7 @@ public class FriendListFindMainActivity extends AppCompatActivity {
                                 assert response.body() != null;
                                 Log.d("API_SUCCESS", response.toString());
                                 Intent intent = new Intent(view.getContext(), ChattingInterface.class);
-                                intent.putExtra("userImage", box.getImageResId());
+                                intent.putExtra("userImage", box.getAvataOther());
                                 intent.putExtra("userName", box.getOtherUserNames());
                                 intent.putExtra("messBoxID", box.getMessagerID());
                                 intent.putExtra("otherFullName", view.getTag().toString());
@@ -118,6 +118,7 @@ public class FriendListFindMainActivity extends AppCompatActivity {
                     Log.d("API_SUCCESS", response.toString());
                     userModelList.clear();
                     for (UserInfoModel info : users) {
+
                         if (info.UserName.equals(NewfeedActivity.username)) continue;
                         userModelList.add(info);
                     }

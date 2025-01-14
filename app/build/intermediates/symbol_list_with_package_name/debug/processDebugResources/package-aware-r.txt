@@ -3063,6 +3063,7 @@ drawable custom_btn_border_radius_10
 drawable custom_btnlogin
 drawable custom_btnsignup
 drawable custom_input_login
+drawable default_avatar
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3299,6 +3300,7 @@ id autoCompleteToEnd
 id autoCompleteToStart
 id avataContainer
 id avataImage
+id avata_infoPage
 id axisRelative
 id back_btn
 id barrier
@@ -3481,7 +3483,6 @@ id ignore
 id ignoreRequest
 id image
 id imageButton10
-id imageButton12
 id imageButton2
 id imageButton7
 id imageButton8
@@ -3489,7 +3490,6 @@ id imageButton9
 id imageContainer
 id imageView
 id imageView2
-id imageView3
 id imageView4
 id imageView5
 id imageView6
@@ -3497,6 +3497,7 @@ id imageView7
 id imageViewSignup
 id imgAvatar
 id imgItemimg
+id img_avata_create_status
 id img_avt_user_chating
 id img_avt_user_coment
 id img_avt_user_list

@@ -1,6 +1,8 @@
 package com.vlteam.vlxbookapplication.Adapter;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.net.Uri;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,10 +13,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.vlteam.vlxbookapplication.InfoPage;
 import com.vlteam.vlxbookapplication.R;
+import com.vlteam.vlxbookapplication.httpservice.ApiService;
+import com.vlteam.vlxbookapplication.httpservice.File;
+import com.vlteam.vlxbookapplication.httpservice.FileManager;
+import com.vlteam.vlxbookapplication.httpservice.RetrofitClient;
 import com.vlteam.vlxbookapplication.model.UserModel;
 
 import java.util.List;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
     private List<UserModel> userModelList;
@@ -49,7 +61,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             holder.tvTime.setText(user.getTimeOfSend().getHour() + ":" + user.getTimeOfSend().getMinute());
         }
-        holder.imgAvtUser.setImageResource(user.getImageResId());
+
+        holder.imgAvtUser.setImageURI(user.getAvataUri());
 
         holder.itemView.setOnClickListener(v -> onItemClickListener.onItemClick(user, v));
 

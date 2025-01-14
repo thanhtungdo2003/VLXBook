@@ -140,7 +140,7 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/imageButton12"
+                    android:id="@+id/img_avata_create_status"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_gravity="center"

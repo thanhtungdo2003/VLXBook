@@ -1,5 +1,6 @@
 package com.vlteam.vlxbookapplication.model;
 
+import android.net.Uri;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
@@ -10,15 +11,24 @@ public class UserModel {
     private String MessagerID;
     private String OtherUserNames;
     private String Content;
+    private String AvataOther;
     private String FullName;
     private String FullNameOther;
-    private int imageResId;
-    private String TimeOfSend; // Thêm thuộc tính giờ (dạng chuỗi)
+    private Uri AvataUri;
+    private String TimeOfSend;
 
 
     // Getters and setters
     public String getMessagerID() {
         return MessagerID;
+    }
+
+    public String getAvataOther() {
+        return AvataOther;
+    }
+
+    public void setAvataOther(String avataOther) {
+        AvataOther = avataOther;
     }
 
     public void setMessagerID(String messagerID) {
@@ -57,12 +67,12 @@ public class UserModel {
         this.Content = content;
     }
 
-    public int getImageResId() {
-        return imageResId;
+    public Uri getAvataUri() {
+        return AvataUri;
     }
 
-    public void setImageResId(int imageResId) {
-        this.imageResId = imageResId;
+    public void setAvataUri(Uri avataUri) {
+        AvataUri = avataUri;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)

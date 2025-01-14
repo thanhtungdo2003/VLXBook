@@ -87,7 +87,7 @@
                         android:translationY="120sp">
 
                         <ImageView
-                            android:id="@+id/imageView3"
+                            android:id="@+id/avata_infoPage"
                             android:layout_width="146dp"
                             android:layout_height="146dp"
                             android:layout_marginStart="-10dp"
