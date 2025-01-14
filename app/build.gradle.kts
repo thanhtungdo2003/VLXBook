@@ -50,5 +50,6 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
 
     implementation("com.google.android.material:material:1.12.0")
+    implementation("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
 
 }

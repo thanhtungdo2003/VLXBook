@@ -54,7 +54,7 @@
                     app:srcCompat="@drawable/searchicon" />
 
                 <ImageButton
-                    android:id="@+id/imageButton3"
+                    android:id="@+id/open_update_info_btn"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginLeft="10dp"

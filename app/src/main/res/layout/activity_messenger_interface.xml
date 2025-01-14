@@ -61,6 +61,7 @@
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:textColor="#000000"
+            android:textColorHint="#666666"
             android:textSize="15sp" />
     </LinearLayout>
     <!-- RecyclerView ngang -->

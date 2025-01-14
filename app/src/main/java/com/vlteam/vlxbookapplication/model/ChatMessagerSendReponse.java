@@ -17,8 +17,10 @@ public class ChatMessagerSendReponse {
         this.content = content;
     }
 
+
+    
     public void setChatMessagerID(String chatMessagerID) {
-        chatMessagerID = chatMessagerID;
+        this.chatMessagerID = chatMessagerID;
     }
 
     public String getContent() {

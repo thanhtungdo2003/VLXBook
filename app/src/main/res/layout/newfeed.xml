@@ -47,7 +47,7 @@
                 app:srcCompat="@drawable/searchicon" />
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/open_update_info_btn"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
@@ -158,7 +158,8 @@
                     android:background="@drawable/custom_addnewstatus"
                     android:gravity="center|left"
                     android:paddingLeft="10dp"
-                    android:text="Bạn đang nghĩ gì?" />
+                    android:text="Bạn đang nghĩ gì?"
+                    android:textColor="#474747" />
 
                 <ImageButton
                     android:id="@+id/imageButton10"

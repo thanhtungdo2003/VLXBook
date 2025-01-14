@@ -38,7 +38,7 @@ public class UserAvtImageUnderSearch extends RecyclerView.Adapter<UserAvtImageUn
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
         UserModel user = userModelList.get(position);
         if (user == null) return;
-        holder.tvNameUnderSearch.setText(user.getOtherUserNames());
+        holder.tvNameUnderSearch.setText(user.getFullNameOther());
         holder.imgAvtUnderSearch.setImageResource(user.getImageResId());
         holder.itemView.setOnClickListener(v -> onItemClickListener.onItemClick(user, v));
     }

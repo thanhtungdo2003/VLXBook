@@ -1,0 +1,4 @@
+package com.vlteam.vlxbookapplication.httpservice;
+
+public class File {
+}

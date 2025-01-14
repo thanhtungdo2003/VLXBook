@@ -148,6 +148,7 @@
             android:maxLines="4"
             android:minHeight="40dp"
             android:paddingHorizontal="12dp"
+            android:textColorHint="#666666"
             android:textColor="#1D1D1D" />
 
         <!-- Nút gửi -->

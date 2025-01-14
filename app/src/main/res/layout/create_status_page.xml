@@ -120,6 +120,7 @@
         android:ems="10"
         android:gravity="top|left"
         android:hint="Bạn đang nghĩ gì?"
+        android:textColorHint="#666666"
         android:paddingLeft="10dp"
         android:paddingTop="10dp" />
 
