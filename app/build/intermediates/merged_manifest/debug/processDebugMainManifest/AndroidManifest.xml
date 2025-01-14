@@ -38,13 +38,7 @@
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
         <activity
             android:name="com.vlteam.vlxbookapplication.update_infouser_pageActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
         <activity
             android:name="com.vlteam.vlxbookapplication.FriendListFindMainActivity"
             android:exported="false" />
@@ -55,7 +49,7 @@
             android:name="com.vlteam.vlxbookapplication.createStatusPage"
             android:exported="false" />
         <activity
-            android:name="com.vlteam.vlxbookapplication.MessengerInterface"
+            android:name="com.vlteam.vlxbookapplication.MainActivity"
             android:exported="false" />
         <activity
             android:name="com.vlteam.vlxbookapplication.SignupActivity"
@@ -64,10 +58,10 @@
             android:name="com.vlteam.vlxbookapplication.ChattingInterface"
             android:exported="false" />
         <activity
-            android:name="com.vlteam.vlxbookapplication.MainActivity"
+            android:name="com.vlteam.vlxbookapplication.login"
             android:exported="false" />
         <activity
-            android:name="com.vlteam.vlxbookapplication.login"
+            android:name="com.vlteam.vlxbookapplication.MessengerInterface"
             android:exported="false" />
         <activity
             android:name="com.vlteam.vlxbookapplication.NewfeedActivity"

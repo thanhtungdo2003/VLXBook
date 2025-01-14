@@ -85,7 +85,8 @@
         android:layout_weight="1"
         android:background="@color/cardview_light_background"
         android:orientation="vertical">
-        <!-- ListView hoặc RecyclerView để hiển thị tin nhắn -->
+
+    <!-- ListView hoặc RecyclerView để hiển thị tin nhắn -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcv_message_box"
             android:layout_width="match_parent"
@@ -101,9 +102,10 @@
         android:background="@color/white"
         android:gravity="center_vertical">
 
-        <!-- Icon Thêm -->
+
+    <!-- Icon Thêm -->
         <ImageView
-            android:id="@+id/icon_add"
+            android:id="@+id/btn_add_something"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:contentDescription="Add"
@@ -112,7 +114,7 @@
 
         <!-- Icon Camera -->
         <ImageView
-            android:id="@+id/icon_camera"
+            android:id="@+id/btn_camera"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:contentDescription="Camera"
@@ -121,7 +123,7 @@
 
         <!-- Icon Hình ảnh -->
         <ImageView
-            android:id="@+id/icon_image"
+            android:id="@+id/btn_choose_image"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:contentDescription="Image"
@@ -130,25 +132,36 @@
 
         <!-- Icon Ghi âm -->
         <ImageView
-            android:id="@+id/icon_microphone"
+            android:id="@+id/btn_micro"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:contentDescription="Microphone"
             android:padding="4dp"
             android:src="@drawable/mic_icon" />
 
+        <ImageView
+            android:id="@+id/btn_show_bar_left_message_input"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:contentDescription="Microphone"
+            android:padding="4dp"
+            android:src="@drawable/show_bar_left_message_input" />
         <!-- Khung nhập tin nhắn -->
+
+
+        <!-- Khung nháº­p tin nháº¯n -->
         <EditText
             android:id="@+id/edt_message_input"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/rounded_search"
             android:hint="Nhắn tin"
-            android:maxLines="4"
+            android:maxLines="3"
             android:minHeight="40dp"
             android:paddingHorizontal="12dp"
             android:textColor="#1D1D1D" />
+
 
         <!-- Nút gửi -->
         <ImageView

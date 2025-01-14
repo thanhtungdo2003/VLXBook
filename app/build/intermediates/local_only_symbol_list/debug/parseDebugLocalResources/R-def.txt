@@ -62,6 +62,8 @@ drawable ic_launcher_foreground
 drawable image_icon
 drawable imageic
 drawable imageicon
+drawable img
+drawable img_1
 drawable imgvideo_border
 drawable infomation_icon
 drawable item_ripple
@@ -87,6 +89,7 @@ drawable search_icon
 drawable searchicon
 drawable send_icon
 drawable shareicon
+drawable show_bar_left_message_input
 drawable tagicon
 drawable trashicon
 drawable tvicon
@@ -99,11 +102,16 @@ id btnBackToNewfeed
 id btnCreateStatus
 id btnNextIMG
 id btnNextToSignup
+id btn_add_something
 id btn_back_chatting
 id btn_call_chatting
 id btn_call_video_chatting
+id btn_camera
+id btn_choose_image
 id btn_info_chatting
+id btn_micro
 id btn_send_message
+id btn_show_bar_left_message_input
 id btnlogin
 id btnsignup
 id button
@@ -130,10 +138,6 @@ id editTextText4
 id edt_message_input
 id et_search
 id fullName_tv_info
-id icon_add
-id icon_camera
-id icon_image
-id icon_microphone
 id imageButton
 id imageButton10
 id imageButton12

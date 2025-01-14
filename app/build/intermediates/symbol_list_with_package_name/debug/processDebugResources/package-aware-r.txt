@@ -3095,6 +3095,8 @@ drawable ic_search_black_24
 drawable image_icon
 drawable imageic
 drawable imageicon
+drawable img
+drawable img_1
 drawable imgvideo_border
 drawable indeterminate_static
 drawable infomation_icon
@@ -3193,6 +3195,7 @@ drawable search_icon
 drawable searchicon
 drawable send_icon
 drawable shareicon
+drawable show_bar_left_message_input
 drawable tagicon
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -3310,11 +3313,16 @@ id btnBackToNewfeed
 id btnCreateStatus
 id btnNextIMG
 id btnNextToSignup
+id btn_add_something
 id btn_back_chatting
 id btn_call_chatting
 id btn_call_video_chatting
+id btn_camera
+id btn_choose_image
 id btn_info_chatting
+id btn_micro
 id btn_send_message
+id btn_show_bar_left_message_input
 id btnlogin
 id btnsignup
 id button
@@ -3462,11 +3470,7 @@ id honorRequest
 id horizontal
 id horizontal_only
 id icon
-id icon_add
-id icon_camera
 id icon_group
-id icon_image
-id icon_microphone
 id ifRoom
 id ignore
 id ignoreRequest

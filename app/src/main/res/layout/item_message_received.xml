@@ -18,5 +18,4 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         android:maxWidth="300dp" />
-
 </LinearLayout>
