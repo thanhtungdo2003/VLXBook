@@ -38,6 +38,7 @@ drawable back
 drawable back_icon
 drawable bg_message_received
 drawable bg_message_sent
+drawable boder_radious_50
 drawable borderradius100
 drawable call_icon
 drawable call_video_icon
@@ -160,6 +161,7 @@ id imgAvatar
 id imgItemimg
 id img_avt_user_chating
 id img_avt_user_list
+id img_avt_user_message_received
 id img_user_avatar_under_search
 id info_main
 id main

@@ -3039,6 +3039,7 @@ int drawable back 0x7f08008b
 int drawable back_icon 0x7f08008c
 int drawable bg_message_received 0x7f08008d
 int drawable bg_message_sent 0x7f08008e
+int drawable boder_radious_50 0x7f080131
 int drawable borderradius100 0x7f08008f
 int drawable btn_checkbox_checked_mtrl 0x7f080090
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f080091
@@ -3496,6 +3497,7 @@ int id imgAvatar 0x7f0a0120
 int id imgItemimg 0x7f0a0121
 int id img_avt_user_chating 0x7f0a0122
 int id img_avt_user_list 0x7f0a0123
+int id img_avt_user_message_received 0x7f0a0280
 int id img_user_avatar_under_search 0x7f0a0124
 int id immediateStop 0x7f0a0125
 int id included 0x7f0a0126
