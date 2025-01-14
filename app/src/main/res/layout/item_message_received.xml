@@ -7,16 +7,19 @@
     android:paddingStart="8dp"
     android:paddingTop="1dp"
     android:layout_marginBottom="2dp">
+
     <com.vlteam.vlxbookapplication.CircleImageView
         android:id="@+id/img_avt_user_message_received"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:background="@drawable/boder_radious_50"
-        android:src="@drawable/avt_5"
-        android:layout_marginLeft="3dp"
-        android:scaleType="centerCrop"
         android:clipToOutline="true"
-        android:layout_gravity="bottom"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_avatar" />
     <TextView
         android:id="@+id/text_message_received"
         android:layout_width="wrap_content"

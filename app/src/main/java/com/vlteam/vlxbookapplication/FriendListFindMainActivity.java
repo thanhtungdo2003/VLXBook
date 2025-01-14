@@ -22,6 +22,8 @@ import com.vlteam.vlxbookapplication.Adapter.FriendsProposeBarAdapter;
 import com.vlteam.vlxbookapplication.Adapter.UserAdapter;
 import com.vlteam.vlxbookapplication.Adapter.UserAvtImageUnderSearch;
 import com.vlteam.vlxbookapplication.httpservice.ApiService;
+import com.vlteam.vlxbookapplication.httpservice.File;
+import com.vlteam.vlxbookapplication.httpservice.FileManager;
 import com.vlteam.vlxbookapplication.httpservice.RetrofitClient;
 import com.vlteam.vlxbookapplication.model.UserInfoModel;
 import com.vlteam.vlxbookapplication.model.UserModel;
@@ -107,7 +109,7 @@ public class FriendListFindMainActivity extends AppCompatActivity {
         // Kết nối Adapter
         rcvUsersItems.setLayoutManager(new LinearLayoutManager(this));
         rcvUsersItems.setAdapter(userAdapter);
-
+        FileManager fileManager = new File(this);
         apiService.getAllUser(1).enqueue(new Callback<List<UserInfoModel>>() {
             @SuppressLint("NotifyDataSetChanged")
             @Override
@@ -118,8 +120,10 @@ public class FriendListFindMainActivity extends AppCompatActivity {
                     Log.d("API_SUCCESS", response.toString());
                     userModelList.clear();
                     for (UserInfoModel info : users) {
-
                         if (info.UserName.equals(NewfeedActivity.username)) continue;
+                        info.setApiService(apiService);
+                        info.setContext(FriendListFindMainActivity.this);
+                        info.setFileManager(fileManager);
                         userModelList.add(info);
                     }
                     userAdapter.notifyDataSetChanged();

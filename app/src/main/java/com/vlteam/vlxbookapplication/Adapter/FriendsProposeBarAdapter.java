@@ -45,7 +45,7 @@ public class FriendsProposeBarAdapter extends RecyclerView.Adapter<FriendsPropos
         if (user == null) return;
 
         holder.tvFullName.setText(user.getFullName());
-        holder.imgAvtUser.setImageResource(R.drawable.default_avatar);
+        user.renderAvata(holder.imgAvtUser);
         ImageButton open_mess_button = holder.itemView.findViewById(R.id.open_messager_box_fp_btn);
         open_mess_button.setTag(user.getFullName());
         holder.itemView.findViewById(R.id.open_messager_box_fp_btn).setOnClickListener(v -> onItemClickListener.onItemClick(user, v));

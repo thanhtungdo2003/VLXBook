@@ -69,24 +69,13 @@ public class InfoPage extends AppCompatActivity {
             public void onResponse(@NonNull Call<List<UserInfoModel>> call, @NonNull Response<List<UserInfoModel>> response) {
                 if (response.isSuccessful()) {
                     UserInfoModel user = response.body().get(0);
-                    Call<ResponseBody> avataCall = apiService.downloadAvatar(user.Avata);
-                    avataCall.enqueue(new Callback<ResponseBody>() {
-                        @Override
-                        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                            if (response.isSuccessful() && response.body() != null) {
-                                boolean isSaved = fileManager.saveFileToInternalStorage(InfoPage.this, response.body(), user.Avata);
-                                if (isSaved) {
-                                    Uri fileUri = fileManager.getFileUri(InfoPage.this, user.Avata);
-                                    ((ImageView) findViewById(R.id.avata_infoPage)).setImageURI(fileUri);
-                                }
-                            }
-                        }
-                        @Override
-                        public void onFailure(Call<ResponseBody> call, Throwable t) {
-                            // Xử lý lỗi kết nối hoặc ngoại lệ
-                        }
-                    });
+                    user.setApiService(apiService);
+                    user.setContext(InfoPage.this);
+                    user.setFileManager(fileManager);
+                    user.renderAvata(((ImageView) findViewById(R.id.avata_infoPage)));
+
                     ((TextView) findViewById(R.id.fullName_tv_info)).setText(user.getFullName());
+                    ((TextView) findViewById(R.id.user_displayname_textview_title)).setText(user.getFullName());
 
                     //
                     LinearLayout info_intro = new LinearLayout(InfoPage.this);

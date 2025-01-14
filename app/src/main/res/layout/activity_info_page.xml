@@ -94,7 +94,7 @@
                             android:layout_marginTop="-1dp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/anlan" />
+                            app:srcCompat="@drawable/default_avatar" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <LinearLayout

@@ -52,7 +52,7 @@ public class UserAvtImageUnderSearch extends RecyclerView.Adapter<UserAvtImageUn
         UserModel user = userModelList.get(position);
         if (user == null) return;
         holder.tvNameUnderSearch.setText(user.getFullNameOther());
-        holder.imgAvtUnderSearch.setImageURI(user.getAvataUri());
+        user.renderAvata(holder.imgAvtUnderSearch);
         holder.itemView.setOnClickListener(v -> onItemClickListener.onItemClick(user, v));
     }
 

@@ -61,9 +61,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             holder.tvTime.setText(user.getTimeOfSend().getHour() + ":" + user.getTimeOfSend().getMinute());
         }
-
-        holder.imgAvtUser.setImageURI(user.getAvataUri());
-
+        user.renderAvata(holder.imgAvtUser);
         holder.itemView.setOnClickListener(v -> onItemClickListener.onItemClick(user, v));
 
     }

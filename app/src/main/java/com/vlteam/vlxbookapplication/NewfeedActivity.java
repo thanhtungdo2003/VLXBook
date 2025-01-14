@@ -97,11 +97,7 @@ public class NewfeedActivity extends AppCompatActivity {
                                     Uri fileUri = fileManager.getFileUri(NewfeedActivity.this, user.Avata);
                                     userInfo.Avata = fileUri;
                                     ((ImageButton) findViewById(R.id.img_avata_create_status)).setImageURI(fileUri);
-                                } else {
-                                    // Xử lý lỗi khi lưu tệp
                                 }
-                            } else {
-                                // Xử lý phản hồi không thành công
                             }
                         }
 
@@ -117,6 +113,7 @@ public class NewfeedActivity extends AppCompatActivity {
                 Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
             }
         });
+
 
         btnCreateSTT = findViewById(R.id.btnCreateStatus);
         btnCreateSTT.setOnClickListener(new View.OnClickListener() {
@@ -142,6 +139,15 @@ public class NewfeedActivity extends AppCompatActivity {
 
             }
         });
+         findViewById(R.id.img_avata_create_status).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NewfeedActivity.this, InfoPage.class);
+                intent.putExtra("other_username", username);
+                startActivity(intent);
+            }
+        });
+
 
         findViewById(R.id.open_update_info_btn).setOnClickListener(new View.OnClickListener() {
             @Override

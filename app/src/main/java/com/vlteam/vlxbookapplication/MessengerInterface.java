@@ -92,32 +92,9 @@ public class MessengerInterface extends AppCompatActivity {
                     userModelList.clear();
                     assert boxs != null;
                     for (UserModel userModel: boxs){
-                        if (userModel.getAvataOther().equals("NONE")) {
-                            Uri drawableUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" +
-                                    getResources().getResourcePackageName(R.drawable.default_avatar) + "/" +
-                                    getResources().getResourceTypeName(R.drawable.default_avatar) + "/" +
-                                    getResources().getResourceEntryName(R.drawable.default_avatar));
-                            userModel.setAvataUri(drawableUri);
-                        }else {
-                            Call<ResponseBody> avataCall = apiService.downloadAvatar(userModel.getAvataOther());
-                            avataCall.enqueue(new Callback<ResponseBody>() {
-                                @Override
-                                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                                    if (response.isSuccessful() && response.body() != null) {
-                                        boolean isSaved = fileManager.saveFileToInternalStorage(MessengerInterface.this, response.body(), userModel.getAvataOther());
-                                        if (isSaved) {
-                                            Uri fileUri = fileManager.getFileUri(MessengerInterface.this, userModel.getAvataOther());
-                                            userModel.setAvataUri(fileUri);
-                                        }
-                                    }
-                                }
-                                @Override
-                                public void onFailure(Call<ResponseBody> call, Throwable t) {
-                                    // Xử lý lỗi kết nối hoặc ngoại lệ
-                                }
-                            });
-                        }
-                        System.out.println(userModel.getOtherUserNames());
+                        userModel.setApiService(apiService);
+                        userModel.setContext(MessengerInterface.this);
+                        userModel.setFileManager(fileManager);
                         userModelList.add(userModel);
                     }
                     // Thông báo Adapter cập nhật dữ liệu
