@@ -37,6 +37,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
         <activity
+            android:name="com.vlteam.vlxbookapplication.GameCenterActivity"
+            android:exported="false" />
+        <activity
             android:name="com.vlteam.vlxbookapplication.NewfeedActivity"
             android:exported="true" >
             <intent-filter>
@@ -74,13 +77,7 @@
             android:exported="false" />
         <activity
             android:name="com.vlteam.vlxbookapplication.update_infouser_pageActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

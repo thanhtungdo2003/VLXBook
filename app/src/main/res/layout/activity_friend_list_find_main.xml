@@ -107,7 +107,7 @@
                 app:srcCompat="@drawable/notifyicon" />
 
             <ImageButton
-                android:id="@+id/imageButton8"
+                android:id="@+id/imgBtnGamecenter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

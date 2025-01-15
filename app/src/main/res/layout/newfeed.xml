@@ -102,13 +102,13 @@
             app:srcCompat="@drawable/notifyicon" />
 
         <ImageButton
-            android:id="@+id/imageButton8"
+            android:id="@+id/imgBtnGamecenter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:scaleType="centerInside"
-            app:srcCompat="@drawable/tvicon" />
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/gameicon" />
 
         <ImageButton
             android:id="@+id/imageButton9"

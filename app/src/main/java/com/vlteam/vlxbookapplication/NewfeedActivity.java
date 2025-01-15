@@ -53,7 +53,7 @@ public class NewfeedActivity extends AppCompatActivity {
     private FileManager fileManager;
     private int currentPage = 1;
     private boolean hasMulData = false;
-    ImageButton btnNext;
+    ImageButton btnNext,btnGamecenter;
     Button btnCreateSTT;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -126,6 +126,16 @@ public class NewfeedActivity extends AppCompatActivity {
                 startActivity(nextToCreateSTTPage);
             }
         });
+        btnGamecenter = findViewById(R.id.imgBtnGamecenter);
+        btnGamecenter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextToGameCenter = new Intent(NewfeedActivity.this,GameCenterActivity.class);
+                nextToGameCenter.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(nextToGameCenter);
+            }
+        });
+
         findViewById(R.id.open_messager_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
