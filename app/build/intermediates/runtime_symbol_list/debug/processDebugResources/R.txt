@@ -3387,7 +3387,6 @@ int id clip_vertical 0x7f0a00a8
 int id clockwise 0x7f0a00a9
 int id closest 0x7f0a00aa
 int id collapseActionView 0x7f0a00ab
-int id comment_area 0x7f0a00ac
 int id compress 0x7f0a00ad
 int id confirm_button 0x7f0a00ae
 int id constraint 0x7f0a00af

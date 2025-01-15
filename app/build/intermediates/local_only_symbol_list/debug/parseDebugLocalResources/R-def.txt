@@ -153,7 +153,6 @@ id cardView2
 id cardView3
 id chat_input_area
 id circleImageView
-id comment_area
 id dotTextView
 id edt_comment_input
 id edt_message_input

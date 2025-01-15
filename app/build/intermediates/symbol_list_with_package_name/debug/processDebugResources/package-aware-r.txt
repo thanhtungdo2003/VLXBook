@@ -3388,7 +3388,6 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
-id comment_area
 id compress
 id confirm_button
 id constraint

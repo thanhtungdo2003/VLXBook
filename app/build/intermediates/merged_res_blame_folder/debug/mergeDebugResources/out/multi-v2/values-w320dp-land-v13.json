@@ -4,7 +4,7 @@
             "outputFile": "com.vlteam.vlxbookapplication.app-mergeDebugResources-30:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tcao2\\.gradle\\caches\\8.9\\transforms\\54c123701f46a4b05d368b15e1500bb6\\transformed\\material-1.12.0\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
+                    "source": "C:\\Users\\duong\\.gradle\\caches\\8.9\\transforms\\54c123701f46a4b05d368b15e1500bb6\\transformed\\material-1.12.0\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
