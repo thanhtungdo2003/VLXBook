@@ -51,6 +51,8 @@ public class NewfeedActivity extends AppCompatActivity {
     public static UserInfo userInfo;
     private ApiService apiService;
     private FileManager fileManager;
+    private int currentPage = 1;
+    private boolean hasMulData = false;
     ImageButton btnNext;
     Button btnCreateSTT;
     @SuppressLint("MissingInflatedId")
@@ -159,34 +161,12 @@ public class NewfeedActivity extends AppCompatActivity {
         // Khởi tạo danh sách bài viết
         postList = new ArrayList<>();
 
-        ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
-        FileManager fileManager = new File(this);
+        apiService = RetrofitClient.getClient().create(ApiService.class);
+        fileManager = new File(this);
 
-
+        loadArticle(currentPage);
         postAdapter = new ArticleAdapter(postList);
-        apiService.getArticleByPage(1).enqueue(new Callback<List<Article>>() {
-            @SuppressLint("NotifyDataSetChanged")
-            @Override
-            public void onResponse(@NonNull Call<List<Article>> call, @NonNull Response<List<Article>> response) {
-                if (response.isSuccessful()) {
-                    List<Article> articles = response.body();
-                    assert response.body() != null;
-                    Log.d("API_SUCCESS", response.toString());
-                    assert articles != null;
-                    for (Article article : articles){
-                        article.setUp(apiService, NewfeedActivity.this, fileManager);
-                        postList.add(article);
-                    }
-                    postAdapter.notifyDataSetChanged();
-                } else {
-                    Log.d("API_ERROR", "Code: " + response.code());
-                }
-            }
-            @Override
-            public void onFailure(@NonNull Call<List<Article>> call, @NonNull Throwable t) {
-                Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
-            }
-        });
+
         postAdapter.setOnItemClickListener(new ArticleAdapter.OnItemClickListener() {
             @Override
             public void Onclick(int position, Article article) {
@@ -208,6 +188,48 @@ public class NewfeedActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+        recyclerView.setOnScrollChangeListener(new View.OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                // Kiểm tra nếu đã cuộn đến cuối
+                if (!v.canScrollVertically(1)) { // 1 = kiểm tra hướng xuống, -1 = hướng lên
+                    if (hasMulData) {
+                        loadArticle(++currentPage);
+                    }
+                }
+            }
+        });
+    }
+    public void loadArticle(int page){
+        apiService.getArticleByPage(page).enqueue(new Callback<List<Article>>() {
+            @SuppressLint("NotifyDataSetChanged")
+            @Override
+            public void onResponse(@NonNull Call<List<Article>> call, @NonNull Response<List<Article>> response) {
+                if (response.isSuccessful()) {
+                    List<Article> articles = response.body();
+                    assert response.body() != null;
+                    Log.d("API_SUCCESS", response.toString());
+                    assert articles != null;
+                    if (articles.size() > 2){
+                        hasMulData = true;
+                    } else if (articles.isEmpty()) {
+                        hasMulData = false;
+                        currentPage--;
+                    }
+                    for (Article article : articles){
+                        article.setUp(apiService, NewfeedActivity.this, fileManager);
+                        postList.add(article);
+                    }
+                    postAdapter.notifyDataSetChanged();
+                } else {
+                    Log.d("API_ERROR", "Code: " + response.code());
+                }
+            }
+            @Override
+            public void onFailure(@NonNull Call<List<Article>> call, @NonNull Throwable t) {
+                Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
+            }
         });
     }
 }

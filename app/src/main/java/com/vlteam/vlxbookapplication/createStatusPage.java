@@ -51,6 +51,8 @@ public class createStatusPage extends AppCompatActivity {
     private HorizontalScrollView scrollView;
     private LinearLayout imageContainer;
     private List<Uri> currentPostImgUris = new ArrayList<>();
+    private FileManager fileManager;
+    private ApiService apiService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,8 +73,8 @@ public class createStatusPage extends AppCompatActivity {
         scrollView = findViewById(R.id.scrollImageHorizontal);
         imageContainer = findViewById(R.id.imageContainer);
 
-        ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
-        FileManager fileManager = new File(this);
+        apiService = RetrofitClient.getClient().create(ApiService.class);
+        fileManager = new File(this);
         addImageVideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,43 +104,56 @@ public class createStatusPage extends AppCompatActivity {
         findViewById(R.id.post_summbit_btn_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = NewfeedActivity.username;
-                String caption = ((EditText) findViewById(R.id.caption_post_input)).getText().toString().trim();
-                StringBuilder imgPathsBuilder = new StringBuilder();
-                String vidPaths = "NONE";
-                imgPathsBuilder.append("NONE");
-                if (currentPostImgUris.isEmpty()){
-                    imgPathsBuilder.append("NONE");
-                }
-                for (Uri uri: currentPostImgUris){
-                    String filename = fileManager.getFileName(uri);
-                    imgPathsBuilder.append(filename).append("&");
-                }
-                if (imgPathsBuilder.length() > 0){
-                    imgPathsBuilder.setLength(imgPathsBuilder.length() - 1);
-                }
-                apiService.createArticle(username,caption, imgPathsBuilder.toString(), vidPaths).enqueue(new Callback<Article>() {
-                    @Override
-                    public void onResponse(@NonNull Call<Article> call, @NonNull Response<Article> response) {
-                        if (response.isSuccessful()) {
-                            assert response.body() != null;
-                            Log.d("API_SUCCESS", response.toString());
-                            Toast.makeText(createStatusPage.this, "Đã đăng bài viết", Toast.LENGTH_SHORT).show();
-                        } else {
-                            Log.d("API_ERROR", "Code: " + response.code());
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(@NonNull Call<Article> call, @NonNull Throwable t) {
-                        Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
-                    }
-                });
-                fileManager.upload(currentPostImgUris, FileStorageType.ARTICLE_IMG);
+                post();
+            }
+        });
+        findViewById(R.id.post_sumbit).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                post();
             }
         });
     }
+    public void post(){
+        String username = NewfeedActivity.username;
+        String caption = "NONE";
+        if (((EditText) findViewById(R.id.caption_post_input)).getText().toString().isEmpty()){
+            caption = "NONE";
+        }else {
+            caption = ((EditText) findViewById(R.id.caption_post_input)).getText().toString().trim();
+        }
+        StringBuilder imgPathsBuilder = new StringBuilder();
+        String vidPaths = "NONE";
+        if (currentPostImgUris.isEmpty()){
+            imgPathsBuilder.append("NONE");
+        }
+        for (Uri uri: currentPostImgUris){
+            String filename = fileManager.getFileName(uri);
+            imgPathsBuilder.append(filename).append("&");
+        }
+        if (imgPathsBuilder.length() > 0){
+            imgPathsBuilder.setLength(imgPathsBuilder.length() - 1);
+        }
+        apiService.createArticle(username,caption, imgPathsBuilder.toString(), vidPaths).enqueue(new Callback<Article>() {
+            @Override
+            public void onResponse(@NonNull Call<Article> call, @NonNull Response<Article> response) {
+                if (response.isSuccessful()) {
+                    assert response.body() != null;
+                    Log.d("API_SUCCESS", response.toString());
+                    Toast.makeText(createStatusPage.this, "Đã đăng bài viết", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(createStatusPage.this, NewfeedActivity.class));
+                } else {
+                    Log.d("API_ERROR", "Code: " + response.code());
+                }
+            }
 
+            @Override
+            public void onFailure(@NonNull Call<Article> call, @NonNull Throwable t) {
+                Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
+            }
+        });
+        fileManager.upload(currentPostImgUris, FileStorageType.ARTICLE_IMG);
+    }
     private void openImagePicker() {
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/* video/*");

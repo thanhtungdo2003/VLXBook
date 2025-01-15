@@ -84,12 +84,12 @@
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\font\\roboto_thin.xml"
     },
     {
-        "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_item_post.xml.flat",
-        "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\item_post.xml"
-    },
-    {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_item_user_avt_name_under_search.xml.flat",
         "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\item_user_avt_name_under_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\layout_item_post.xml.flat",
+        "source": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-main-34:\\layout\\item_post.xml"
     },
     {
         "merged": "C:\\Users\\Thanh Tung\\.gradle\\daemon\\8.9\\com.vlteam.vlxbookapplication.app-debug-32:\\drawable_custom_btnlogin.xml.flat",

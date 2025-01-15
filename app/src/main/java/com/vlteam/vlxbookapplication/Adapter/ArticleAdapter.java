@@ -40,7 +40,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy (HH:mm)");
 
         holder.tvDateOfPost.setText(art.getTimeOfPost().format(formatter));
-        holder.tvNameUser.setText(art.getUserName());
+        holder.tvNameUser.setText(art.getFullName());
         holder.tvCaption.setText(art.getCaption());
         art.renderImg(holder.imgItemimg, art.getImgArray()[0]);
         holder.btnNext.setOnClickListener(v ->{

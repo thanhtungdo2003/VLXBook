@@ -30,6 +30,7 @@ public class Article {
     private Context context;
     private ApiService apiService;
     private FileManager fileManager;
+    private String FullName;
     public HashMap<String, Uri> imgUris = new HashMap<>();
 
 
@@ -76,17 +77,26 @@ public class Article {
                             imageView.setImageURI(fileUri);
                         }
                     }else {
-                        imageView.setImageResource(R.drawable.default_avatar);
+                        imageView.setVisibility(View.GONE);
 
                     }
                 }
                 @Override
                 public void onFailure(Call<ResponseBody> call, Throwable t) {
-                    imageView.setImageResource(R.drawable.default_avatar);
+                    imageView.setVisibility(View.GONE);
                 }
             });
         }
     }
+
+    public String getFullName() {
+        return FullName;
+    }
+
+    public void setFullName(String fullName) {
+        FullName = fullName;
+    }
+
     public String getUserName() {
         return UserName;
     }
