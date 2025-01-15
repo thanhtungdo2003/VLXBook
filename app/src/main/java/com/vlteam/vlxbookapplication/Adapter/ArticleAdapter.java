@@ -1,5 +1,6 @@
 package com.vlteam.vlxbookapplication.Adapter;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.vlteam.vlxbookapplication.R;
 import com.vlteam.vlxbookapplication.model.Article;
 
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.List;
 
 public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder> {
@@ -30,12 +33,16 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
         return new ArticleViewHolder(view);
     }
 
+    @SuppressLint("NewApi")
     @Override
     public void onBindViewHolder(ArticleViewHolder holder, int position) {
         Article art = postList.get(position);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy (HH:mm)");
+
+        holder.tvDateOfPost.setText(art.getTimeOfPost().format(formatter));
         holder.tvNameUser.setText(art.getUserName());
-        holder.tvDateOfPost.setText(art.getTimeOfPost().toString());
         holder.tvCaption.setText(art.getCaption());
+        art.renderImg(holder.imgItemimg, art.getImgArray()[0]);
         holder.btnNext.setOnClickListener(v ->{
             if(listener!=null){
                 listener.Onclick(position,art);

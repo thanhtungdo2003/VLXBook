@@ -80,7 +80,7 @@ public class ChattingInterface extends AppCompatActivity {
         int userImageResId = intent.getIntExtra("userImage", 0);
         Uri avataUri = intent.getParcelableExtra("avataUri");
         messageList = new ArrayList<>();
-        messageAdapter = new MessageAdapter(messageList, avataUri);
+        messageAdapter = new MessageAdapter(messageList);
         rcvMessages.setLayoutManager(new LinearLayoutManager(this));
         rcvMessages.setAdapter(messageAdapter);
 
@@ -183,12 +183,24 @@ public class ChattingInterface extends AppCompatActivity {
                                     continue;
                                 }
                                 if (!messageIDList.contains(model.ChatMessagerID)){
+                                    // Thêm tin nhắn mới
                                     messageList.add(model);
                                     messageIDList.add(model.ChatMessagerID);
+                                    // Chỉ xử lý khi có ít nhất 2 tin nhắn
+                                    if (messageList.size() > 1) {
+                                        // Lấy tin nhắn cuối cùng và trước đó
+                                        MessageModel currentMess = messageList.get(messageList.size() - 1);
+                                        MessageModel lastMess = messageList.get(messageList.size() - 2);
+
+                                        // So sánh username để đặt avatar
+                                        if (!currentMess.getUserName().equals(lastMess.getUserName())) {
+                                            lastMess.setAvatarUri(avataUri);
+                                        } else {
+                                            lastMess.setAvatarUri(null);
+                                        }
+                                    }
                                     isNewChat = true;
                                 }
-
-
                             }
                             if (isNewChat) {
                                 messageAdapter.notifyItemInserted(messageList.size() - 1);

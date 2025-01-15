@@ -51,7 +51,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -211,7 +213,7 @@ public class update_infouser_pageActivity extends AppCompatActivity {
                         Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
                     }
                 });
-                fileManager.upload(currentAvataUri, FileStorageType.USER_AVATA);
+                fileManager.upload(Collections.singletonList(currentAvataUri), FileStorageType.USER_AVATA);
             }
         });
     }

@@ -62,7 +62,7 @@ public class FriendListFindMainActivity extends AppCompatActivity {
         findViewById(R.id.open_home_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(FriendListFindMainActivity.this, NewfeedActivity.class));
+                finish();
                 overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
 
             }

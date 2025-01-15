@@ -3,10 +3,12 @@ package com.vlteam.vlxbookapplication.httpservice;
 import android.content.Context;
 import android.net.Uri;
 
+import java.util.List;
+
 import okhttp3.ResponseBody;
 
 public interface FileManager {
-    void upload(Uri uri, FileStorageType type);
+    void upload(List<Uri> uris, FileStorageType type);
     Uri download(Context context, String filename, FileStorageType type);
 
     String getFileName(Uri uri);

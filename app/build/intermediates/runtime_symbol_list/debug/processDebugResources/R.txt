@@ -3346,7 +3346,6 @@ int id button11 0x7f0a0085
 int id button12 0x7f0a0086
 int id button13 0x7f0a0087
 int id button14 0x7f0a0088
-int id button15 0x7f0a0089
 int id button6 0x7f0a008a
 int id button7 0x7f0a008b
 int id button8 0x7f0a008c
@@ -3356,6 +3355,7 @@ int id cache_measures 0x7f0a008f
 int id callMeasure 0x7f0a0090
 int id cancel_action 0x7f0a0091
 int id cancel_button 0x7f0a0092
+int id caption_post_input 0x7f0a028b
 int id carryVelocity 0x7f0a0093
 int id center 0x7f0a0094
 int id centerCrop 0x7f0a0095
@@ -3369,6 +3369,7 @@ int id chat_input_area 0x7f0a009c
 int id checkbox 0x7f0a009d
 int id checked 0x7f0a009e
 int id chronometer 0x7f0a009f
+int id circleImageView 0x7f0a0289
 int id circle_center 0x7f0a00a0
 int id clear_text 0x7f0a00a1
 int id clip_horizontal 0x7f0a00a2
@@ -3428,7 +3429,6 @@ int id easeInOut 0x7f0a00d7
 int id easeOut 0x7f0a00d8
 int id east 0x7f0a00d9
 int id edge 0x7f0a00da
-int id editTextText3 0x7f0a00db
 int id edit_query 0x7f0a00dc
 int id edit_text_id 0x7f0a00dd
 int id edt_comment_input 0x7f0a00de
@@ -3461,6 +3461,7 @@ int id floating 0x7f0a00f8
 int id forever 0x7f0a00f9
 int id fragment_container_view_tag 0x7f0a00fa
 int id frost 0x7f0a00fb
+int id fullName_ctt 0x7f0a028a
 int id fullName_tv_info 0x7f0a00fc
 int id fullscreen_header 0x7f0a00fd
 int id ghost_view 0x7f0a00fe
@@ -3657,6 +3658,8 @@ int id phone_input 0x7f0a01bc
 int id pin 0x7f0a01bd
 int id position 0x7f0a01be
 int id postLayout 0x7f0a01bf
+int id post_sumbit 0x7f0a028c
+int id post_summbit_btn_1 0x7f0a028d
 int id pressed 0x7f0a01c0
 int id progress_circular 0x7f0a01c1
 int id progress_horizontal 0x7f0a01c2
@@ -3781,9 +3784,7 @@ int id textView21 0x7f0a0238
 int id textView22 0x7f0a0239
 int id textView3 0x7f0a023a
 int id textView4 0x7f0a023b
-int id textView5 0x7f0a023c
 int id textView6 0x7f0a023d
-int id textView7 0x7f0a023e
 int id textView8 0x7f0a023f
 int id textView9 0x7f0a0240
 int id text_input_end_icon 0x7f0a0241

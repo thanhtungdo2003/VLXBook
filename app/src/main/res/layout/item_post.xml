@@ -4,21 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="3dp"
+    android:background="#FFFFFF"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imgAvatar"
+        <com.vlteam.vlxbookapplication.CircleImageView
+            android:id="@+id/circleImageView"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:background="@drawable/borderradius100"
-            android:outlineProvider="background"
-            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
             app:srcCompat="@drawable/default_avatar" />
 
         <LinearLayout
@@ -39,7 +38,8 @@
                 android:id="@+id/tvDateOfPost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1-1-2024" />
+                android:text="1-1-2024"
+                android:textColor="#525252" />
         </LinearLayout>
     </LinearLayout>
 
@@ -62,7 +62,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/avatar5" />
+            app:srcCompat="@drawable/imageic" />
 
         <ImageButton
             android:id="@+id/btnBackIMG"
@@ -99,7 +99,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingLeft="10dp"
-            android:text="xx và xx người khác" />
+            android:text="xx và xx người khác"
+            android:textColor="#4E4E4E" />
 
         <TextView
             android:id="@+id/textView10"
@@ -108,7 +109,8 @@
             android:layout_weight="1"
             android:gravity="center|right"
             android:paddingRight="10dp"
-            android:text="20 bình luận" />
+            android:text="20 bình luận"
+            android:textColor="#4E4E4E" />
     </LinearLayout>
 
     <LinearLayout
@@ -125,11 +127,12 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:background="@drawable/custom_addnewstatus"
+            android:background="#03FFFFFF"
             android:drawableLeft="@drawable/likeicon"
             android:gravity="center"
+            android:paddingLeft="10dp"
             android:text="1,5K"
-            android:paddingLeft="10dp"/>
+            android:textColor="#575757" />
 
         <Button
             android:id="@+id/btn_view_cmt"
@@ -138,11 +141,12 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:background="@drawable/custom_addnewstatus"
+            android:background="#03FFFFFF"
             android:drawableLeft="@drawable/commenticon"
             android:gravity="center"
+            android:paddingLeft="10dp"
             android:text="20"
-            android:paddingLeft="10dp"/>
+            android:textColor="#626262" />
 
         <ImageButton
             android:id="@+id/btn_copy_link_address"
@@ -151,10 +155,10 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:background="@drawable/custom_addnewstatus"
-            android:src="@drawable/linkicon"
+            android:background="#03FFFFFF"
+            android:contentDescription="Icon Button"
             android:scaleType="centerInside"
-            android:contentDescription="Icon Button"/>
+            android:src="@drawable/linkicon" />
 
         <ImageButton
             android:id="@+id/btn_share_post"
@@ -163,10 +167,10 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:background="@drawable/custom_addnewstatus"
-            android:src="@drawable/shareicon"
+            android:background="#03FFFFFF"
+            android:contentDescription="Icon Button"
             android:scaleType="centerInside"
-            android:contentDescription="Icon Button"/>
+            android:src="@drawable/shareicon" />
     </LinearLayout>
 
     <TextView

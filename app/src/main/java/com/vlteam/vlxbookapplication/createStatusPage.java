@@ -7,14 +7,17 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -24,6 +27,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.vlteam.vlxbookapplication.httpservice.ApiService;
+import com.vlteam.vlxbookapplication.httpservice.File;
+import com.vlteam.vlxbookapplication.httpservice.FileManager;
+import com.vlteam.vlxbookapplication.httpservice.FileStorageType;
+import com.vlteam.vlxbookapplication.httpservice.RetrofitClient;
+import com.vlteam.vlxbookapplication.model.Article;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class createStatusPage extends AppCompatActivity {
 
     private static final int REQUEST_CODE_PICK_MEDIA = 100; // Mã yêu cầu chọn ảnh/video
@@ -32,7 +50,7 @@ public class createStatusPage extends AppCompatActivity {
     LinearLayout addImageVideo;
     private HorizontalScrollView scrollView;
     private LinearLayout imageContainer;
-
+    private List<Uri> currentPostImgUris = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,17 +61,18 @@ public class createStatusPage extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent back = new Intent(createStatusPage.this,NewfeedActivity.class);
-                back.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-                startActivity(back);
+                finish();
             }
         });
+        ((ImageView) findViewById(R.id.avata_infoPage)).setImageURI(NewfeedActivity.userInfo.Avata);
+        ((TextView) findViewById(R.id.fullName_ctt)).setText(NewfeedActivity.userInfo.getFullName());
         // Ánh xạ các view từ layout XML
         addImageVideo = findViewById(R.id.addImageVideo);
         scrollView = findViewById(R.id.scrollImageHorizontal);
         imageContainer = findViewById(R.id.imageContainer);
 
+        ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
+        FileManager fileManager = new File(this);
         addImageVideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,6 +97,44 @@ public class createStatusPage extends AppCompatActivity {
                         openImagePicker();
                     }
                 }
+            }
+        });
+        findViewById(R.id.post_summbit_btn_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String username = NewfeedActivity.username;
+                String caption = ((EditText) findViewById(R.id.caption_post_input)).getText().toString().trim();
+                StringBuilder imgPathsBuilder = new StringBuilder();
+                String vidPaths = "NONE";
+                imgPathsBuilder.append("NONE");
+                if (currentPostImgUris.isEmpty()){
+                    imgPathsBuilder.append("NONE");
+                }
+                for (Uri uri: currentPostImgUris){
+                    String filename = fileManager.getFileName(uri);
+                    imgPathsBuilder.append(filename).append("&");
+                }
+                if (imgPathsBuilder.length() > 0){
+                    imgPathsBuilder.setLength(imgPathsBuilder.length() - 1);
+                }
+                apiService.createArticle(username,caption, imgPathsBuilder.toString(), vidPaths).enqueue(new Callback<Article>() {
+                    @Override
+                    public void onResponse(@NonNull Call<Article> call, @NonNull Response<Article> response) {
+                        if (response.isSuccessful()) {
+                            assert response.body() != null;
+                            Log.d("API_SUCCESS", response.toString());
+                            Toast.makeText(createStatusPage.this, "Đã đăng bài viết", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Log.d("API_ERROR", "Code: " + response.code());
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(@NonNull Call<Article> call, @NonNull Throwable t) {
+                        Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
+                    }
+                });
+                fileManager.upload(currentPostImgUris, FileStorageType.ARTICLE_IMG);
             }
         });
     }
@@ -114,6 +171,8 @@ public class createStatusPage extends AppCompatActivity {
                 addImageToScrollView(selectedMediaUri, true); // Video
             } else if (type != null && type.startsWith("image/")) {
                 addImageToScrollView(selectedMediaUri, false); // Ảnh
+                currentPostImgUris.add(selectedMediaUri);
+
             }
         }
     }

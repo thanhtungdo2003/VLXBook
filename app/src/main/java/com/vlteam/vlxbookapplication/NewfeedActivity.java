@@ -8,8 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -32,9 +32,7 @@ import com.vlteam.vlxbookapplication.model.UserInfo;
 import com.vlteam.vlxbookapplication.model.UserInfoModel;
 import com.vlteam.vlxbookapplication.storage.UserStorage;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -96,7 +94,7 @@ public class NewfeedActivity extends AppCompatActivity {
                                 if (isSaved) {
                                     Uri fileUri = fileManager.getFileUri(NewfeedActivity.this, user.Avata);
                                     userInfo.Avata = fileUri;
-                                    ((ImageButton) findViewById(R.id.img_avata_create_status)).setImageURI(fileUri);
+                                    ((ImageView) findViewById(R.id.img_avata_create_status)).setImageURI(fileUri);
                                 }
                             }
                         }
@@ -121,7 +119,8 @@ public class NewfeedActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent nextToCreateSTTPage = new Intent(NewfeedActivity.this,createStatusPage.class);
                 nextToCreateSTTPage.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-
+                nextToCreateSTTPage.putExtra("username", username);
+                nextToCreateSTTPage.putExtra("avataUri", userInfo.Avata);
                 startActivity(nextToCreateSTTPage);
             }
         });
@@ -159,12 +158,35 @@ public class NewfeedActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         // Khởi tạo danh sách bài viết
         postList = new ArrayList<>();
-        // Thêm một số bài viết mẫu vào danh sách
-        postList.add(new Article("Tùng Ăn C", "1", "Ăn c sdvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv1", "image_path", new Date(), "video_path"));
-        postList.add(new Article("Tùng Ăn D", "1", "Ăn c 2", "logo.png", new Date(), "video_path"));
-        postList.add(new Article("Tùng Ăn D", "1", "Ăn c 2", "image_path", new Date(), "video_path"));
-        postList.add(new Article("Tùng Ăn D", "1", "Ăn c 2", "image_path", new Date(), "video_path"));
+
+        ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
+        FileManager fileManager = new File(this);
+
+
         postAdapter = new ArticleAdapter(postList);
+        apiService.getArticleByPage(1).enqueue(new Callback<List<Article>>() {
+            @SuppressLint("NotifyDataSetChanged")
+            @Override
+            public void onResponse(@NonNull Call<List<Article>> call, @NonNull Response<List<Article>> response) {
+                if (response.isSuccessful()) {
+                    List<Article> articles = response.body();
+                    assert response.body() != null;
+                    Log.d("API_SUCCESS", response.toString());
+                    assert articles != null;
+                    for (Article article : articles){
+                        article.setUp(apiService, NewfeedActivity.this, fileManager);
+                        postList.add(article);
+                    }
+                    postAdapter.notifyDataSetChanged();
+                } else {
+                    Log.d("API_ERROR", "Code: " + response.code());
+                }
+            }
+            @Override
+            public void onFailure(@NonNull Call<List<Article>> call, @NonNull Throwable t) {
+                Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
+            }
+        });
         postAdapter.setOnItemClickListener(new ArticleAdapter.OnItemClickListener() {
             @Override
             public void Onclick(int position, Article article) {

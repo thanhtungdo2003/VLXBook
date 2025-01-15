@@ -1,5 +1,6 @@
 package com.vlteam.vlxbookapplication.model;
 
+import android.net.Uri;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
@@ -16,11 +17,16 @@ public class MessageModel {
     public String FullName ;
     public String Images ;
     public String TimeOfSend ;
+    public Uri AvatarUri;
     public boolean isSent(String currentUserId) {
         return MessagerID.equals(currentUserId);
     }
 
     public MessageModel() {
+    }
+
+    public void setAvatarUri(Uri avatarUri) {
+        AvatarUri = avatarUri;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)

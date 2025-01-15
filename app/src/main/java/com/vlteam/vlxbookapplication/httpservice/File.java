@@ -10,6 +10,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -19,11 +21,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class File implements FileManager{
+public class File implements FileManager {
     private Context context;
-    public File(Context context){
+
+    public File(Context context) {
         this.context = context;
     }
+
     @Override
     public java.io.File uriToFile(Uri uri) {
         java.io.File file = null;
@@ -52,6 +56,7 @@ public class File implements FileManager{
         }
         return file;
     }
+
     @SuppressLint("Range")
     @Override
     public String getFileName(Uri uri) {
@@ -72,6 +77,7 @@ public class File implements FileManager{
         }
         return result;
     }
+
     public MultipartBody.Part prepareFilePart(String partName, java.io.File file) {
         RequestBody requestFile = RequestBody.create(
                 file,
@@ -79,6 +85,36 @@ public class File implements FileManager{
         );
         return MultipartBody.Part.createFormData(partName, file.getName(), requestFile);
     }
+
+    public void addArticleImgs(List<java.io.File> files) {
+        // Chuẩn bị tệp
+        for (java.io.File file : files) {
+            MultipartBody.Part filePart = prepareFilePart("file", file);
+
+            // Tạo instance của ApiService
+            ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
+
+            // Gọi phương thức uploadAvatar
+            Call<Boolean> call = apiService.addArticleImg(filePart);
+            call.enqueue(new Callback<Boolean>() {
+                @Override
+                public void onResponse(Call<Boolean> call, Response<Boolean> response) {
+                    if (response.isSuccessful() && response.body() != null) {
+                        boolean result = response.body();
+
+                    } else {
+                        // Xử lý lỗi từ phản hồi
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Boolean> call, Throwable t) {
+                    // Xử lý lỗi kết nối hoặc ngoại lệ
+                }
+            });
+        }
+    }
+
     public void uploadAvatar(java.io.File file) {
         // Chuẩn bị tệp
         MultipartBody.Part filePart = prepareFilePart("file", file);
@@ -98,15 +134,18 @@ public class File implements FileManager{
                     // Xử lý lỗi từ phản hồi
                 }
             }
+
             @Override
             public void onFailure(Call<Boolean> call, Throwable t) {
                 // Xử lý lỗi kết nối hoặc ngoại lệ
             }
         });
     }
+
     public void downloadAvatar(Context context, String filename) {
 
     }
+
     @Override
     public boolean saveFileToInternalStorage(Context context, ResponseBody body, String filename) {
         try {
@@ -141,26 +180,35 @@ public class File implements FileManager{
             return false;
         }
     }
+
     @Override
     public Uri getFileUri(Context context, String filename) {
         java.io.File file = new java.io.File(context.getFilesDir(), filename);
         return Uri.fromFile(file);
     }
+
     @Override
-    public void upload(Uri uri, FileStorageType type) {
-        switch (type){
+    public void upload(List<Uri> uris, FileStorageType type) {
+        switch (type) {
             case USER_AVATA:
-                uploadAvatar(uriToFile(uri));
+                uploadAvatar(uriToFile(uris.get(0)));
                 break;
             case ARTICLE_IMG:
+                List<java.io.File> files = new ArrayList<>();
+                for (Uri uri : uris) {
+                    files.add(uriToFile(uri));
+                }
+                if (files.isEmpty()) return;
+                addArticleImgs(files);
                 break;
             case USER_COVER_PHOTO:
                 break;
         }
     }
+
     @Override
     public Uri download(Context context, String filename, FileStorageType type) {
-        switch (type){
+        switch (type) {
             case USER_AVATA:
 
                 break;

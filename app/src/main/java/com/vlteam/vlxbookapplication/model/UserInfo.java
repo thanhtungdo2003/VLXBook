@@ -13,4 +13,8 @@ public class UserInfo {
     public String Phone;
     public String Location;
     public String Job;
+
+    public String getFullName() {
+        return Name + " " + Surname;
+    }
 }

@@ -23,9 +23,8 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     private Uri avatarOtherUri;
     private String currentUserId;
 
-    public MessageAdapter(List<MessageModel> messageList, Uri avatarOtherUri) {
+    public MessageAdapter(List<MessageModel> messageList) {
         this.messageList = messageList;
-        this.avatarOtherUri = avatarOtherUri;
     }
 
     @NonNull
@@ -45,8 +44,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         MessageModel message = messageList.get(position);
         if (message == null) return;
         holder.contentTv.setText(message.getContent());
-        if (avatarOtherUri != null && holder.senderAvata != null){
-            holder.senderAvata.setImageURI(avatarOtherUri);
+        if (holder.senderAvata != null){
+            if (message.AvatarUri != null) {
+                holder.senderAvata.setImageURI(message.AvatarUri);
+            }else {
+                holder.senderAvata.setVisibility(View.INVISIBLE);
+            }
         }
     }
 

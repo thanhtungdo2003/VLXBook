@@ -1,5 +1,6 @@
 package com.vlteam.vlxbookapplication.httpservice;
 
+import com.vlteam.vlxbookapplication.model.Article;
 import com.vlteam.vlxbookapplication.model.AuthModel;
 import com.vlteam.vlxbookapplication.model.ChatMessagerSendReponse;
 import com.vlteam.vlxbookapplication.model.MessageModel;
@@ -11,6 +12,8 @@ import java.util.List;
 import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
@@ -26,6 +29,7 @@ public interface ApiService {
 
     @GET("api/Account/get-all-user/{page}")
     Call<List<UserInfoModel>> getAllUser(@Path("page") int page);
+
     @GET("api/Account/get-info-by-username/{userName}")
     Call<List<UserInfoModel>> getUser(@Path("userName") String userName);
 
@@ -49,12 +53,33 @@ public interface ApiService {
 
     @POST("api/Messager/send/{username}&{messager_id}&{content}")
     Call<ChatMessagerSendReponse> sendMessager(@Path("username") String username, @Path("messager_id") String messager_id, @Path("content") String content);
+
     @Multipart
     @POST("api/Account/avata-up")
     Call<Boolean> uploadAvatar(@Part MultipartBody.Part file);
+
+    @Multipart
+    @POST("api/Article/img-add")
+    Call<Boolean> addArticleImg(@Part MultipartBody.Part file);
+
     @GET("api/File/get-avata/{filename}")
     Call<ResponseBody> downloadAvatar(@Path("filename") String filename);
+
+    @GET("api/File/get-article-img/{filename}")
+    Call<ResponseBody> downloadArticleImg(@Path("filename") String filename);
+
     @POST("api/Messager/inbox-create/{username_self}&{username_target}")
     Call<UserModel> createBoxMess(@Path("username_self") String username_self, @Path("username_target") String username_target);
+
+    @POST("api/Article/create/{username}&{caption}&{imgs}&{vids}")
+    Call<Article> createArticle(
+            @Path("username") String username,
+            @Path("caption") String caption,
+            @Path("imgs") String imgs,
+            @Path("vids") String vids
+    );
+
+    @GET("api/Article/get-all/{page}")
+    Call<List<Article>> getArticleByPage(@Path("page") int page);
 }
 

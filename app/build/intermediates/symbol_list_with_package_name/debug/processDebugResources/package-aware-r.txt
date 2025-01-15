@@ -3347,7 +3347,6 @@ id button11
 id button12
 id button13
 id button14
-id button15
 id button6
 id button7
 id button8
@@ -3357,6 +3356,7 @@ id cache_measures
 id callMeasure
 id cancel_action
 id cancel_button
+id caption_post_input
 id carryVelocity
 id center
 id centerCrop
@@ -3370,6 +3370,7 @@ id chat_input_area
 id checkbox
 id checked
 id chronometer
+id circleImageView
 id circle_center
 id clear_text
 id clip_horizontal
@@ -3429,7 +3430,6 @@ id easeInOut
 id easeOut
 id east
 id edge
-id editTextText3
 id edit_query
 id edit_text_id
 id edt_comment_input
@@ -3462,6 +3462,7 @@ id floating
 id forever
 id fragment_container_view_tag
 id frost
+id fullName_ctt
 id fullName_tv_info
 id fullscreen_header
 id ghost_view
@@ -3658,6 +3659,8 @@ id phone_input
 id pin
 id position
 id postLayout
+id post_sumbit
+id post_summbit_btn_1
 id pressed
 id progress_circular
 id progress_horizontal
@@ -3782,9 +3785,7 @@ id textView21
 id textView22
 id textView3
 id textView4
-id textView5
 id textView6
-id textView7
 id textView8
 id textView9
 id text_input_end_icon
