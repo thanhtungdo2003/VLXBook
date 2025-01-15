@@ -67,7 +67,7 @@
 
         <ImageButton
             android:id="@+id/open_home_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
@@ -76,16 +76,16 @@
 
         <ImageButton
             android:id="@+id/open_friend_find_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:scaleType="centerInside"
-            app:srcCompat="@drawable/friendicon" />
+            app:srcCompat="@drawable/friendic" />
 
         <ImageButton
             android:id="@+id/open_messager_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
@@ -94,25 +94,25 @@
 
         <ImageButton
             android:id="@+id/btn_open_zing_mp3"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:scaleType="centerInside"
-            app:srcCompat="@drawable/notifyicon" />
+            app:srcCompat="@drawable/musicicon" />
 
         <ImageButton
             android:id="@+id/imgBtnGamecenter"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:scaleType="centerCrop"
+            android:scaleType="centerInside"
             app:srcCompat="@drawable/gameicon" />
 
         <ImageButton
             android:id="@+id/imageButton9"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/white"

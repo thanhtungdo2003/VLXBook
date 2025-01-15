@@ -35,6 +35,6 @@ public class ZingMp3Activity extends AppCompatActivity {
 
         webSettings.setJavaScriptEnabled(true);
 
-        webView.loadUrl("https://zingmp3.vn/");
+        webView.loadUrl("https://l.facebook.com/l.php?u=https%3A%2F%2Fzingmp3.vn%2Ftim-kiem%2Ftat-ca%3Fq%3Dt%25E1%25BA%25BFt%2520b%25C3%25ACnh%2520an%26fbclid%3DIwZXh0bgNhZW0CMTAAAR0K3fCY97E11DBp8aVDXJQauqUSsVVZtfqEdS_4dlP8UgOh-utlXUNBkWg_aem_IPi5icdfB0Weuc4gdwuxfQ&h=AT0nl7WoWCW_zEfp6FZ1xLjgMitDhqMTaxEVMVG0UyHE4Zc_pSpZstDSTPuzIo32iSKzOvAxJTZ30y4IgkaYkCsBXuDz2aZo26XENdZrtb1fYay2cF8b7bmCA7zpFqHROQapdbWYZdE-ja6NRSX_cg");
     }
 }

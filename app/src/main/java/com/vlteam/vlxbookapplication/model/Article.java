@@ -77,8 +77,7 @@ public class Article {
                             imageView.setImageURI(fileUri);
                         }
                     }else {
-                        imageView.setVisibility(View.GONE);
-
+                        imageView.setVisibility(View.VISIBLE);
                     }
                 }
                 @Override

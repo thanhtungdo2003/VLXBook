@@ -93,6 +93,7 @@ drawable menuicon
 drawable messagericon
 drawable messicon
 drawable mic_icon
+drawable musicicon
 drawable next
 drawable notifyicon
 drawable openrightside
