@@ -173,7 +173,6 @@ id imageView6
 id imageView7
 id imageView9
 id imageViewSignup
-id imgAvatar
 id imgBtnGamecenter
 id imgItemimg
 id img_avata_create_status
@@ -181,6 +180,7 @@ id img_avt_user_chating
 id img_avt_user_coment
 id img_avt_user_list
 id img_avt_user_message_received
+id img_post_comment_page
 id img_user_avatar_under_search
 id info_main
 id job_input

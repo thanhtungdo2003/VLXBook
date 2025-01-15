@@ -77,7 +77,6 @@ public class ChattingInterface extends AppCompatActivity {
         currentOtherUserName = intent.getStringExtra("userName");
         String messBoxID = intent.getStringExtra("messBoxID");
         String otherFullName = intent.getStringExtra("otherFullName");
-        int userImageResId = intent.getIntExtra("userImage", 0);
         Uri avataUri = intent.getParcelableExtra("avataUri");
         messageList = new ArrayList<>();
         messageAdapter = new MessageAdapter(messageList);
@@ -87,7 +86,10 @@ public class ChattingInterface extends AppCompatActivity {
 
         currentMessagerBoxID = messBoxID;
         tvUserNameChatting.setText(otherFullName);
-        CimgAvtUserChat.setImageResource(userImageResId);
+        //set avt uuser messsenger boxx
+        
+        Uri userImageResId = intent.getParcelableExtra("avataUri");
+        CimgAvtUserChat.setImageURI(userImageResId);
 
         btnBackChat.setOnClickListener(v -> finish());
         ApiService apiService = RetrofitClient.getClient().create(ApiService.class);

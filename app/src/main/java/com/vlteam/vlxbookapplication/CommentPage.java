@@ -57,7 +57,6 @@ public class CommentPage extends AppCompatActivity {
         tvUserName.setText(userName);
 
 
-
         btnBackCommentToNewfeed = findViewById(R.id.btn_back_comment_to_newfeed);
         btnComment = findViewById(R.id.btn_comment);
 
@@ -65,6 +64,7 @@ public class CommentPage extends AppCompatActivity {
 
         rcvComment = findViewById(R.id.rcv_comment);
         rcvComment.setLayoutManager(new LinearLayoutManager(this));
+
 
         // Dữ liệu mẫu
         commentList = new ArrayList<>();
@@ -75,7 +75,6 @@ public class CommentPage extends AppCompatActivity {
         commentList.add(new CommentModel(R.drawable.avt_9, "2", "Wow","Dương",5));
         commentList.add(new CommentModel(R.drawable.avt_7, "2", "Adu","Dương",4));
         commentList.add(new CommentModel(R.drawable.avt_8, "2", "Thực sự là tôi rất ấn tượng với chất lượng của sản phẩm này. Đầu tiên, tôi phải nói rằng khi nhận được hàng, tôi rất bất ngờ về độ hoàn thiện và sự tỉ mỉ của nó.","Lương",3));
-
         commentAdapter = new CommentAdapter(commentList);
 
         rcvComment.setAdapter(commentAdapter);
