@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/join_caro_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".game.ControlCaroGameActivity">
+
+    <LinearLayout
+        android:layout_width="405dp"
+        android:layout_height="442dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="288dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Số quân một hàng (Win)"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/editAmountWinRow_text"
+            android:layout_width="239dp"
+            android:layout_height="63dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="5" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kích thước" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editWidth_text"
+                android:layout_width="193dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Chiều rộng"
+                android:inputType="number"
+                android:text="13" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/caro_join_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5EB476"
+            android:text="JOIN GAME"
+            android:textColor="#3E2723" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:rotation="-1"
+        android:rotationX="-10"
+        android:rotationY="10"
+        android:text="Caro "
+        android:textSize="120sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:rotationY="-10"
+        android:text="Thắng bại tại kỹ lăng"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+</androidx.constraintlayout.widget.ConstraintLayout>

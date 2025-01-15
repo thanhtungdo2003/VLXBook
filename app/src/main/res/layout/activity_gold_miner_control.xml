@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/join_caro_game"
+    android:layout_width="800sp"
+    android:layout_height="410sp"
+    android:background="@drawable/gold_miner_menu_bg"
+    tools:context=".activity.GoldMinerControlActivity">
+
+    <Button
+        android:id="@+id/join_game_gold_miner"
+        android:layout_width="121dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="628dp"
+        android:layout_marginTop="44dp"
+        android:background="#00B8622A"
+        android:text="."
+        android:textColor="#08FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/money_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="-20dp"
+        android:text="$0"
+        android:textColor="#4CAF50"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/goal_money_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="1dp"
+        android:text="$0"
+        android:textColor="#FFEB3B"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tnt_btn"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="180dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goal_money_text_view"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/buff_btn"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="180dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goal_money_text_view"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/luck_btn"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="180dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goal_money_text_view"
+        tools:ignore="SpeakableTextPresentCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>
