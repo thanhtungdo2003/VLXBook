@@ -186,8 +186,16 @@ public class NewfeedActivity extends AppCompatActivity {
             @Override
             public void OnCommentClick(int position, Article article) {
                 Toast.makeText(NewfeedActivity.this, "Comment clicked at position: " + position, Toast.LENGTH_SHORT).show();
-                Intent pageViewCmt = new Intent(NewfeedActivity.this,CommentPage.class);
-                startActivity(pageViewCmt);
+
+                Intent intent = new Intent(NewfeedActivity.this, CommentPage.class);
+                intent.putExtra("UserName", article.UserName);
+                intent.putExtra("ArticleID", article.ArticleID);
+                intent.putExtra("Caption", article.Caption);
+                intent.putExtra("Images", article.Images);
+                intent.putExtra("TimeOfPost", article.TimeOfPost);
+                intent.putExtra("Videos", article.Videos);
+                intent.putExtra("imgUri", article.imgUris.get(article.getImgArray()[0]));
+                startActivity(intent);
             }
         });
 

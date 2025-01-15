@@ -67,10 +67,10 @@
             android:name="com.vlteam.vlxbookapplication.ChattingInterface"
             android:exported="false" />
         <activity
-            android:name="com.vlteam.vlxbookapplication.MainActivity"
+            android:name="com.vlteam.vlxbookapplication.login"
             android:exported="false" />
         <activity
-            android:name="com.vlteam.vlxbookapplication.login"
+            android:name="com.vlteam.vlxbookapplication.MainActivity"
             android:exported="false" />
         <activity
             android:name="com.vlteam.vlxbookapplication.CommentPage"

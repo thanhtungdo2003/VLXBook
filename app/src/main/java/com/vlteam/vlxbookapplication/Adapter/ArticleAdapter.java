@@ -54,7 +54,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
             }
         });
     }
-
+    
     @Override
     public int getItemCount() {
         return postList.size();
@@ -67,7 +67,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
         public ImageButton btnNext;
         public ArticleViewHolder(View itemView) {
             super(itemView);
-            imgAvatar = itemView.findViewById(R.id.imgAvatar);
+            imgAvatar = itemView.findViewById(R.id.circleImageView);
             imgItemimg = itemView.findViewById(R.id.imgItemimg);
             tvNameUser = itemView.findViewById(R.id.tvNameUser);
             tvDateOfPost = itemView.findViewById(R.id.tvDateOfPost);
@@ -82,6 +82,5 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
     public interface OnItemClickListener {
         void Onclick(int position,Article article);
         void OnCommentClick(int position, Article article);
-
     }
 }
