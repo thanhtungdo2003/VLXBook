@@ -3115,6 +3115,7 @@ drawable item_ripple
 drawable knightblock
 drawable likeicon
 drawable linkicon
+drawable listen_to_music_icon
 drawable locationic
 drawable logo
 drawable logo_mesenger
@@ -3342,6 +3343,7 @@ id btn_copy_link_address
 id btn_info_chatting
 id btn_like
 id btn_micro
+id btn_open_zing_mp3
 id btn_search_in_comment_page
 id btn_send_message
 id btn_share_post
@@ -3871,6 +3873,7 @@ id withinBounds
 id wrap
 id wrap_content
 id wrap_content_constrained
+id wv_zingmp3
 id x_left
 id x_right
 integer abc_config_activityDefaultDur
@@ -3993,6 +3996,7 @@ layout activity_friend_list_find_main
 layout activity_info_page
 layout activity_main
 layout activity_messenger_interface
+layout activity_zing_mp3
 layout create_status_page
 layout custom_dialog
 layout design_bottom_navigation_item

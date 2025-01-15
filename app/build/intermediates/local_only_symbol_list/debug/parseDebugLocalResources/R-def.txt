@@ -81,6 +81,7 @@ drawable item_ripple
 drawable knightblock
 drawable likeicon
 drawable linkicon
+drawable listen_to_music_icon
 drawable locationic
 drawable logo
 drawable logo_mesenger
@@ -131,6 +132,7 @@ id btn_copy_link_address
 id btn_info_chatting
 id btn_like
 id btn_micro
+id btn_open_zing_mp3
 id btn_search_in_comment_page
 id btn_send_message
 id btn_share_post
@@ -254,12 +256,14 @@ id updateinfo_back_btn
 id user_displayname_textview_title
 id usernameInput
 id usernameInputSignup
+id wv_zingmp3
 layout activity_chatting_interface
 layout activity_comment_page
 layout activity_friend_list_find_main
 layout activity_info_page
 layout activity_main
 layout activity_messenger_interface
+layout activity_zing_mp3
 layout create_status_page
 layout game_center_page
 layout item_comment

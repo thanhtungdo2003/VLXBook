@@ -87,7 +87,7 @@ public class ChattingInterface extends AppCompatActivity {
         currentMessagerBoxID = messBoxID;
         tvUserNameChatting.setText(otherFullName);
         //set avt uuser messsenger boxx
-        
+
         Uri userImageResId = intent.getParcelableExtra("avataUri");
         CimgAvtUserChat.setImageURI(userImageResId);
 

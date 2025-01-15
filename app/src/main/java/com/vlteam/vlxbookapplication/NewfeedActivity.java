@@ -53,7 +53,7 @@ public class NewfeedActivity extends AppCompatActivity {
     private FileManager fileManager;
     private int currentPage = 1;
     private boolean hasMulData = false;
-    ImageButton btnNext,btnGamecenter;
+    ImageButton btnNext,btnGamecenter,btnZingMp3;
     Button btnCreateSTT;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -61,7 +61,11 @@ public class NewfeedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.newfeed);
-
+        btnZingMp3 = findViewById(R.id.btn_open_zing_mp3);
+        btnZingMp3.setOnClickListener(v -> {
+            Intent zingmp3 = new Intent(this, ZingMp3Activity.class);
+            startActivity(zingmp3);
+        });
         userStorage = new UserStorage(this);
         username = userStorage.getUserName();
 

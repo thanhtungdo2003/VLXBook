@@ -37,6 +37,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
         <activity
+            android:name="com.vlteam.vlxbookapplication.ZingMp3Activity"
+            android:exported="false" />
+        <activity
             android:name="com.vlteam.vlxbookapplication.GameCenterActivity"
             android:exported="false" />
         <activity

@@ -93,7 +93,7 @@
             app:srcCompat="@drawable/messicon" />
 
         <ImageButton
-            android:id="@+id/imageButton7"
+            android:id="@+id/btn_open_zing_mp3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
