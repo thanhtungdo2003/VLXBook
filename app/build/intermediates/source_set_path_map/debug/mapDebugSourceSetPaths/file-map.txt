@@ -1,35 +1,35 @@
-com.vlteam.vlxbookapplication.app-lifecycle-viewmodel-savedstate-2.6.2-0 C:\Users\duong\.gradle\caches\8.9\transforms\0a790f0fcfb3e93ea37e4b211c4effbe\transformed\lifecycle-viewmodel-savedstate-2.6.2\res
-com.vlteam.vlxbookapplication.app-media-1.0.0-1 C:\Users\duong\.gradle\caches\8.9\transforms\0b56f5be0ba8206511fa68c908ad59e5\transformed\media-1.0.0\res
-com.vlteam.vlxbookapplication.app-core-ktx-1.13.0-2 C:\Users\duong\.gradle\caches\8.9\transforms\0d9447e6533bc74aa1e06aa1cb3a3cb8\transformed\core-ktx-1.13.0\res
-com.vlteam.vlxbookapplication.app-activity-1.9.3-3 C:\Users\duong\.gradle\caches\8.9\transforms\141d6206c297349e63aa772a38fffeaf\transformed\activity-1.9.3\res
-com.vlteam.vlxbookapplication.app-transition-1.5.0-4 C:\Users\duong\.gradle\caches\8.9\transforms\2ca554ebc89acc95579c592cbb9827a0\transformed\transition-1.5.0\res
-com.vlteam.vlxbookapplication.app-emoji2-1.3.0-5 C:\Users\duong\.gradle\caches\8.9\transforms\304629a0600a5600e72ab6c04a64f89d\transformed\emoji2-1.3.0\res
-com.vlteam.vlxbookapplication.app-core-1.13.0-6 C:\Users\duong\.gradle\caches\8.9\transforms\37d67509cb5248890435e0adcc2b9fc3\transformed\core-1.13.0\res
-com.vlteam.vlxbookapplication.app-material-1.12.0-7 C:\Users\duong\.gradle\caches\8.9\transforms\54c123701f46a4b05d368b15e1500bb6\transformed\material-1.12.0\res
-com.vlteam.vlxbookapplication.app-constraintlayout-2.2.0-8 C:\Users\duong\.gradle\caches\8.9\transforms\56ad8dae2ffbf9de6e0acc77fca5e3d3\transformed\constraintlayout-2.2.0\res
-com.vlteam.vlxbookapplication.app-lifecycle-runtime-2.6.2-9 C:\Users\duong\.gradle\caches\8.9\transforms\5e649728976e38dbcb06f84f5c8a0034\transformed\lifecycle-runtime-2.6.2\res
-com.vlteam.vlxbookapplication.app-fragment-1.5.4-10 C:\Users\duong\.gradle\caches\8.9\transforms\66314053f01108ef518fe208aa00bc5f\transformed\fragment-1.5.4\res
-com.vlteam.vlxbookapplication.app-recyclerview-1.1.0-11 C:\Users\duong\.gradle\caches\8.9\transforms\6d0055509cfd1e8b7342fe8c25bab96c\transformed\recyclerview-1.1.0\res
-com.vlteam.vlxbookapplication.app-lifecycle-livedata-core-2.6.2-12 C:\Users\duong\.gradle\caches\8.9\transforms\73256926dc5e80a2b1318d06d6134b34\transformed\lifecycle-livedata-core-2.6.2\res
-com.vlteam.vlxbookapplication.app-emoji2-views-helper-1.3.0-13 C:\Users\duong\.gradle\caches\8.9\transforms\8406fa3797fcbd6d9a39674a44cf51d2\transformed\emoji2-views-helper-1.3.0\res
-com.vlteam.vlxbookapplication.app-core-runtime-2.2.0-14 C:\Users\duong\.gradle\caches\8.9\transforms\85ab9d9c1c3130a9013eb1beb10b9182\transformed\core-runtime-2.2.0\res
-com.vlteam.vlxbookapplication.app-savedstate-1.2.1-15 C:\Users\duong\.gradle\caches\8.9\transforms\974dec4b79dd4a77286fa925cf14b923\transformed\savedstate-1.2.1\res
-com.vlteam.vlxbookapplication.app-drawerlayout-1.1.1-16 C:\Users\duong\.gradle\caches\8.9\transforms\a03d8eaa573133421799cda00a1ce474\transformed\drawerlayout-1.1.1\res
-com.vlteam.vlxbookapplication.app-startup-runtime-1.1.1-17 C:\Users\duong\.gradle\caches\8.9\transforms\ad6bce0abd031e756f2ecb3c40fe758e\transformed\startup-runtime-1.1.1\res
-com.vlteam.vlxbookapplication.app-profileinstaller-1.4.0-18 C:\Users\duong\.gradle\caches\8.9\transforms\b33662edc78228b2c9ce06e008b3faf8\transformed\profileinstaller-1.4.0\res
-com.vlteam.vlxbookapplication.app-appcompat-resources-1.7.0-19 C:\Users\duong\.gradle\caches\8.9\transforms\bba04451f9900fb7946b043034dcacde\transformed\appcompat-resources-1.7.0\res
-com.vlteam.vlxbookapplication.app-appcompat-1.7.0-20 C:\Users\duong\.gradle\caches\8.9\transforms\c9812abd19c2d547c327732784650b32\transformed\appcompat-1.7.0\res
-com.vlteam.vlxbookapplication.app-lifecycle-process-2.6.2-21 C:\Users\duong\.gradle\caches\8.9\transforms\d1373661ac2f7b0d3571abc24674637a\transformed\lifecycle-process-2.6.2\res
-com.vlteam.vlxbookapplication.app-cardview-1.0.0-22 C:\Users\duong\.gradle\caches\8.9\transforms\d7423466dc549ccc34b4c8d9f3c5df07\transformed\cardview-1.0.0\res
-com.vlteam.vlxbookapplication.app-annotation-experimental-1.4.0-23 C:\Users\duong\.gradle\caches\8.9\transforms\d9bc3ec136985973ad9388c01dbb31c6\transformed\annotation-experimental-1.4.0\res
-com.vlteam.vlxbookapplication.app-lifecycle-livedata-2.6.2-24 C:\Users\duong\.gradle\caches\8.9\transforms\eb1b1d2c96ed076a7305448cb5e60c57\transformed\lifecycle-livedata-2.6.2\res
-com.vlteam.vlxbookapplication.app-lifecycle-viewmodel-2.6.2-25 C:\Users\duong\.gradle\caches\8.9\transforms\f89b35dbbcef306d0fe5d04734c042eb\transformed\lifecycle-viewmodel-2.6.2\res
-com.vlteam.vlxbookapplication.app-viewpager2-1.0.0-26 C:\Users\duong\.gradle\caches\8.9\transforms\f911d01f696d40de8db1ed9049c87144\transformed\viewpager2-1.0.0\res
-com.vlteam.vlxbookapplication.app-coordinatorlayout-1.1.0-27 C:\Users\duong\.gradle\caches\8.9\transforms\ffd1b6a00fbeb80d5ce8861a6e156b7b\transformed\coordinatorlayout-1.1.0\res
-com.vlteam.vlxbookapplication.app-pngs-28 C:\Users\duong\Desktop\VLXX\VLXBook\app\build\generated\res\pngs\debug
-com.vlteam.vlxbookapplication.app-resValues-29 C:\Users\duong\Desktop\VLXX\VLXBook\app\build\generated\res\resValues\debug
-com.vlteam.vlxbookapplication.app-packageDebugResources-30 C:\Users\duong\Desktop\VLXX\VLXBook\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.vlteam.vlxbookapplication.app-packageDebugResources-31 C:\Users\duong\Desktop\VLXX\VLXBook\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.vlteam.vlxbookapplication.app-debug-32 C:\Users\duong\Desktop\VLXX\VLXBook\app\build\intermediates\merged_res\debug\mergeDebugResources
-com.vlteam.vlxbookapplication.app-debug-33 C:\Users\duong\Desktop\VLXX\VLXBook\app\src\debug\res
-com.vlteam.vlxbookapplication.app-main-34 C:\Users\duong\Desktop\VLXX\VLXBook\app\src\main\res
+com.vlteam.vlxbookapplication.app-lifecycle-viewmodel-savedstate-2.6.2-0 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\0a790f0fcfb3e93ea37e4b211c4effbe\transformed\lifecycle-viewmodel-savedstate-2.6.2\res
+com.vlteam.vlxbookapplication.app-media-1.0.0-1 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\0b56f5be0ba8206511fa68c908ad59e5\transformed\media-1.0.0\res
+com.vlteam.vlxbookapplication.app-core-ktx-1.13.0-2 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\0d9447e6533bc74aa1e06aa1cb3a3cb8\transformed\core-ktx-1.13.0\res
+com.vlteam.vlxbookapplication.app-activity-1.9.3-3 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\141d6206c297349e63aa772a38fffeaf\transformed\activity-1.9.3\res
+com.vlteam.vlxbookapplication.app-transition-1.5.0-4 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\2ca554ebc89acc95579c592cbb9827a0\transformed\transition-1.5.0\res
+com.vlteam.vlxbookapplication.app-emoji2-1.3.0-5 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\304629a0600a5600e72ab6c04a64f89d\transformed\emoji2-1.3.0\res
+com.vlteam.vlxbookapplication.app-core-1.13.0-6 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\37d67509cb5248890435e0adcc2b9fc3\transformed\core-1.13.0\res
+com.vlteam.vlxbookapplication.app-material-1.12.0-7 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\54c123701f46a4b05d368b15e1500bb6\transformed\material-1.12.0\res
+com.vlteam.vlxbookapplication.app-constraintlayout-2.2.0-8 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\56ad8dae2ffbf9de6e0acc77fca5e3d3\transformed\constraintlayout-2.2.0\res
+com.vlteam.vlxbookapplication.app-lifecycle-runtime-2.6.2-9 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\5e649728976e38dbcb06f84f5c8a0034\transformed\lifecycle-runtime-2.6.2\res
+com.vlteam.vlxbookapplication.app-fragment-1.5.4-10 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\66314053f01108ef518fe208aa00bc5f\transformed\fragment-1.5.4\res
+com.vlteam.vlxbookapplication.app-recyclerview-1.1.0-11 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\6d0055509cfd1e8b7342fe8c25bab96c\transformed\recyclerview-1.1.0\res
+com.vlteam.vlxbookapplication.app-lifecycle-livedata-core-2.6.2-12 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\73256926dc5e80a2b1318d06d6134b34\transformed\lifecycle-livedata-core-2.6.2\res
+com.vlteam.vlxbookapplication.app-emoji2-views-helper-1.3.0-13 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\8406fa3797fcbd6d9a39674a44cf51d2\transformed\emoji2-views-helper-1.3.0\res
+com.vlteam.vlxbookapplication.app-core-runtime-2.2.0-14 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\85ab9d9c1c3130a9013eb1beb10b9182\transformed\core-runtime-2.2.0\res
+com.vlteam.vlxbookapplication.app-savedstate-1.2.1-15 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\974dec4b79dd4a77286fa925cf14b923\transformed\savedstate-1.2.1\res
+com.vlteam.vlxbookapplication.app-drawerlayout-1.1.1-16 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\a03d8eaa573133421799cda00a1ce474\transformed\drawerlayout-1.1.1\res
+com.vlteam.vlxbookapplication.app-startup-runtime-1.1.1-17 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\ad6bce0abd031e756f2ecb3c40fe758e\transformed\startup-runtime-1.1.1\res
+com.vlteam.vlxbookapplication.app-profileinstaller-1.4.0-18 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\b33662edc78228b2c9ce06e008b3faf8\transformed\profileinstaller-1.4.0\res
+com.vlteam.vlxbookapplication.app-appcompat-resources-1.7.0-19 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\bba04451f9900fb7946b043034dcacde\transformed\appcompat-resources-1.7.0\res
+com.vlteam.vlxbookapplication.app-appcompat-1.7.0-20 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\c9812abd19c2d547c327732784650b32\transformed\appcompat-1.7.0\res
+com.vlteam.vlxbookapplication.app-lifecycle-process-2.6.2-21 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\d1373661ac2f7b0d3571abc24674637a\transformed\lifecycle-process-2.6.2\res
+com.vlteam.vlxbookapplication.app-cardview-1.0.0-22 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\d7423466dc549ccc34b4c8d9f3c5df07\transformed\cardview-1.0.0\res
+com.vlteam.vlxbookapplication.app-annotation-experimental-1.4.0-23 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\d9bc3ec136985973ad9388c01dbb31c6\transformed\annotation-experimental-1.4.0\res
+com.vlteam.vlxbookapplication.app-lifecycle-livedata-2.6.2-24 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\eb1b1d2c96ed076a7305448cb5e60c57\transformed\lifecycle-livedata-2.6.2\res
+com.vlteam.vlxbookapplication.app-lifecycle-viewmodel-2.6.2-25 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\f89b35dbbcef306d0fe5d04734c042eb\transformed\lifecycle-viewmodel-2.6.2\res
+com.vlteam.vlxbookapplication.app-viewpager2-1.0.0-26 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\f911d01f696d40de8db1ed9049c87144\transformed\viewpager2-1.0.0\res
+com.vlteam.vlxbookapplication.app-coordinatorlayout-1.1.0-27 C:\Users\Thanh Tung\.gradle\caches\8.9\transforms\ffd1b6a00fbeb80d5ce8861a6e156b7b\transformed\coordinatorlayout-1.1.0\res
+com.vlteam.vlxbookapplication.app-pngs-28 C:\Users\Thanh Tung\Desktop\VLXTeam\VLXBook\app\build\generated\res\pngs\debug
+com.vlteam.vlxbookapplication.app-resValues-29 C:\Users\Thanh Tung\Desktop\VLXTeam\VLXBook\app\build\generated\res\resValues\debug
+com.vlteam.vlxbookapplication.app-packageDebugResources-30 C:\Users\Thanh Tung\Desktop\VLXTeam\VLXBook\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.vlteam.vlxbookapplication.app-packageDebugResources-31 C:\Users\Thanh Tung\Desktop\VLXTeam\VLXBook\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.vlteam.vlxbookapplication.app-debug-32 C:\Users\Thanh Tung\Desktop\VLXTeam\VLXBook\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.vlteam.vlxbookapplication.app-debug-33 C:\Users\Thanh Tung\Desktop\VLXTeam\VLXBook\app\src\debug\res
+com.vlteam.vlxbookapplication.app-main-34 C:\Users\Thanh Tung\Desktop\VLXTeam\VLXBook\app\src\main\res

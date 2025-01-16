@@ -3,14 +3,11 @@ package com.vlteam.vlxbookapplication;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -27,15 +24,11 @@ import com.vlteam.vlxbookapplication.httpservice.ApiService;
 import com.vlteam.vlxbookapplication.httpservice.File;
 import com.vlteam.vlxbookapplication.httpservice.FileManager;
 import com.vlteam.vlxbookapplication.httpservice.RetrofitClient;
-import com.vlteam.vlxbookapplication.model.AccountModel;
-import com.vlteam.vlxbookapplication.model.ChatMessagerSendReponse;
-import com.vlteam.vlxbookapplication.model.MessageModel;
 import com.vlteam.vlxbookapplication.model.UserInfoModel;
 
 import java.util.List;
 import java.util.Objects;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -50,7 +43,7 @@ public class InfoPage extends AppCompatActivity {
         EdgeToEdge.enable(this);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_info_page);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.join_caro_game), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;

@@ -66,6 +66,12 @@
         <activity
             android:name=".update_infouser_pageActivity"
             android:exported="false" />
+        <activity android:name=".game.GoldMinerControlActivity" android:exported="false" android:screenOrientation="landscape"/>
+        <activity android:name=".game.GoldMinerActivity" android:exported="false" android:screenOrientation="landscape"/>
+        <activity android:name=".game.ControlCaroGameActivity" android:exported="false"/>
+        <activity android:name=".game.CaroGameActivity" android:exported="false"/>
+        <activity android:name=".game.FlappyBirdControlActivity" android:exported="false"/>
+        <activity android:name=".FlappyBird" android:exported="false"/>
     </application>
 
 </manifest>

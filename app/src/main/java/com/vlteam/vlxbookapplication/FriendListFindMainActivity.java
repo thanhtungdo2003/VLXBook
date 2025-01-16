@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -19,8 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.vlteam.vlxbookapplication.Adapter.FriendsProposeBarAdapter;
-import com.vlteam.vlxbookapplication.Adapter.UserAdapter;
-import com.vlteam.vlxbookapplication.Adapter.UserAvtImageUnderSearch;
 import com.vlteam.vlxbookapplication.httpservice.ApiService;
 import com.vlteam.vlxbookapplication.httpservice.File;
 import com.vlteam.vlxbookapplication.httpservice.FileManager;
@@ -47,7 +42,7 @@ public class FriendListFindMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_friend_list_find_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.join_caro_game), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;

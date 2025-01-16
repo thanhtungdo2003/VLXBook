@@ -3040,6 +3040,7 @@ drawable back
 drawable back_icon
 drawable back_left_icon
 drawable bg_comment
+drawable bg_flappybird
 drawable bg_message_received
 drawable bg_message_sent
 drawable boder_radious_50
@@ -3078,11 +3079,22 @@ drawable design_snackbar_background
 drawable dropdownic
 drawable emojiicon
 drawable flapbird
+drawable flappy_bird
+drawable flappybird_pipe
+drawable flappybird_pipe_bottom
+drawable flappybird_pipe_top
+drawable flappybird_world
 drawable friendic
 drawable friendicon
 drawable friendicon_select
 drawable gameicon
+drawable gold
+drawable gold_miner_background
+drawable gold_miner_background_1
+drawable gold_miner_background_2
+drawable gold_miner_menu_bg
 drawable homeicon
+drawable hook
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -3148,6 +3160,7 @@ drawable menuicon
 drawable messagericon
 drawable messicon
 drawable mic_icon
+drawable miner
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -3203,6 +3216,8 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable notifyicon
 drawable openrightside
+drawable point
+drawable rock
 drawable rounded_search
 drawable search_icon
 drawable search_icon_in_page_comment
@@ -3212,6 +3227,7 @@ drawable shareicon
 drawable show_bar_left_message_input
 drawable tagicon
 drawable test_level_drawable
+drawable tnt
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable trashicon
@@ -3352,11 +3368,13 @@ id btn_show_bar_left_message_input
 id btn_view_cmt
 id btnlogin
 id btnsignup
+id buff_btn
 id button10
 id button11
 id button12
 id button13
 id button14
+id button2
 id button6
 id button7
 id button8
@@ -3370,6 +3388,10 @@ id caption_post_input
 id cardView1
 id cardView2
 id cardView3
+id caro_join_btn
+id caro_redo
+id caro_reload
+id caro_undo
 id carryVelocity
 id center
 id centerCrop
@@ -3404,6 +3426,7 @@ id cos
 id counterclockwise
 id cradle
 id currentState
+id current_checked_text_view
 id custom
 id customPanel
 id cut
@@ -3442,6 +3465,8 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editAmountWinRow_text
+id editWidth_text
 id edit_query
 id edit_text_id
 id edt_comment_input
@@ -3479,6 +3504,7 @@ id fullName_tv_info
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id goal_money_text_view
 id gone
 id graph
 id graph_wrap
@@ -3488,6 +3514,7 @@ id groups
 id header_title
 id hide_ime_id
 id hideable
+id history_list_layout
 id home
 id homeAsUp
 id honorRequest
@@ -3510,7 +3537,6 @@ id imageView4
 id imageView5
 id imageView6
 id imageView7
-id imageView9
 id imageViewSignup
 id imgBtnGamecenter
 id imgItemimg
@@ -3525,12 +3551,18 @@ id immediateStop
 id included
 id indeterminate
 id info
+id info_game_container
 id info_main
 id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
 id job_input
+id join_caro_game
+id join_caro_gamecneter
+id join_flappybird_game
+id join_game_gold_miner
+id join_goldminner_game
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3545,6 +3577,7 @@ id listMode
 id list_item
 id location_input
 id logout_btn
+id luck_btn
 id m3_side_sheet
 id main
 id marquee
@@ -3577,6 +3610,7 @@ id message
 id message_area
 id middle
 id mini
+id money_text_view
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3670,6 +3704,7 @@ id peekHeight
 id percent
 id phone_input
 id pin
+id playFlappy
 id position
 id postLayout
 id post_sumbit
@@ -3732,6 +3767,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id sort_select
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -3818,6 +3854,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id tnt_btn
 id toggle
 id toolbar
 id toolbar_icon
@@ -3991,9 +4028,15 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_caro_game
 layout activity_chatting_interface
 layout activity_comment_page
+layout activity_control_caro_game
+layout activity_flappy_bird
+layout activity_flappy_bird_control
 layout activity_friend_list_find_main
+layout activity_gold_miner
+layout activity_gold_miner_control
 layout activity_info_page
 layout activity_main
 layout activity_messenger_interface
@@ -4104,6 +4147,9 @@ layout update_infouser_page
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw flap
+raw hit
+raw point
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

@@ -35,6 +35,7 @@ import com.vlteam.vlxbookapplication.httpservice.RetrofitClient;
 import com.vlteam.vlxbookapplication.model.Article;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
@@ -50,9 +51,10 @@ public class createStatusPage extends AppCompatActivity {
     LinearLayout addImageVideo;
     private HorizontalScrollView scrollView;
     private LinearLayout imageContainer;
-    private List<Uri> currentPostImgUris = new ArrayList<>();
+    private HashMap<Integer,Uri> currentPostImgUris = new HashMap<>();
     private FileManager fileManager;
     private ApiService apiService;
+    private int currentIndexImgUri = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,6 +117,7 @@ public class createStatusPage extends AppCompatActivity {
         });
     }
     public void post(){
+
         String username = NewfeedActivity.username;
         String caption = "NONE";
         if (((EditText) findViewById(R.id.caption_post_input)).getText().toString().isEmpty()){
@@ -127,13 +130,14 @@ public class createStatusPage extends AppCompatActivity {
         if (currentPostImgUris.isEmpty()){
             imgPathsBuilder.append("NONE");
         }
-        for (Uri uri: currentPostImgUris){
+        for (Uri uri: currentPostImgUris.values()){
             String filename = fileManager.getFileName(uri);
             imgPathsBuilder.append(filename).append("&");
         }
         if (imgPathsBuilder.length() > 0){
             imgPathsBuilder.setLength(imgPathsBuilder.length() - 1);
         }
+        System.out.println("==========================="+imgPathsBuilder.toString());
         apiService.createArticle(username,caption, imgPathsBuilder.toString(), vidPaths).enqueue(new Callback<Article>() {
             @Override
             public void onResponse(@NonNull Call<Article> call, @NonNull Response<Article> response) {
@@ -152,7 +156,8 @@ public class createStatusPage extends AppCompatActivity {
                 Log.e("API_FAILURE", Objects.requireNonNull(t.getMessage()));
             }
         });
-        fileManager.upload(currentPostImgUris, FileStorageType.ARTICLE_IMG);
+        List<Uri> uris = new ArrayList<>(currentPostImgUris.values());
+        fileManager.upload(uris, FileStorageType.ARTICLE_IMG);
     }
     private void openImagePicker() {
         Intent intent = new Intent(Intent.ACTION_PICK);
@@ -186,14 +191,14 @@ public class createStatusPage extends AppCompatActivity {
                 addImageToScrollView(selectedMediaUri, true); // Video
             } else if (type != null && type.startsWith("image/")) {
                 addImageToScrollView(selectedMediaUri, false); // Ảnh
-                currentPostImgUris.add(selectedMediaUri);
-
             }
         }
     }
 
     private void addImageToScrollView(Uri uri,boolean isVideo) {
         if (uri != null) {
+            currentPostImgUris.put(currentIndexImgUri, uri);
+
             FrameLayout frameLayout = new FrameLayout(this);
             frameLayout.setLayoutParams(new LinearLayout.LayoutParams(500, 500));
             frameLayout.setBackgroundResource(R.drawable.imgvideo_border);
@@ -211,27 +216,14 @@ public class createStatusPage extends AppCompatActivity {
             FrameLayout.LayoutParams deleteParams = (FrameLayout.LayoutParams) btnDelete.getLayoutParams();
             deleteParams.gravity= (Gravity.TOP | Gravity.RIGHT);
             btnDelete.setLayoutParams(deleteParams);  // Cập nhật LayoutParams với margin
-
+            btnDelete.setTag(currentIndexImgUri);
             btnDelete.setOnClickListener(v -> {
                 imageContainer.removeView(frameLayout);
+                currentPostImgUris.remove((int)v.getTag());
             });
             if(isVideo){
-
-                VideoView videoView = new VideoView(this);
-                videoView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT)); // Đặt kích thước cho video
-                videoView.setVideoURI(uri);
-                videoView.seekTo(1);
-
-                videoView.setOnClickListener(v -> {
-                    if (videoView.isPlaying()) {
-                        videoView.pause();
-                    } else {
-                        videoView.start();
-                    }
-                });
+                VideoView videoView = getVideoView(uri);
                 frameLayout.addView(videoView);
-                frameLayout.addView(btnDelete);
-                imageContainer.addView(frameLayout);
 
             }
             else {
@@ -240,11 +232,29 @@ public class createStatusPage extends AppCompatActivity {
                 imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
                 imageView.setImageURI(uri);
                 frameLayout.addView(imageView);
-                frameLayout.addView(btnDelete);
-                imageContainer.addView(frameLayout);
             }
+            frameLayout.addView(btnDelete);
+            imageContainer.addView(frameLayout);
             scrollView.setVisibility(View.VISIBLE);
+            currentIndexImgUri++;
         }
+    }
+
+    @NonNull
+    private VideoView getVideoView(Uri uri) {
+        VideoView videoView = new VideoView(this);
+        videoView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT)); // Đặt kích thước cho video
+        videoView.setVideoURI(uri);
+        videoView.seekTo(1);
+
+        videoView.setOnClickListener(v -> {
+            if (videoView.isPlaying()) {
+                videoView.pause();
+            } else {
+                videoView.start();
+            }
+        });
+        return videoView;
     }
 
     @Override

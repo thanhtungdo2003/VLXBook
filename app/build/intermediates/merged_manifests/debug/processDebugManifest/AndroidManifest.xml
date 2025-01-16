@@ -81,6 +81,26 @@
         <activity
             android:name="com.vlteam.vlxbookapplication.update_infouser_pageActivity"
             android:exported="false" />
+        <activity
+            android:name="com.vlteam.vlxbookapplication.game.GoldMinerControlActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.vlteam.vlxbookapplication.game.GoldMinerActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.vlteam.vlxbookapplication.game.ControlCaroGameActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vlteam.vlxbookapplication.game.CaroGameActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vlteam.vlxbookapplication.game.FlappyBirdControlActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vlteam.vlxbookapplication.FlappyBird"
+            android:exported="false" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

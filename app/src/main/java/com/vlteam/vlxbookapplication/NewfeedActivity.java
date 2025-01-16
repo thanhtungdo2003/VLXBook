@@ -206,22 +206,60 @@ public class NewfeedActivity extends AppCompatActivity {
         recyclerView.setFocusable(false);
         recyclerView.setAdapter(postAdapter);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.join_caro_game), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        recyclerView.setOnScrollChangeListener(new View.OnScrollChangeListener() {
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            private boolean isUserScrolling = false;
+
             @Override
-            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                // Kiểm tra nếu đã cuộn đến cuối
-                if (!v.canScrollVertically(1)) { // 1 = kiểm tra hướng xuống, -1 = hướng lên
-                    if (hasMulData) {
-                        loadArticle(++currentPage);
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+
+                if (newState == RecyclerView.SCROLL_STATE_DRAGGING) {
+                    // Người dùng bắt đầu cuộn bằng tay
+                    isUserScrolling = true;
+                } else if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                    // RecyclerView đã dừng cuộn
+                    if (isUserScrolling) {
+                        isUserScrolling = false;
+
+                        // Kiểm tra nếu đã cuộn đến cuối cùng
+                        if (isScrolledToBottom(recyclerView)) {
+                            onScrolledToBottom();
+                        }
                     }
                 }
             }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+            }
+
+            // Kiểm tra nếu RecyclerView đã cuộn đến cuối cùng
+            private boolean isScrolledToBottom(RecyclerView recyclerView) {
+                LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+                if (layoutManager != null) {
+                    int totalItemCount = layoutManager.getItemCount();
+                    int lastVisibleItemPosition = layoutManager.findLastVisibleItemPosition();
+
+                    return totalItemCount > 0 && lastVisibleItemPosition == totalItemCount - 1;
+                }
+                return false;
+            }
+
+            // Hành động khi cuộn tới cuối
+            private void onScrolledToBottom() {
+                if (hasMulData) {
+                    loadArticle(++currentPage);
+                }
+            }
         });
+
+
     }
     public void loadArticle(int page){
         apiService.getArticleByPage(page).enqueue(new Callback<List<Article>>() {

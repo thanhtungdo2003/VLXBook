@@ -1,6 +1,8 @@
 package com.vlteam.vlxbookapplication.model;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.view.View;
@@ -12,6 +14,8 @@ import com.vlteam.vlxbookapplication.R;
 import com.vlteam.vlxbookapplication.httpservice.ApiService;
 import com.vlteam.vlxbookapplication.httpservice.FileManager;
 
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 
@@ -51,14 +55,21 @@ public class Article {
         }
     }
 
-    public void renderImg(ImageView imageView, String path){
-        if (getImgArray().length == 0){
-            imageView.setVisibility(View.GONE);
+    public void renderImg(ImageView imageView, String path) {
+        imageView.setVisibility(View.GONE);
+
+        if (getImgArray().length == 0) {
             return;
         }
-        if (imgUris.containsKey(path)){
+        if (imgUris.containsKey(path)) {
             if (imgUris.get(path) != null) {
-                imageView.setImageURI(imgUris.get(path));
+                Bitmap optimizedBitmap = optimizeBitmapTo1MB(imgUris.get(path));
+                if (optimizedBitmap != null) {
+                    imageView.setImageBitmap(optimizedBitmap);
+                    imageView.setVisibility(View.VISIBLE);
+                } else {
+                    imageView.setVisibility(View.GONE);
+                }
                 return;
             }
         }
@@ -73,13 +84,23 @@ public class Article {
                         boolean isSaved = fileManager.saveFileToInternalStorage(context, response.body(), path);
                         if (isSaved) {
                             Uri fileUri = fileManager.getFileUri(context, path);
-                            imgUris.put(path, fileUri);
-                            imageView.setImageURI(fileUri);
+
+                            // Giảm kích thước ảnh trước khi hiển thị
+                            Bitmap optimizedBitmap = optimizeBitmapTo1MB(fileUri);
+                            if (optimizedBitmap != null) {
+                                imgUris.put(path, fileUri);
+
+                                imageView.setImageBitmap(optimizedBitmap);
+                                imageView.setVisibility(View.VISIBLE);
+                            } else {
+                                imageView.setVisibility(View.GONE);
+                            }
                         }
-                    }else {
-                        imageView.setVisibility(View.VISIBLE);
+                    } else {
+                        imageView.setVisibility(View.GONE);
                     }
                 }
+
                 @Override
                 public void onFailure(Call<ResponseBody> call, Throwable t) {
                     imageView.setVisibility(View.GONE);
@@ -87,6 +108,64 @@ public class Article {
             });
         }
     }
+
+    private Bitmap optimizeBitmapTo1MB(Uri fileUri) {
+        try {
+            InputStream inputStream = context.getContentResolver().openInputStream(fileUri);
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inJustDecodeBounds = true;
+
+            // Đọc metadata của ảnh (không tải ảnh vào bộ nhớ)
+            BitmapFactory.decodeStream(inputStream, null, options);
+            inputStream.close();
+
+            // Kích thước gốc của ảnh
+            int originalWidth = options.outWidth;
+            int originalHeight = options.outHeight;
+
+            // Tính toán tỷ lệ giảm để phù hợp
+            options.inSampleSize = calculateInSampleSizeToTargetSize(originalWidth, originalHeight);
+            options.inJustDecodeBounds = false;
+
+            // Đọc lại ảnh với tỷ lệ giảm
+            inputStream = context.getContentResolver().openInputStream(fileUri);
+            Bitmap scaledBitmap = BitmapFactory.decodeStream(inputStream, null, options);
+            inputStream.close();
+
+            // Nén ảnh xuống dung lượng ~1MB
+            ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
+            scaledBitmap.compress(Bitmap.CompressFormat.JPEG, 50, byteStream);
+
+            // Kiểm tra kích thước sau nén
+            while (byteStream.toByteArray().length / 1024 > 1024) {
+                byteStream.reset();
+                scaledBitmap.compress(Bitmap.CompressFormat.JPEG, 45, byteStream);
+            }
+
+            // Trả về bitmap đã tối ưu hóa
+            return BitmapFactory.decodeByteArray(byteStream.toByteArray(), 0, byteStream.size());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    private int calculateInSampleSizeToTargetSize(int originalWidth, int originalHeight) {
+        int reqWidth = 600; // Đặt chiều rộng mong muốn
+        int reqHeight = 600; // Đặt chiều cao mong muốn
+        int inSampleSize = 1;
+
+        if (originalHeight > reqHeight || originalWidth > reqWidth) {
+            int halfHeight = originalHeight / 2;
+            int halfWidth = originalWidth / 2;
+
+            while ((halfHeight / inSampleSize) >= reqHeight && (halfWidth / inSampleSize) >= reqWidth) {
+                inSampleSize *= 2;
+            }
+        }
+        return inSampleSize;
+    }
+
 
     public String getFullName() {
         return FullName;

@@ -10,21 +10,15 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.provider.OpenableColumns;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
-import android.widget.VideoView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -42,16 +36,10 @@ import com.vlteam.vlxbookapplication.httpservice.File;
 import com.vlteam.vlxbookapplication.httpservice.FileManager;
 import com.vlteam.vlxbookapplication.httpservice.FileStorageType;
 import com.vlteam.vlxbookapplication.httpservice.RetrofitClient;
-import com.vlteam.vlxbookapplication.model.ChatMessagerSendReponse;
-import com.vlteam.vlxbookapplication.model.MessageModel;
 import com.vlteam.vlxbookapplication.model.UserInfoModel;
 
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
@@ -61,10 +49,6 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import okhttp3.MediaType;
-import okhttp3.MultipartBody;
-import okhttp3.RequestBody;
-import retrofit2.Call;
 
 public class update_infouser_pageActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_PICK_MEDIA = 100; // Mã yêu cầu chọn ảnh/video
@@ -85,7 +69,7 @@ public class update_infouser_pageActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.update_infouser_page);
         khoitaoSpinner();
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.join_caro_game), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
